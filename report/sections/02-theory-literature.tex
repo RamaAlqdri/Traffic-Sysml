@@ -1,0 +1,45 @@
+\section{Landasan Teori dan Studi Literatur}
+\subsection{MBSE dan SysML}
+Materi kuliah menggambarkan MBSE sebagai pendekatan rekayasa yang memusatkan requirement, desain, analisis dan verification pada model yang saling terhubung \citep[bagian 3 dan 10]{lecture01}. SysML digunakan untuk menyatakan konsep model, sedangkan Mermaid dan PlantUML hanya merender representasi tekstual. Versi 1.6 dipilih sebagai asumsi proyek ASM-010; catatan kuliah tidak menyatakan nomor versi. Referensi normatif tambahan adalah \citet{omg2019}.
+
+Subset mencakup Requirement, UseCase, Activity/Action, Interaction/Message, StateMachine, Block, PartProperty, ProxyPort, InterfaceBlock, Connector/ItemFlow serta dependency satisfy, verify dan allocate. Block Definition Diagram (BDD) memuat definisi tipe; Internal Block Diagram (IBD) memuat penggunaan part di dalam context block. Relasi satisfy berarah dari elemen pemenuh ke requirement, verify dari test case ke requirement, dan allocate dari elemen yang dialokasikan ke target alokasi \citep[bagian 15.3.1.2, 16.3.2.7, 16.3.2.9]{omg2019}. Model tidak diklaim telah diperiksa melalui engine SysML atau seluruh constraint Object Constraint Language (OCL).
+
+\subsection{Artikel traffic pertama}
+\citet{mondal2022} merancang prioritas berbasis kombinasi density dan waiting time, serta green time proporsional terhadap density (PDF 3--5; EVID-TRF-001). Input contoh memakai jumlah mobil dan waiting time; output berupa urutan fase dan timer. Sensor, road-side unit (RSU), processing unit dan traffic light controller dipisahkan (EVID-TRF-002). Simulasi Python membandingkan kondisi balanced/unbalanced dengan fixed-time. Peningkatan average percentage traffic flow yang dilaporkan 31.05\% adalah hasil studi tersebut, bukan hasil proyek ini (PDF 8--9; EVID-TRF-005).
+
+Ada keterbatasan yang harus dipertahankan dalam interpretasi. Algorithm 1 baris 6 memakai ascending order, sementara contoh Table 1 memilih prioritas terbesar (PDF 6; EVID-TRF-004). Rumus normalisasi dengan penyebut max-minus-min juga membutuhkan aturan tambahan saat semua nilai sama; ini analisis atas rumus, bukan laporan kegagalan simulator penulis. Karena itu kontrak scheduler proyek tidak menyalin pseudocode artikel secara langsung.
+
+\subsection{Artikel traffic kedua}
+\citet{mathiane2023} memakai hitungan kelompok kendaraan, two-dimensional convolutional neural network (2D-CNN), simulasi Pygame dan pembanding Simulation of Urban Mobility (SUMO). Density pada bagian 3.1 dihitung menggunakan jumlah kendaraan serta konfigurasi lajur; definisinya bukan normalisasi kapasitas pendekat proyek (EVID-TRF-006). Input klasifikasi dan input kontrol dibedakan. Baseline dapat menerima hitungan yang sudah tersedia tanpa membuat training pipeline kamera.
+
+Angka klasifikasi 96\% merujuk pengenalan jenis kendaraan, bukan keselamatan controller. Abstrak memakai istilah 90\% throughput, sementara kesimpulan memakai 90\% faster (EVID-TRF-008). Kajian tidak mengharmonisasi keduanya menjadi target numerik. Hardware dan deteksi malfunction masih disebut sebagai pengembangan berikutnya; artikel tidak membuktikan fail-safe proyek siap digunakan (bagian 5; EVID-TRF-007).
+
+\subsection{Artikel MBSE dan batas evidence}
+\citet{campo2023} melakukan analisis konten terhadap 2914 klaim dari 60 sumber. Temuannya membahas persepsi manfaat, drawback, evidence dan metrik, bukan eksperimen kausal pada satu pengendali. Penulis melaporkan 47\% klaim berbasis author opinions dan 86\% tidak disubstansiasi metrik (Abstract, bagian 3.2 dan 3.3.6; EVID-MBSE-001/002). Ini mendukung kehati-hatian terhadap klaim manfaat MBSE, bukan angka keberhasilan proyek.
+
+Pemilihan corpus studi Campo tidak exhaustif dan bagian 2.1 menyatakan tidak menilai mutu metodologi setiap sumber. PDF lokal memiliki peringatan xref meskipun 26 halaman terbaca; locator bagian digunakan tanpa mengklaim integritas page-anchor lulus. Kedua PDF traffic lulus structural preflight. Metadata Springer cocok dengan PDF; akses MDPI mendapat 429 dan permintaan Wiley lanjutan mendapat 403. Batas ini dicatat tanpa mengganti sumber pengguna.
+
+\subsection{Sintesis untuk rancangan}
+Kedua studi traffic memberi dasar konsep adaptasi green terhadap kondisi kendaraan. Perbedaan formulasi, teknologi dan lingkup emergency tidak dijadikan kewajiban untuk menggabungkan semua fitur. Materi kuliah memberi dasar hubungan antar-view; kajian MBSE memberi batas terhadap klaim manfaat yang tidak diukur. Aturan tie-break, hard waiting bound, sampling, kategori dan failure handling spesifik tetap merupakan asumsi desain kelompok. Register evidence penuh berada pada source penelitian repository; Tabel~\ref{tab:evidence} merangkum lokasi dan penggunaannya.
+\begin{longtable}{>{\raggedright\arraybackslash}p{.20\linewidth}>{\raggedright\arraybackslash}p{.31\linewidth}>{\raggedright\arraybackslash}p{.40\linewidth}}
+\caption{Ringkasan evidence dan batas penggunaannya.}\label{tab:evidence}\\
+\toprule ID & Lokasi sumber & Penggunaan / batas \\\midrule\endfirsthead
+\toprule ID & Lokasi sumber & Penggunaan / batas \\\midrule\endhead
+TRF-001 & Mondal PDF 3--5 & Input, prioritas, green adaptif; bukan tie-break proyek \\
+TRF-002 & Mondal PDF 3--4 & Tanggung jawab komponen dan empat fase \\
+TRF-003 & Mondal PDF 5--6 & Inventaris angka sumber; tidak otomatis diadopsi \\
+TRF-004 & Mondal PDF 6 & Disposition perbedaan pseudocode/contoh \\
+TRF-005 & Mondal PDF 8--9 & Skenario balanced/unbalanced; hasil hanya milik studi \\
+TRF-006 & Mathiane 3.1 & Hitungan sebagai input; definisi density khusus studi \\
+TRF-007 & Mathiane 3.2 dan 5 & Lingkup CNN/emergency dan hardware future work \\
+TRF-008 & Mathiane abstrak dan 5 & Istilah hasil kuantitatif berbeda; tidak jadi target \\
+MBSE-001 & Campo 2.1--2.2 & Metode/corpus dan batas evidence \\
+MBSE-002 & Campo 3.2, 3.3.6, 4 & Bedakan persepsi, bukti dan metrik \\
+LEC-001 & Catatan 01:9--10; 02:16--19 & Consistency dan traceability \\
+LEC-002 & Catatan 02:5 & Requirement, satisfy, verify \\
+LEC-003 & Catatan 02:7--9 & Tiga sudut behavior \\
+LEC-004 & Catatan 02:10--13 & BDD type, IBD part/port/connector \\
+LEC-005 & Catatan 02:21 & Tujuan tugas; provenance slide belum dicocokkan \\
+\bottomrule
+\end{longtable}
+ID pada tabel memakai prefiks lengkap EVID-. Catatan kuliah disediakan sebagai Markdown yang diperluas dari slide; penulis, tanggal, institusi dan batas perluasan tidak dicantumkan. Kutipan mengacu ke catatan yang tersedia, bukan mengarang identitas dosen atau nomor slide asli \citep{lecture01,lecture02}.

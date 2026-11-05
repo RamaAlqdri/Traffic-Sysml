@@ -1,0 +1,47 @@
+---
+title: "SysML Requirement view — baseline inti"
+config:
+  theme: default
+  look: classic
+  layout: dagre
+---
+requirementDiagram
+direction LR
+requirement REQ_F_003 {
+ id: "REQ-F-003"
+ text: "Prioritas"
+ risk: medium
+ verifymethod: test
+}
+requirement REQ_P_005 {
+ id: "REQ-P-005"
+ text: "Maximum waiting"
+ risk: medium
+ verifymethod: analysis
+}
+requirement REQ_S_001 {
+ id: "REQ-S-001"
+ text: "Eksklusivitas"
+ risk: medium
+ verifymethod: analysis
+}
+requirement REQ_R_003 {
+ id: "REQ-R-003"
+ text: "Fallback timing"
+ risk: medium
+ verifymethod: test
+}
+element TrafficController {
+ type: "SysML Block BLK-04"
+}
+element SignalController {
+ type: "SysML Block BLK-05"
+}
+element WaitingBoundAnalysis {
+ type: "SysML TestCase VER-09"
+}
+TrafficController - satisfies -> REQ_F_003
+TrafficController - satisfies -> REQ_P_005
+SignalController - satisfies -> REQ_S_001
+TrafficController - satisfies -> REQ_R_003
+WaitingBoundAnalysis - verifies -> REQ_P_005

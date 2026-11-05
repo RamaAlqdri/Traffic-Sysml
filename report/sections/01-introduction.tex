@@ -1,0 +1,15 @@
+\section{Pendahuluan}
+\subsection{Latar belakang}
+Tugas yang dicatat pada materi kuliah meminta sistem yang mendeteksi kondisi kendaraan dan memberikan hijau lebih lama kepada ruas dengan kondisi lebih padat \citep[bagian 21]{lecture02}. Penyesuaian fase dan durasi merupakan dua keputusan yang berbeda. \citet{mondal2022} menggunakannya dalam rancangan adaptive control berbasis density dan waiting time, sedangkan \citet{mathiane2023} menggabungkan penghitungan kendaraan, klasifikasi dan pengaturan sinyal. Rancangan proyek mengambil rationale input dan kontrol adaptif tanpa mewajibkan seluruh teknologi kedua artikel.
+
+Pemodelan perlu menjelaskan batas sistem, tanggung jawab komponen, transisi sinyal, dan cara memeriksa kebutuhan. Catatan kuliah menekankan consistency dan traceability antar-view \citep[bagian 9--10]{lecture01}. Pada proyek ini, hubungan evidence/asumsi, requirement, behavior, structure dan verification menjadi dasar audit desain; keberadaan diagram saja belum membuktikan peningkatan throughput.
+
+\subsection{Rumusan masalah dan tujuan}
+Masalah desain adalah bagaimana merepresentasikan pengendali empat pendekat yang adaptif, tidak memberi green berkonflik, mempunyai batas pelayanan dan perilaku data-failure yang jelas. Tujuannya menghasilkan model subset SysML 1.6 yang konsisten, katalog requirement yang dapat diperiksa, serta skenario verifikasi dengan status pelaksanaan yang jujur. Laporan dan presentasi merupakan artefak akademik, bukan perangkat pengendali lapangan.
+
+\subsection{Metode pengerjaan}
+Urutan kerja adalah audit sumber, kajian terarah tiga jurnal yang dipilih pengguna, pencatatan evidence/asumsi, formulasi masalah, requirements, behavioral/structural views, traceability dan analisis verifikasi. Kajian ini bukan pencarian literatur exhaustif atau systematic review baru. Identitas sumber dan konteks klaim diperiksa sebelum dipakai. Bantuan kecerdasan buatan (artificial intelligence, AI) digunakan untuk ekstraksi, penyusunan source, dan pemeriksaan; tanggung jawab peninjauan akademik tetap pada kelompok.
+
+
+\subsection{Konvensi identitas}
+ID berarti identifier elemen yang stabil. Prefiks EVID menandai evidence, ASM asumsi desain, REQ requirement, UC use case, ACT action, BLK block, VER verification/test case, STM state machine, dan INT interaction. Pada evidence, TRF berarti traffic, LEC catatan lecture, dan MBSE kajian metodologis. LOW, MEDIUM dan HIGH merupakan label enumeration kategori, bukan singkatan bebas. Nomor dan identitas tetap sama lintas source serta diagram.

@@ -1,0 +1,36 @@
+\section{Analisis Permasalahan dan Asumsi Desain}
+\subsection{Scope, stakeholder dan input}
+System of Interest adalah SmartTrafficLightSystem dengan pendekat North, South, East, West, hanya gerak lurus. Tidak ada pedestrian, dedicated turn, emergency, dashboard, machine learning (ML) atau koordinasi antarsimpang. Baseline mengeksekusi satu green pada satu waktu; setiap pasangan pendekat berbeda dianggap berkonflik secara konservatif. TrafficDataSource adalah aktor eksternal penyedia hitungan, RoadUsers penerima sinyal, sedangkan kelompok/dosen meninjau artefak dan pengelola lalu lintas berkepentingan terhadap batas desain.
+
+VehicleDetection adalah adapter input, bukan sensor kamera yang telah diimplementasikan. CountsFrame berisi empat record dengan approach unik, vehicleCount integer 0 sampai 2147483647, observedAt pada clock monotonic bersama, dan flag valid. Hitungan adalah snapshot antrean pada akhir jendela observasi, bukan kendaraan lewat per detik atau kendaraan/km. Kapasitas dan area fisik lokasi tidak tersedia; belum ada kalibrasi.
+
+\begin{table}[htbp]\centering
+\caption{Parameter baseline: seluruhnya asumsi desain ASM-002--008.}
+\begin{tabular}{ll}\toprule Parameter & Nilai / aturan \\\midrule
+Kategori LOW / MEDIUM / HIGH & 0--5 / 6--15 / $\geq 16$ kendaraan \\
+Green LOW / MEDIUM / HIGH & 10 / 20 / 30 s \\
+Minimum / maximum green & 10 / 30 s \\
+Yellow / all-red & 3 / 1 s \\
+Observasi / decision tick & 1 / 1 s \\
+Stale threshold & umur $>3$ s \\
+Maximum service waiting & 210 s, operasi round baseline \\
+Fallback / recovery & green 10 ring / 3 frame baru baik + round baru \\\bottomrule
+\end{tabular}\end{table}
+
+Angka artikel seperti cycle 120 s atau amber 2.5 s pada Mondal tidak menetapkan parameter lokasi proyek. Nilai tabel dipilih sebagai grid konseptual yang mudah dianalisis; tidak diklaim aman untuk geometri persimpangan tertentu. Dua hitungan dalam kategori sama boleh mendapat grant sama. Setiap perubahan parameter memerlukan perhitungan ulang bound dan revisi artefak.
+
+\subsection{Prioritas dan batas tunggu}
+Setiap pendekat mendapat satu pelayanan dalam setiap round, termasuk count nol. Eligible hanya memuat pendekat yang belum dilayani pada round berjalan. Pada akhir all-red, urutan nominal adalah kategori menurun, waktu tunggu menurun, lalu ring N--S--E--W dengan pointer awal N. Pointer maju ke penerus pendekat yang baru menerima green. Grant aktif tidak diubah oleh sampel baru.
+
+Waktu tunggu diukur sejak green pendekat terakhir berakhir dan nol selama green; untuk pendekat belum pernah dilayani diinisialisasi dari startup. Ini waktu menunggu kesempatan pelayanan, bukan delay tiap kendaraan. Rencana sisa round diperiksa terhadap deadline 210 s; bila urutan nominal melampauinya, earliest-deadline-first (EDF) mengambil alih. Rencana yang tetap tidak layak meminta SafetyHold.
+
+Pada dua round bersebelahan, suatu pendekat dapat berpindah dari pertama menjadi terakhir. Paling banyak enam green lain dan tujuh clearance berada di antaranya:
+\begin{equation}\label{eq:bound}
+W_{\max}\leq 6G_{\max}+7(Y+A)=6(30)+7(3+1)=208\ \mathrm{s}<210\ \mathrm{s}.
+\end{equation}
+Startup terburuk bagi pendekat terakhir adalah $1+3(30+4)=103$ s. Margin 2 s merupakan margin diskrit model, bukan allowance latensi perangkat nyata.
+
+\subsection{Failure handling dan batas jaminan}
+Cache fresh boleh digunakan saat satu event sampel hilang. Frame invalid, valid=false, cache tidak lengkap atau stale melatch dataFault; count salah tidak diganti nol. Fault data tidak memotong grant aktif. Sesudah green dan clearance selesai, Fallback melayani eligible dalam ring dengan green 10. Round dan wait timers tidak direset saat pergantian mode. Adapter mengecek cache tiap tick walau input berhenti. Latch sensor clear setelah tiga frame baru baik, tetapi mode Fallback ditahan sampai round baru. Pemulihan membutuhkan tiga frame lengkap valid dengan timestamp baru berturut-turut pada tick berbeda, lalu awal round baru.
+
+SignalController menolak command yang di luar domain atau melewati clearance dan menahan semua merah dalam SafetyHold hingga restart. Minimum green nominal dan bound tunggu dikecualikan saat SafetyHold/restart. Jaminan logis mengasumsikan clock dan actuator ideal; lampu stuck, pemadaman, latensi dan keselamatan perangkat fisik tidak diverifikasi.

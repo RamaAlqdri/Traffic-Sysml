@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[indonesian]{babel}
+\usepackage[margin=22mm]{geometry}
+\usepackage{microtype,graphicx,booktabs,longtable,array,amsmath,pdflscape}
+\usepackage[authoryear,round]{natbib}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Pemodelan Smart Traffic Light dengan MBSE dan SysML 1.6},pdfauthor={Proyek Akademik Pengembangan Sistem Pintar}}
+\usepackage{enumitem}
+\setlist{nosep}
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+\graphicspath{{../assets/diagrams/}}
+\title{Pemodelan Smart Traffic Light\\Berbasis Kepadatan Kendaraan\\\large Pendekatan Model-Based Systems Engineering (MBSE)}
+\author{Proyek Akademik Pengembangan Sistem Pintar}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Proyek ini merancang model konseptual pengendali sinyal untuk satu simpang empat pendekat. Model menerima jumlah kendaraan, mengelompokkan kondisi traffic, memilih pendekat yang belum dilayani pada putaran berjalan, serta mengunci durasi hijau menurut kategori. Evidence dari dua artikel traffic, satu kajian MBSE dan catatan kuliah dipisahkan dari asumsi desain kelompok. Tujuh view Systems Modeling Language (SysML) direpresentasikan melalui Mermaid dan PlantUML sebagai renderer tekstual. Sebanyak 24 requirement dihubungkan dengan perilaku, komponen dan 21 skenario verifikasi. Analisis referensi terhadap 576 pasangan urutan dua putaran menghasilkan batas tunggu maksimum 208 detik pada asumsi nominal, di bawah batas desain 210 detik. Angka tersebut merupakan hasil analisis kontrak penjadwalan, bukan pengukuran kinerja traffic, delay kendaraan atau bukti keselamatan perangkat fisik. Perilaku fault dan recovery yang belum dieksekusi tetap ditandai belum diuji.
+\end{abstract}
+\clearpage
+\tableofcontents
+\clearpage
+\input{sections/01-introduction}
+\input{sections/02-theory-literature}
+\input{sections/03-problem}
+\input{sections/04-requirements}
+\input{sections/05-models}
+\input{sections/06-trace-verification}
+\input{sections/07-discussion-conclusion}
+\clearpage
+\bibliographystyle{plainnat}
+\bibliography{bibliography}
+\end{document}

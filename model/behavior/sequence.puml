@@ -1,0 +1,44 @@
+@startuml
+skinparam shadowing false
+title SysML interaction INT-01 - grant, data fault and recovery
+actor TrafficDataSource as Source
+participant "sensor : VehicleDetection\nBLK-02" as Sensor
+participant "analysis : DensityAnalysis\nBLK-03" as Analysis
+participant "controller : TrafficController\nBLK-04" as Controller
+participant "signals : SignalController\nBLK-05" as Signals
+participant "lights : TrafficLights[4]\nBLK-06" as Lights
+Source -> Sensor : CountsFrame (each 1 s)
+Sensor -> Analysis : validated CountsFrame
+Analysis -> Controller : DensityFrame
+Sensor -> Controller : dataFault + recoveryStreak
+Signals -> Controller : safeBoundary at tick (startup/clearance done)
+Controller -> Controller : ACT-03 eligible + rank + deadlines
+Controller -> Signals : PhaseCommand (approach, greenSeconds, mode)
+Signals -> Signals : ACT-09 validate command and clearance
+Signals -> Lights : LampVector: one green, others red
+Signals -> Controller : grantAccepted(i)
+Controller -> Controller : ACT-08 mark served; advance ring pointer
+... granted 10/20/30 s in Normal ...
+Source -> Sensor : invalid/stale data during green
+Sensor -> Controller : latch dataFault
+note over Controller,Signals
+Current grant remains frozen.
+No new green while grant/clearance is active.
+end note
+Signals -> Lights : active yellow, others red (3 s)
+Signals -> Lights : all red (1 s)
+Signals -> Controller : safeBoundary
+Controller -> Signals : Fallback grant: next eligible in ring, 10 s
+Signals -> Lights : one green, others red
+loop three consecutive new valid frames on distinct ticks
+ Source -> Sensor : CountsFrame with new observedAt
+ Sensor -> Analysis : validated CountsFrame
+ Analysis -> Controller : DensityFrame
+ Sensor -> Controller : recoveryStreak; clear fault after third good frame
+end
+note over Controller
+Sensor clears fault after 3 new good frames.
+Controller returns Normal only at next round boundary.
+No reset of round or wait timers on mode change.
+end note
+@enduml

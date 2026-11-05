@@ -1,0 +1,14 @@
+{
+  "schema": "pdf_read_preflight/1",
+  "verdict": "UNAVAILABLE",
+  "file": "references/jurnal-mbse.pdf",
+  "sha256": "09a974ebe9899d87d3561c9c96c9299ec7f8fd76fa111063496c22af1602e4fc",
+  "declared_page_count": 26,
+  "enumerated_page_count": 26,
+  "reader_page_count": 26,
+  "warnings": [
+    "xref-coverage: object number(s) [824] present in the file but absent from the active xref chain (possible stale startxref / unreachable newer revision)"
+  ],
+  "generated_at": "2026-11-02T04:45:26.333229+00:00",
+  "tool": "pdf_read_preflight/1.0.0"
+}

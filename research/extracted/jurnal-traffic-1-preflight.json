@@ -1,0 +1,12 @@
+{
+  "schema": "pdf_read_preflight/1",
+  "verdict": "PASS",
+  "file": "references/jurnal-traffic-1.pdf",
+  "sha256": "05aefd9d282fbc866a414dbe3ac951b651423321a505c9a821ce51a60ffbf9ef",
+  "declared_page_count": 11,
+  "enumerated_page_count": 11,
+  "reader_page_count": 11,
+  "warnings": [],
+  "generated_at": "2026-11-02T04:46:19.997425+00:00",
+  "tool": "pdf_read_preflight/1.0.0"
+}
