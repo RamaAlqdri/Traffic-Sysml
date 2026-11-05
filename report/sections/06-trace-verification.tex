@@ -1,5 +1,5 @@
-\chapter{Traceability dan Verification Scenarios}
-\section{Penelusuran requirement}
+\section{Traceability dan Verification Scenarios}
+\subsection{Penelusuran requirement}
 Tabel~\ref{tab:traceability} memuat seluruh requirement. Sources tersedia pada katalog. Setiap block mengarah melalui dependency satisfy ke requirement; setiap test case melalui verify ke requirement. Action dialokasikan ke block, dengan arah allocation dari action ke block. Hubungan ini menyatakan tanggung jawab desain, bukan verdict pelaksanaan.
 \begin{longtable}{|l|l|l|l|l|}
 \caption{Traceability requirement, behavior, structure, dan verification}\label{tab:traceability}\\
@@ -37,9 +37,9 @@ REQ-D-002 & UC-02 & ACT-03 & BLK-01 & VER-21 \\ \hline
 \end{longtable}
 \sumber{Katalog requirement dan model SysML proyek (2026)}
 
-\section{Interface internal}
+\subsection{Interface internal}
 Proxy port bertipe InterfaceBlock; port penerima dikonjugasikan. Connector C01 membawa CountsFrame dari sensor ke analysis, C02 DensityFrame dari analysis ke controller, C03 fault/streak dari sensor ke controller, C04 PhaseCommand dari controller ke signals, C05 BoundaryEvent (SafeBoundary atau GrantAccepted) dari signals ke controller, dan C06 LampVector ke empat lights. Setiap light memiliki approach yang berbeda dan mengambil entry vector yang sesuai. Annotation part dan port PlantUML tidak diklaim sebagai validasi native SysML.
-\section{Skenario dan receipt pelaksanaan}
+\subsection{Skenario dan receipt pelaksanaan}
 Sebanyak 21 test case didefinisikan dalam source verification. Cakupan meliputi kategori, sekali pelayanan per round, tie/ring, grant freeze, wait timer, cadence, boundary, min/max green, fairness, exclusivity, clearance, command rejection, deadline override, domain input, output flow, stale, fault, fallback, recovery, scope dan semantik SysML. Setiap skenario memuat kondisi awal, stimulus/timeline, expected behavior, kriteria lulus/gagal dan metode.
 Checker referensi \texttt{model/verification/check\_model.py} benar-benar dijalankan. Ia tidak mengeksekusi source diagram atau perangkat fisik. Hasil yang tersedia diringkas pada Tabel~\ref{tab:results}.
 \begin{table}[htbp]\centering
@@ -57,6 +57,6 @@ Cross-links & 24 ID requirement unik, sumber dan 21 definisi verification terlac
 \end{tabular}
 \sumber{Receipt analisis kontrak referensi proyek (2026)}\end{table}
 VER-02/04/05/06/07/08/11/12/17/18/19 tetap not-run sebagai dynamic/complete inspections pada receipt executable. Expected timeline tersedia, tetapi tidak dipromosikan menjadi measured result. VER-15/20/21 diperiksa secara terpisah pada source dan dicatat dalam manual-inspection.md. Pemeriksaan semantik terpisah pada dictionary/model dilakukan secara inspection source dan tidak mengubah klaim cakupan eksekusi checker.
-\section{Contoh timeline konseptual}
+\subsection{Contoh timeline konseptual}
 Jika N mendapat green pada t=1 sampai 11, perubahan kategori pada t=2 tidak mengubah grant tersebut. Yellow berlangsung 11--14, all-red 14--15, dan green berikutnya paling awal 15. Jika dataFault muncul saat grant 30 s pada t=5, green N berakhir 31, yellow 31--34, all-red 34--35, lalu Fallback memberi green 10 pada boundary 35. Ini expected behavior dari kontrak, bukan hasil runtime controller.
 Pemulihan menuntut tiga timestamp baru yang valid dan round baru. Retransmisi timestamp yang sama tidak meningkatkan streak. Deadline precedence diuji secara aritmetika: pada t=200, melayani N selama 30 s ditambah clearance 4 akan membuat S dengan deadline 210 mulai 234; urutan EDF dapat memilih S pada 200. Jika deadline sudah terlewat sebelum keputusan, tidak ada pengurutan yang mengembalikannya dan SafetyHold diminta.

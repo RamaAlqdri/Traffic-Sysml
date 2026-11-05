@@ -1,6 +1,6 @@
 # Verification receipt
 
-Run: 2026-11-05 12:34:50 WIB. Command: `python3 model/verification/check_model.py`.
+Run: 2026-11-05 12:57:34 WIB. Command: `python3 model/verification/check_model.py`.
 Scope: executable reference-contract checks and static cross-links; not execution of diagrams, hardware, or vehicle-flow simulation. Python assertions must be enabled (do not use `-O`).
 
 | TestCase | Verdict | Actual evidence / limit |

@@ -347,6 +347,8 @@ Jangan hapus history.
 
 ## Build policy
 
+Format laporan mengikuti revisi pengguna 5 November 2026: judul pembahasan langsung sebagai poin bernomor, tanpa label BAB; tanpa ringkasan, daftar isi/tabel/gambar, atau bagian dasar teori/studi literatur. Sampul UB, Calibri, sitasi desain, diagram, tabel isi dan traceability tetap dipakai. Kajian lengkap tersimpan sebagai source riset.
+
 Entry point dari root: `make build`. Build harus memeriksa prasyarat, merender tujuh diagram, lalu mengompilasi laporan dan presentasi; gagal dengan exit code nonzero jika ada tahap gagal, dan append output/command/versi ke `logs/build.md`. Gunakan konfigurasi lokal yang tercatat, dependency lockfile bila relevan, serta satu engine LaTeX dan satu backend bibliography. Sesuai revisi pengguna 5 November 2026, laporan wajib mengikuti template UB yang dicatat di report/TEMPLATE-UB.md dengan Calibri asli, XeLaTeX dan Biber. Presentasi mandiri tetap pdfLaTeX/BibTeX; masing-masing artefak memakai satu backend konsisten. Jangan memakai versi `latest` sebagai spesifikasi reproducibility. Catat font dan toolchain; satu command saja tidak menjamin hasil identik lintas mesin.
 Sebelum selesai:
 - render Mermaid

@@ -14092,3 +14092,10240 @@ test -s report/main.pdf
 test -s presentation/main.pdf
 
 ```
+
+## 2026-11-05 12:43:37 WIB — make build
+
+- Command: `make build`
+- Lecture: `lecture/01-pengantar-mbse.md`
+- Exit code: 0
+- Result: render/compile succeeded; log and release QC still required
+
+```text
+python3 model/verification/check_model.py
+PASS: 576 order pairs, maximum wait 208s; category/tie/input/state and 24 requirement links checked.
+mmdc --version
+12.0.0
+plantuml -version
+PlantUML version 1.2026.9 / 18d0aae [2026-10-17 08:25:10 UTC]
+(GPL source distribution)
+
+Build Version: 1.2026.9
+Git Commit: 18d0aae
+Compile Time: 2026-10-17 08:25:10 UTC
+
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: ID
+ 
+PLANTUML_LIMIT_SIZE: 4096
+
+GraphViz: dot - graphviz version 12.2.1 (20241206.2353)
+Installation seems OK. File generation OK
+java -version
+openjdk version "21.0.1" 2023-10-17
+OpenJDK Runtime Environment (build 21.0.1+12-29)
+OpenJDK 64-Bit Server VM (build 21.0.1+12-29, mixed mode, sharing)
+dot -V
+dot - graphviz version 12.2.1 (20241206.2353)
+rsvg-convert --version
+rsvg-convert version 2.60.0
+latexmk -v
+Latexmk, John Collins, 9 March 2026. Version 4.88
+pdflatex --version
+pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 Han The Thanh (pdfTeX) et al.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the pdfTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the pdfTeX source.
+Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
+Compiled with libpng 1.6.55; using libpng 1.6.55
+Compiled with zlib 1.3.2; using zlib 1.3.2
+Compiled with xpdf version 4.06
+xelatex --version
+XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 SIL International, Jonathan Kew and Khaled Hosny.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the XeTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the XeTeX source.
+Primary author of XeTeX: Jonathan Kew.
+Compiled with ICU version 78.2; using 78.2
+Compiled with zlib version 1.3.2; using 1.3.2
+Compiled with FreeType2 version 2.14.1; using 2.14.1
+Compiled with Graphite2 version 1.3.14; using 1.3.14
+Compiled with HarfBuzz version 12.3.2; using 12.3.2
+Compiled with libpng version 1.6.55; using 1.6.55
+Compiled with pplib version v2.2
+Using Mac OS X Core Text and Cocoa frameworks
+biber version: 2.21
+BibTeX 0.99e (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 Oren Patashnik.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the BibTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the BibTeX source.
+Primary author of BibTeX: Oren Patashnik.
+mkdir -p assets/diagrams
+mmdc -i model/requirements/requirements.mmd -o assets/diagrams/requirements.pdf
+Generating single mermaid chart
+Rendering model/behavior/use-case.puml -> assets/diagrams/use-case.svg and .pdf
+Rendering model/behavior/activity.puml -> assets/diagrams/activity.svg and .pdf
+Rendering model/behavior/sequence.puml -> assets/diagrams/sequence.svg and .pdf
+Rendering model/behavior/state-machine.puml -> assets/diagrams/state-machine.svg and .pdf
+Rendering model/structure/bdd.puml -> assets/diagrams/bdd.svg and .pdf
+Rendering model/structure/ibd.puml -> assets/diagrams/ibd.svg and .pdf
+latexmk -xelatex -cd -interaction=nonstopmode -halt-on-error -file-line-error report/main.tex
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'report/'
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  ../assets/diagrams/activity.pdf
+  ../assets/diagrams/bdd.pdf
+  ../assets/diagrams/ibd.pdf
+  ../assets/diagrams/requirements.pdf
+  ../assets/diagrams/sequence.pdf
+  ../assets/diagrams/state-machine.pdf
+  ../assets/diagrams/use-case.pdf
+  gaya/ubtesis.sty
+  main.tex
+  sections/01-introduction.tex
+  sections/03-problem.tex
+  sections/04-requirements.tex
+  sections/05-models.tex
+  sections/06-trace-verification.tex
+  sections/07-discussion-conclusion.tex
+Category 'changed_user':
+  ../assets/diagrams/activity.pdf
+  ../assets/diagrams/bdd.pdf
+  ../assets/diagrams/ibd.pdf
+  ../assets/diagrams/requirements.pdf
+  ../assets/diagrams/sequence.pdf
+  ../assets/diagrams/state-machine.pdf
+  ../assets/diagrams/use-case.pdf
+  gaya/ubtesis.sty
+  main.tex
+  sections/01-introduction.tex
+  sections/03-problem.tex
+  sections/04-requirements.tex
+  sections/05-models.tex
+  sections/06-trace-verification.tex
+  sections/07-discussion-conclusion.tex
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+
+Underfull \hbox (badness 2245) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 * yang terdaftar; angka tetap asumsi. Metode verification
+ menyatakan cara
+
+Underfull \hbox (badness 1436) in paragraph at lines 9--10
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-006, ASM-003. \T
+U/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Proksi count tanpa kapasit
+as
+[3]
+Underfull \hbox (badness 1281) in paragraph at lines 15--16
+[]\TU/Calibri(0)/m/n/12 TrafficController harus mengeluarkan pendekat dari elig
+ible setelah grant
+
+Underfull \hbox (badness 3118) in paragraph at lines 49--50
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-002, ASM-006. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jendela observasi dan sampling
+[4]
+Underfull \hbox (badness 4660) in paragraph at lines 63--64
+[]\TU/Calibri(0)/m/n/12 SignalController harus mempertahankan green yang diteri
+ma sekurang-
+
+Underfull \hbox (badness 1939) in paragraph at lines 65--66
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-005, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Batas nominal dan pengecualian
+
+Underfull \hbox (badness 2326) in paragraph at lines 79--80
+\TU/Calibri(0)/m/n/12 210 s sejak green sebelumnya berakhir pada operasi round 
+baseline tanpa
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-002, ASM-001, AS
+M-008. \TU/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Matriks konflik
+[5]
+Underfull \hbox (badness 3209) in paragraph at lines 129--130
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-004, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jangan menjanjikan bound saat
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-007. \TU/Calibri(0)/b
+/n/12 Rationale: \TU/Calibri(0)/m/n/12 Mencegah flapping dan pemulihan dari
+) (./sections/05-models.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[7] [8] [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[12] [13] [14]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 2 on input line 37.
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[16]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[17])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[18]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+[19] (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
+ )
+(see the transcript file for additional information)
+Output written on main.xdv (20 pages, 287240 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'biber main'...
+Rule 'biber main':  Reasons for rerun
+Changed files or newly in use/created:
+  main.bcf
+
+------------
+Run number 1 of rule 'biber main'
+------------
+------------
+Running 'biber  "main.bcf"'
+------------
+INFO - This is Biber 2.21
+INFO - Logfile is 'main.blg'
+INFO - Reading 'main.bcf'
+INFO - Found 6 citekeys in bib section 0
+INFO - Processing section 0
+INFO - Looking for bibtex file 'bibliography.bib' for section 0
+INFO - LaTeX decoding ...
+INFO - Found BibTeX data source 'bibliography.bib'
+INFO - Overriding locale 'indonesian' defaults 'variable = shifted' with 'variable = non-ignorable'
+INFO - Overriding locale 'indonesian' defaults 'normalization = NFD' with 'normalization = prenormalized'
+INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'indonesian'
+INFO - No sort tailoring available for locale 'indonesian'
+INFO - Writing 'main.bbl' with encoding 'UTF-8'
+INFO - Output to main.bbl
+Latexmk: Found biber source file(s) [bibliography.bib, main.bcf]
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.out
+  main.run.xml
+
+------------
+Run number 2 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+
+Underfull \hbox (badness 2245) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 * yang terdaftar; angka tetap asumsi. Metode verification
+ menyatakan cara
+
+Underfull \hbox (badness 1436) in paragraph at lines 9--10
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-006, ASM-003. \T
+U/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Proksi count tanpa kapasit
+as
+[3]
+Underfull \hbox (badness 1281) in paragraph at lines 15--16
+[]\TU/Calibri(0)/m/n/12 TrafficController harus mengeluarkan pendekat dari elig
+ible setelah grant
+
+Underfull \hbox (badness 3118) in paragraph at lines 49--50
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-002, ASM-006. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jendela observasi dan sampling
+[4]
+Underfull \hbox (badness 4660) in paragraph at lines 63--64
+[]\TU/Calibri(0)/m/n/12 SignalController harus mempertahankan green yang diteri
+ma sekurang-
+
+Underfull \hbox (badness 1939) in paragraph at lines 65--66
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-005, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Batas nominal dan pengecualian
+
+Underfull \hbox (badness 2326) in paragraph at lines 79--80
+\TU/Calibri(0)/m/n/12 210 s sejak green sebelumnya berakhir pada operasi round 
+baseline tanpa
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-002, ASM-001, AS
+M-008. \TU/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Matriks konflik
+[5]
+Underfull \hbox (badness 3209) in paragraph at lines 129--130
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-004, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jangan menjanjikan bound saat
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-007. \TU/Calibri(0)/b
+/n/12 Rationale: \TU/Calibri(0)/m/n/12 Mencegah flapping dan pemulihan dari
+) (./sections/05-models.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[7] [8] [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[12] [13] [14]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[16]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[17])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[18]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[19] (./main.aux) )
+(see the transcript file for additional information)
+Output written on main.xdv (20 pages, 285456 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.run.xml
+
+------------
+Run number 3 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+
+Underfull \hbox (badness 2245) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 * yang terdaftar; angka tetap asumsi. Metode verification
+ menyatakan cara
+
+Underfull \hbox (badness 1436) in paragraph at lines 9--10
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-006, ASM-003. \T
+U/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Proksi count tanpa kapasit
+as
+[3]
+Underfull \hbox (badness 1281) in paragraph at lines 15--16
+[]\TU/Calibri(0)/m/n/12 TrafficController harus mengeluarkan pendekat dari elig
+ible setelah grant
+
+Underfull \hbox (badness 3118) in paragraph at lines 49--50
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-002, ASM-006. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jendela observasi dan sampling
+[4]
+Underfull \hbox (badness 4660) in paragraph at lines 63--64
+[]\TU/Calibri(0)/m/n/12 SignalController harus mempertahankan green yang diteri
+ma sekurang-
+
+Underfull \hbox (badness 1939) in paragraph at lines 65--66
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-005, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Batas nominal dan pengecualian
+
+Underfull \hbox (badness 2326) in paragraph at lines 79--80
+\TU/Calibri(0)/m/n/12 210 s sejak green sebelumnya berakhir pada operasi round 
+baseline tanpa
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-002, ASM-001, AS
+M-008. \TU/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Matriks konflik
+[5]
+Underfull \hbox (badness 3209) in paragraph at lines 129--130
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-004, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jangan menjanjikan bound saat
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-007. \TU/Calibri(0)/b
+/n/12 Rationale: \TU/Calibri(0)/m/n/12 Mencegah flapping dan pemulihan dari
+) (./sections/05-models.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[7] [8] [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[12] [13] [14]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[16]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[17])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[18]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[19] (./main.aux) )
+(see the transcript file for additional information)
+Output written on main.xdv (20 pages, 285456 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xdvipdfmx'...
+Rule 'xdvipdfmx':  Reasons for rerun
+Changed files or newly in use/created:
+  main.xdv
+Category 'changed_source_rules':
+  xelatex
+
+------------
+Run number 1 of rule 'xdvipdfmx'
+------------
+------------
+Running 'xdvipdfmx -E -o "main.pdf"  "main.xdv"'
+------------
+main.xdv -> main.pdf
+[1][2][3][4][5][6][7][8][9
+xdvipdfmx:warning: PDF file is tagged... Ignoring tags.
+][10][11][12][13][14][15][16][17][18][19][20]
+424228 bytes written
+Latexmk: All targets (main.xdv main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+latexmk -pdf -cd -interaction=nonstopmode -halt-on-error -file-line-error presentation/main.tex
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'presentation/'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  ../assets/diagrams/use-case.pdf
+Category 'changed_user':
+  ../assets/diagrams/use-case.pdf
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2026/01/22 v3.77 A class for typesetting presentations
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasedecode.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/size11.clo)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex))) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/base/atbegshi-ltx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+
+Package hyperref Message: Stopped early.
+
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasecompatibility.st
+y) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasesection.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframe.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.
+sty) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenotes.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/enumerate.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenavigationsymbol
+s.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemedefault.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerouterthemedefault.st
+y))) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.
+sty)) (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmss.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./main.out) (./main.out)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-basic-dicti
+onary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-bibliograph
+y-dictionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-environment
+-dictionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-months-dict
+ionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-numbers-dic
+tionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-theorem-dic
+tionary-English.dict) (./main.nav) [1{/usr/local/texlive/2026/texmf-var/fonts/m
+ap/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips
+/lm/lm-ec.enc}] [2] (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmss.fd
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd) [3] [4]
+[5{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [6] [7 <../asset
+s/diagrams/use-case.pdf>] [8] [9] [10] [11{/usr/local/texlive/2026/texmf-dist/f
+onts/enc/dvips/lm/lm-rm.enc}] [12] [13] (./main.bbl
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd)) [14] (./main.aux) 
+)</usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loc
+al/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2
+026/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2026/texmf-dist/fonts
+/type1/public/lm/lmss8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
+ic/lm/lmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lm
+sso10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsso8.pfb>
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loca
+l/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
+Output written on main.pdf (14 pages, 256423 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ../report/bibliography.bib
+Latexmk: All targets (main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+test -s report/main.pdf
+test -s presentation/main.pdf
+
+```
+
+## 2026-11-05 12:45:22 WIB — make build
+
+- Command: `make build`
+- Lecture: `lecture/01-pengantar-mbse.md`
+- Exit code: 0
+- Result: render/compile succeeded; log and release QC still required
+
+```text
+python3 model/verification/check_model.py
+PASS: 576 order pairs, maximum wait 208s; category/tie/input/state and 24 requirement links checked.
+mmdc --version
+12.0.0
+plantuml -version
+PlantUML version 1.2026.9 / 18d0aae [2026-10-17 08:25:10 UTC]
+(GPL source distribution)
+
+Build Version: 1.2026.9
+Git Commit: 18d0aae
+Compile Time: 2026-10-17 08:25:10 UTC
+
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: ID
+ 
+PLANTUML_LIMIT_SIZE: 4096
+
+GraphViz: dot - graphviz version 12.2.1 (20241206.2353)
+Installation seems OK. File generation OK
+java -version
+openjdk version "21.0.1" 2023-10-17
+OpenJDK Runtime Environment (build 21.0.1+12-29)
+OpenJDK 64-Bit Server VM (build 21.0.1+12-29, mixed mode, sharing)
+dot -V
+dot - graphviz version 12.2.1 (20241206.2353)
+rsvg-convert --version
+rsvg-convert version 2.60.0
+latexmk -v
+Latexmk, John Collins, 9 March 2026. Version 4.88
+pdflatex --version
+pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 Han The Thanh (pdfTeX) et al.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the pdfTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the pdfTeX source.
+Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
+Compiled with libpng 1.6.55; using libpng 1.6.55
+Compiled with zlib 1.3.2; using zlib 1.3.2
+Compiled with xpdf version 4.06
+xelatex --version
+XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 SIL International, Jonathan Kew and Khaled Hosny.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the XeTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the XeTeX source.
+Primary author of XeTeX: Jonathan Kew.
+Compiled with ICU version 78.2; using 78.2
+Compiled with zlib version 1.3.2; using 1.3.2
+Compiled with FreeType2 version 2.14.1; using 2.14.1
+Compiled with Graphite2 version 1.3.14; using 1.3.14
+Compiled with HarfBuzz version 12.3.2; using 12.3.2
+Compiled with libpng version 1.6.55; using 1.6.55
+Compiled with pplib version v2.2
+Using Mac OS X Core Text and Cocoa frameworks
+biber version: 2.21
+BibTeX 0.99e (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 Oren Patashnik.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the BibTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the BibTeX source.
+Primary author of BibTeX: Oren Patashnik.
+mkdir -p assets/diagrams
+mmdc -i model/requirements/requirements.mmd -o assets/diagrams/requirements.pdf
+Generating single mermaid chart
+Rendering model/behavior/use-case.puml -> assets/diagrams/use-case.svg and .pdf
+Rendering model/behavior/activity.puml -> assets/diagrams/activity.svg and .pdf
+Rendering model/behavior/sequence.puml -> assets/diagrams/sequence.svg and .pdf
+Rendering model/behavior/state-machine.puml -> assets/diagrams/state-machine.svg and .pdf
+Rendering model/structure/bdd.puml -> assets/diagrams/bdd.svg and .pdf
+Rendering model/structure/ibd.puml -> assets/diagrams/ibd.svg and .pdf
+latexmk -xelatex -cd -interaction=nonstopmode -halt-on-error -file-line-error report/main.tex
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'report/'
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  ../assets/diagrams/activity.pdf
+  ../assets/diagrams/bdd.pdf
+  ../assets/diagrams/ibd.pdf
+  ../assets/diagrams/requirements.pdf
+  ../assets/diagrams/sequence.pdf
+  ../assets/diagrams/state-machine.pdf
+  ../assets/diagrams/use-case.pdf
+  gaya/ubtesis.sty
+  sections/04-requirements.tex
+Category 'changed_user':
+  ../assets/diagrams/activity.pdf
+  ../assets/diagrams/bdd.pdf
+  ../assets/diagrams/ibd.pdf
+  ../assets/diagrams/requirements.pdf
+  ../assets/diagrams/sequence.pdf
+  ../assets/diagrams/state-machine.pdf
+  ../assets/diagrams/use-case.pdf
+  gaya/ubtesis.sty
+  sections/04-requirements.tex
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+
+Underfull \hbox (badness 2245) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 * yang terdaftar; angka tetap asumsi. Metode verification
+ menyatakan cara
+
+Underfull \hbox (badness 1436) in paragraph at lines 10--11
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-006, ASM-003. \T
+U/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Proksi count tanpa kapasit
+as
+[3]
+Underfull \hbox (badness 1281) in paragraph at lines 18--19
+[]\TU/Calibri(0)/m/n/12 TrafficController harus mengeluarkan pendekat dari elig
+ible setelah grant
+
+Underfull \hbox (badness 3118) in paragraph at lines 60--61
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-002, ASM-006. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jendela observasi dan sampling
+[4]
+Underfull \hbox (badness 4660) in paragraph at lines 78--79
+[]\TU/Calibri(0)/m/n/12 SignalController harus mempertahankan green yang diteri
+ma sekurang-
+
+Underfull \hbox (badness 1939) in paragraph at lines 80--81
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-005, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Batas nominal dan pengecualian
+
+Underfull \hbox (badness 2326) in paragraph at lines 98--99
+\TU/Calibri(0)/m/n/12 210 s sejak green sebelumnya berakhir pada operasi round 
+baseline tanpa
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-002, ASM-001, AS
+M-008. \TU/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Matriks konflik
+[5]
+Underfull \hbox (badness 3209) in paragraph at lines 160--161
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-004, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jangan menjanjikan bound saat
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-007. \TU/Calibri(0)/b
+/n/12 Rationale: \TU/Calibri(0)/m/n/12 Mencegah flapping dan pemulihan dari
+) (./sections/05-models.tex [7]
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[8] [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[12] [13] [14]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[16]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[17])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[18]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[19] (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)
+Output written on main.xdv (20 pages, 285464 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 2 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+
+Underfull \hbox (badness 2245) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 * yang terdaftar; angka tetap asumsi. Metode verification
+ menyatakan cara
+
+Underfull \hbox (badness 1436) in paragraph at lines 10--11
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-006, ASM-003. \T
+U/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Proksi count tanpa kapasit
+as
+[3]
+Underfull \hbox (badness 1281) in paragraph at lines 18--19
+[]\TU/Calibri(0)/m/n/12 TrafficController harus mengeluarkan pendekat dari elig
+ible setelah grant
+
+Underfull \hbox (badness 3118) in paragraph at lines 60--61
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-002, ASM-006. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jendela observasi dan sampling
+[4]
+Underfull \hbox (badness 4660) in paragraph at lines 78--79
+[]\TU/Calibri(0)/m/n/12 SignalController harus mempertahankan green yang diteri
+ma sekurang-
+
+Underfull \hbox (badness 1939) in paragraph at lines 80--81
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-005, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Batas nominal dan pengecualian
+
+Underfull \hbox (badness 2326) in paragraph at lines 98--99
+\TU/Calibri(0)/m/n/12 210 s sejak green sebelumnya berakhir pada operasi round 
+baseline tanpa
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-002, ASM-001, AS
+M-008. \TU/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Matriks konflik
+[5]
+Underfull \hbox (badness 3209) in paragraph at lines 160--161
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-004, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jangan menjanjikan bound saat
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-007. \TU/Calibri(0)/b
+/n/12 Rationale: \TU/Calibri(0)/m/n/12 Mencegah flapping dan pemulihan dari
+) (./sections/05-models.tex [7]
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[8] [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[12] [13] [14]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[16]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[17])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[18]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[19] (./main.aux) )
+(see the transcript file for additional information)
+Output written on main.xdv (20 pages, 285464 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xdvipdfmx'...
+Rule 'xdvipdfmx':  Reasons for rerun
+Changed files or newly in use/created:
+  main.xdv
+Category 'changed_source_rules':
+  xelatex
+
+------------
+Run number 1 of rule 'xdvipdfmx'
+------------
+------------
+Running 'xdvipdfmx -E -o "main.pdf"  "main.xdv"'
+------------
+main.xdv -> main.pdf
+[1][2][3][4][5][6][7][8][9
+xdvipdfmx:warning: PDF file is tagged... Ignoring tags.
+][10][11][12][13][14][15][16][17][18][19][20]
+424174 bytes written
+Latexmk: All targets (main.xdv main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+latexmk -pdf -cd -interaction=nonstopmode -halt-on-error -file-line-error presentation/main.tex
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'presentation/'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  ../assets/diagrams/use-case.pdf
+Category 'changed_user':
+  ../assets/diagrams/use-case.pdf
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2026/01/22 v3.77 A class for typesetting presentations
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasedecode.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/size11.clo)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex))) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/base/atbegshi-ltx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+
+Package hyperref Message: Stopped early.
+
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasecompatibility.st
+y) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasesection.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframe.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.
+sty) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenotes.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/enumerate.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenavigationsymbol
+s.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemedefault.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerouterthemedefault.st
+y))) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.
+sty)) (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmss.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./main.out) (./main.out)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-basic-dicti
+onary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-bibliograph
+y-dictionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-environment
+-dictionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-months-dict
+ionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-numbers-dic
+tionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-theorem-dic
+tionary-English.dict) (./main.nav) [1{/usr/local/texlive/2026/texmf-var/fonts/m
+ap/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips
+/lm/lm-ec.enc}] [2] (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmss.fd
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd) [3] [4]
+[5{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [6] [7 <../asset
+s/diagrams/use-case.pdf>] [8] [9] [10] [11{/usr/local/texlive/2026/texmf-dist/f
+onts/enc/dvips/lm/lm-rm.enc}] [12] [13] (./main.bbl
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd)) [14] (./main.aux) 
+)</usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loc
+al/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2
+026/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2026/texmf-dist/fonts
+/type1/public/lm/lmss8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
+ic/lm/lmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lm
+sso10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsso8.pfb>
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loca
+l/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
+Output written on main.pdf (14 pages, 256423 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ../report/bibliography.bib
+Latexmk: All targets (main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+test -s report/main.pdf
+test -s presentation/main.pdf
+
+```
+
+## 2026-11-05 12:47:41 WIB — make build
+
+- Command: `make build`
+- Lecture: `lecture/01-pengantar-mbse.md`
+- Exit code: 0
+- Result: render/compile succeeded; log and release QC still required
+
+```text
+python3 model/verification/check_model.py
+PASS: 576 order pairs, maximum wait 208s; category/tie/input/state and 24 requirement links checked.
+mmdc --version
+12.0.0
+plantuml -version
+PlantUML version 1.2026.9 / 18d0aae [2026-10-17 08:25:10 UTC]
+(GPL source distribution)
+
+Build Version: 1.2026.9
+Git Commit: 18d0aae
+Compile Time: 2026-10-17 08:25:10 UTC
+
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: ID
+ 
+PLANTUML_LIMIT_SIZE: 4096
+
+GraphViz: dot - graphviz version 12.2.1 (20241206.2353)
+Installation seems OK. File generation OK
+java -version
+openjdk version "21.0.1" 2023-10-17
+OpenJDK Runtime Environment (build 21.0.1+12-29)
+OpenJDK 64-Bit Server VM (build 21.0.1+12-29, mixed mode, sharing)
+dot -V
+dot - graphviz version 12.2.1 (20241206.2353)
+rsvg-convert --version
+rsvg-convert version 2.60.0
+latexmk -v
+Latexmk, John Collins, 9 March 2026. Version 4.88
+pdflatex --version
+pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 Han The Thanh (pdfTeX) et al.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the pdfTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the pdfTeX source.
+Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
+Compiled with libpng 1.6.55; using libpng 1.6.55
+Compiled with zlib 1.3.2; using zlib 1.3.2
+Compiled with xpdf version 4.06
+xelatex --version
+XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 SIL International, Jonathan Kew and Khaled Hosny.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the XeTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the XeTeX source.
+Primary author of XeTeX: Jonathan Kew.
+Compiled with ICU version 78.2; using 78.2
+Compiled with zlib version 1.3.2; using 1.3.2
+Compiled with FreeType2 version 2.14.1; using 2.14.1
+Compiled with Graphite2 version 1.3.14; using 1.3.14
+Compiled with HarfBuzz version 12.3.2; using 12.3.2
+Compiled with libpng version 1.6.55; using 1.6.55
+Compiled with pplib version v2.2
+Using Mac OS X Core Text and Cocoa frameworks
+biber version: 2.21
+BibTeX 0.99e (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 Oren Patashnik.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the BibTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the BibTeX source.
+Primary author of BibTeX: Oren Patashnik.
+mkdir -p assets/diagrams
+mmdc -i model/requirements/requirements.mmd -o assets/diagrams/requirements.pdf
+Generating single mermaid chart
+Rendering model/behavior/use-case.puml -> assets/diagrams/use-case.svg and .pdf
+Rendering model/behavior/activity.puml -> assets/diagrams/activity.svg and .pdf
+Rendering model/behavior/sequence.puml -> assets/diagrams/sequence.svg and .pdf
+Rendering model/behavior/state-machine.puml -> assets/diagrams/state-machine.svg and .pdf
+Rendering model/structure/bdd.puml -> assets/diagrams/bdd.svg and .pdf
+Rendering model/structure/ibd.puml -> assets/diagrams/ibd.svg and .pdf
+latexmk -xelatex -cd -interaction=nonstopmode -halt-on-error -file-line-error report/main.tex
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'report/'
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  ../assets/diagrams/activity.pdf
+  ../assets/diagrams/bdd.pdf
+  ../assets/diagrams/ibd.pdf
+  ../assets/diagrams/requirements.pdf
+  ../assets/diagrams/sequence.pdf
+  ../assets/diagrams/state-machine.pdf
+  ../assets/diagrams/use-case.pdf
+  sections/04-requirements.tex
+Category 'changed_user':
+  ../assets/diagrams/activity.pdf
+  ../assets/diagrams/bdd.pdf
+  ../assets/diagrams/ibd.pdf
+  ../assets/diagrams/requirements.pdf
+  ../assets/diagrams/sequence.pdf
+  ../assets/diagrams/state-machine.pdf
+  ../assets/diagrams/use-case.pdf
+  sections/04-requirements.tex
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+
+Underfull \hbox (badness 2245) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 * yang terdaftar; angka tetap asumsi. Metode verification
+ menyatakan cara
+
+Underfull \hbox (badness 1436) in paragraph at lines 10--11
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-006, ASM-003. \T
+U/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Proksi count tanpa kapasit
+as
+
+Underfull \hbox (badness 1281) in paragraph at lines 18--19
+[]\TU/Calibri(0)/m/n/12 TrafficController harus mengeluarkan pendekat dari elig
+ible setelah grant
+[3]
+Underfull \hbox (badness 3118) in paragraph at lines 60--61
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-002, ASM-006. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jendela observasi dan sampling
+
+Underfull \hbox (badness 4660) in paragraph at lines 78--79
+[]\TU/Calibri(0)/m/n/12 SignalController harus mempertahankan green yang diteri
+ma sekurang-
+
+Underfull \hbox (badness 1939) in paragraph at lines 80--81
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-005, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Batas nominal dan pengecualian
+
+Underfull \hbox (badness 2326) in paragraph at lines 98--99
+\TU/Calibri(0)/m/n/12 210 s sejak green sebelumnya berakhir pada operasi round 
+baseline tanpa
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-002, ASM-001, AS
+M-008. \TU/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Matriks konflik
+
+Underfull \hbox (badness 3209) in paragraph at lines 160--161
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-004, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jangan menjanjikan bound saat
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-007. \TU/Calibri(0)/b
+/n/12 Rationale: \TU/Calibri(0)/m/n/12 Mencegah flapping dan pemulihan dari
+) (./sections/05-models.tex [6]
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[11] [12] [13]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[15]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[16])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[17]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[18] (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
+ )
+(see the transcript file for additional information)
+Output written on main.xdv (19 pages, 285228 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.run.xml
+
+------------
+Run number 2 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+
+Underfull \hbox (badness 2245) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 * yang terdaftar; angka tetap asumsi. Metode verification
+ menyatakan cara
+
+Underfull \hbox (badness 1436) in paragraph at lines 10--11
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-006, ASM-003. \T
+U/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Proksi count tanpa kapasit
+as
+
+Underfull \hbox (badness 1281) in paragraph at lines 18--19
+[]\TU/Calibri(0)/m/n/12 TrafficController harus mengeluarkan pendekat dari elig
+ible setelah grant
+[3]
+Underfull \hbox (badness 3118) in paragraph at lines 60--61
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-002, ASM-006. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jendela observasi dan sampling
+
+Underfull \hbox (badness 4660) in paragraph at lines 78--79
+[]\TU/Calibri(0)/m/n/12 SignalController harus mempertahankan green yang diteri
+ma sekurang-
+
+Underfull \hbox (badness 1939) in paragraph at lines 80--81
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-005, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Batas nominal dan pengecualian
+
+Underfull \hbox (badness 2326) in paragraph at lines 98--99
+\TU/Calibri(0)/m/n/12 210 s sejak green sebelumnya berakhir pada operasi round 
+baseline tanpa
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-002, ASM-001, AS
+M-008. \TU/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Matriks konflik
+
+Underfull \hbox (badness 3209) in paragraph at lines 160--161
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-004, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jangan menjanjikan bound saat
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-007. \TU/Calibri(0)/b
+/n/12 Rationale: \TU/Calibri(0)/m/n/12 Mencegah flapping dan pemulihan dari
+) (./sections/05-models.tex [6]
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[11] [12] [13]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[15]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[16])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[17]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[18] (./main.aux) )
+(see the transcript file for additional information)
+Output written on main.xdv (19 pages, 285228 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.run.xml
+
+------------
+Run number 3 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+
+Underfull \hbox (badness 2245) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 * yang terdaftar; angka tetap asumsi. Metode verification
+ menyatakan cara
+
+Underfull \hbox (badness 1436) in paragraph at lines 10--11
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-006, ASM-003. \T
+U/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Proksi count tanpa kapasit
+as
+
+Underfull \hbox (badness 1281) in paragraph at lines 18--19
+[]\TU/Calibri(0)/m/n/12 TrafficController harus mengeluarkan pendekat dari elig
+ible setelah grant
+[3]
+Underfull \hbox (badness 3118) in paragraph at lines 60--61
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-002, ASM-006. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jendela observasi dan sampling
+
+Underfull \hbox (badness 4660) in paragraph at lines 78--79
+[]\TU/Calibri(0)/m/n/12 SignalController harus mempertahankan green yang diteri
+ma sekurang-
+
+Underfull \hbox (badness 1939) in paragraph at lines 80--81
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-005, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Batas nominal dan pengecualian
+
+Underfull \hbox (badness 2326) in paragraph at lines 98--99
+\TU/Calibri(0)/m/n/12 210 s sejak green sebelumnya berakhir pada operasi round 
+baseline tanpa
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-002, ASM-001, AS
+M-008. \TU/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Matriks konflik
+
+Underfull \hbox (badness 3209) in paragraph at lines 160--161
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-004, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jangan menjanjikan bound saat
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-007. \TU/Calibri(0)/b
+/n/12 Rationale: \TU/Calibri(0)/m/n/12 Mencegah flapping dan pemulihan dari
+) (./sections/05-models.tex [6]
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[11] [12] [13]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[15]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[16])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[17]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[18] (./main.aux) )
+(see the transcript file for additional information)
+Output written on main.xdv (19 pages, 285228 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xdvipdfmx'...
+Rule 'xdvipdfmx':  Reasons for rerun
+Changed files or newly in use/created:
+  main.xdv
+Category 'changed_source_rules':
+  xelatex
+
+------------
+Run number 1 of rule 'xdvipdfmx'
+------------
+------------
+Running 'xdvipdfmx -E -o "main.pdf"  "main.xdv"'
+------------
+main.xdv -> main.pdf
+[1][2][3][4][5][6][7][8
+xdvipdfmx:warning: PDF file is tagged... Ignoring tags.
+][9][10][11][12][13][14][15][16][17][18][19]
+423514 bytes written
+Latexmk: All targets (main.xdv main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+latexmk -pdf -cd -interaction=nonstopmode -halt-on-error -file-line-error presentation/main.tex
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'presentation/'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  ../assets/diagrams/use-case.pdf
+Category 'changed_user':
+  ../assets/diagrams/use-case.pdf
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2026/01/22 v3.77 A class for typesetting presentations
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasedecode.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/size11.clo)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex))) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/base/atbegshi-ltx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+
+Package hyperref Message: Stopped early.
+
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasecompatibility.st
+y) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasesection.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframe.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.
+sty) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenotes.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/enumerate.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenavigationsymbol
+s.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemedefault.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerouterthemedefault.st
+y))) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.
+sty)) (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmss.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./main.out) (./main.out)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-basic-dicti
+onary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-bibliograph
+y-dictionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-environment
+-dictionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-months-dict
+ionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-numbers-dic
+tionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-theorem-dic
+tionary-English.dict) (./main.nav) [1{/usr/local/texlive/2026/texmf-var/fonts/m
+ap/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips
+/lm/lm-ec.enc}] [2] (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmss.fd
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd) [3] [4]
+[5{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [6] [7 <../asset
+s/diagrams/use-case.pdf>] [8] [9] [10] [11{/usr/local/texlive/2026/texmf-dist/f
+onts/enc/dvips/lm/lm-rm.enc}] [12] [13] (./main.bbl
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd)) [14] (./main.aux) 
+)</usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loc
+al/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2
+026/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2026/texmf-dist/fonts
+/type1/public/lm/lmss8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
+ic/lm/lmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lm
+sso10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsso8.pfb>
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loca
+l/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
+Output written on main.pdf (14 pages, 256423 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ../report/bibliography.bib
+Latexmk: All targets (main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+test -s report/main.pdf
+test -s presentation/main.pdf
+
+```
+
+## 2026-11-05 12:48:45 WIB — Rapport final après normalisation EOF
+
+- Command: `latexmk -xelatex -cd -interaction=nonstopmode -halt-on-error -file-line-error report/main.tex`
+- Exit code: 0
+
+```text
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'report/'
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  sections/04-requirements.tex
+Category 'changed_user':
+  sections/04-requirements.tex
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+
+Underfull \hbox (badness 2245) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 * yang terdaftar; angka tetap asumsi. Metode verification
+ menyatakan cara
+
+Underfull \hbox (badness 1436) in paragraph at lines 10--11
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-006, ASM-003. \T
+U/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Proksi count tanpa kapasit
+as
+
+Underfull \hbox (badness 1281) in paragraph at lines 18--19
+[]\TU/Calibri(0)/m/n/12 TrafficController harus mengeluarkan pendekat dari elig
+ible setelah grant
+[3]
+Underfull \hbox (badness 3118) in paragraph at lines 60--61
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-002, ASM-006. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jendela observasi dan sampling
+
+Underfull \hbox (badness 4660) in paragraph at lines 78--79
+[]\TU/Calibri(0)/m/n/12 SignalController harus mempertahankan green yang diteri
+ma sekurang-
+
+Underfull \hbox (badness 1939) in paragraph at lines 80--81
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-005, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Batas nominal dan pengecualian
+
+Underfull \hbox (badness 2326) in paragraph at lines 98--99
+\TU/Calibri(0)/m/n/12 210 s sejak green sebelumnya berakhir pada operasi round 
+baseline tanpa
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 EVID-TRF-002, ASM-001, AS
+M-008. \TU/Calibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Matriks konflik
+
+Underfull \hbox (badness 3209) in paragraph at lines 160--161
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-004, ASM-008. \TU/Cal
+ibri(0)/b/n/12 Rationale: \TU/Calibri(0)/m/n/12 Jangan menjanjikan bound saat
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+[]\TU/Calibri(0)/b/n/12 Source: \TU/Calibri(0)/m/n/12 ASM-007. \TU/Calibri(0)/b
+/n/12 Rationale: \TU/Calibri(0)/m/n/12 Mencegah flapping dan pemulihan dari
+) (./sections/05-models.tex [6]
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[11] [12] [13]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[15]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[16])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[17]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[18] (./main.aux) )
+(see the transcript file for additional information)
+Output written on main.xdv (19 pages, 285228 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xdvipdfmx'...
+Rule 'xdvipdfmx':  Reasons for rerun
+Category 'changed_source_rules':
+  xelatex
+
+------------
+Run number 1 of rule 'xdvipdfmx'
+------------
+------------
+Running 'xdvipdfmx -E -o "main.pdf"  "main.xdv"'
+------------
+main.xdv -> main.pdf
+[1][2][3][4][5][6][7][8
+xdvipdfmx:warning: PDF file is tagged... Ignoring tags.
+][9][10][11][12][13][14][15][16][17][18][19]
+423514 bytes written
+Latexmk: All targets (main.xdv main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+
+```
+
+## 2026-11-05 12:57:34 WIB — Draft keterbacaan requirement (draft-build.txt)
+
+- Command: `latexmk -xelatex -cd -interaction=nonstopmode -halt-on-error -file-line-error report/main.tex`
+- Exit code: 12
+
+```text
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'report/'
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  gaya/ubtesis.sty
+  sections/04-requirements.tex
+Category 'changed_user':
+  gaya/ubtesis.sty
+  sections/04-requirements.tex
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+[3]
+Underfull \hbox (badness 3679) in paragraph at lines 4--5
+\TU/Calibri(0)/m/n/12 memisahkan pernyataan kebutuhan, sumber, alasan, metode v
+erifikasi, dan
+
+Underfull \hbox (badness 6428) in paragraph at lines 6--7
+[]\TU/Calibri(0)/m/n/12 Pada baris sumber, EVID-* menunjuk evidence dan ASM-* m
+enunjuk
+
+Underfull \hbox (badness 1286) in paragraph at lines 6--7
+\TU/Calibri(0)/m/n/12 dan Inspection berarti uji, analisis, dan inspeksi; penca
+ntuman metode tidak
+
+Underfull \hbox (badness 1052) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 skenario verifikasi (VER). ID yang sama digunakan pada di
+agram dan matriks
+./sections/04-requirements.tex:13: Undefined control sequence.
+l.13 \requirementcard
+                     
+Output written on main.xdv (4 pages, 80080 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Incomplete (and hence corrupt) bcf file 'main.bcf'
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: ========== Incomplete .bcf file 'main.bcf'.
+  I'll rename the file to 'main.bcf-SAVE-ERROR'.
+  I'll rename the bbl file to 'main.bbl-SAVE-ERROR',
+  in case the incomplete bcf file was a result of error in
+  'xelatex' caused by an error in the bbl file.
+Latexmk: Errors, so I did not complete making targets
+Collected error summary (may duplicate other messages):
+  xelatex: Command for 'xelatex' gave return code 1
+      Refer to 'main.log' and/or above output for details
+Latexmk: Undoing directory change
+
+Latexmk: Sometimes, the -f option can be used to get latexmk
+  to try to force complete processing.
+  But normally, you will need to correct the file(s) that caused the
+  error, and then rerun latexmk.
+  In some cases, it is best to clean out generated files before rerunning
+  latexmk after you've corrected the files.
+
+```
+
+## 2026-11-05 12:57:34 WIB — Draft keterbacaan requirement (draft-build-2.txt)
+
+- Command: `latexmk -xelatex -cd -interaction=nonstopmode -halt-on-error -file-line-error report/main.tex`
+- Exit code: 0
+
+```text
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'report/'
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  gaya/ubtesis.sty
+Category 'changed_user':
+  gaya/ubtesis.sty
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+No file main.bbl.
+(./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+
+LaTeX Warning: Citation 'lecture02' on page 1 undefined on input line 3.
+
+
+LaTeX Warning: Citation 'mondal2022' on page 1 undefined on input line 3.
+
+
+LaTeX Warning: Citation 'mathiane2023' on page 1 undefined on input line 3.
+
+
+Underfull \hbox (badness 1342) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Tugas yang dicatat pada materi kuliah meminta sistem ya
+ng mendeteksi
+
+Underfull \hbox (badness 1024) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 penghitungan kendaraan, klasifikasi dan pengaturan sinyal
+. Rancangan proyek
+
+LaTeX Warning: Citation 'lecture01' on page 1 undefined on input line 5.
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 5726) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 evidence/asumsi, requirement, behavior, structure dan ver
+ification menjadi
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+[3]
+Underfull \hbox (badness 3679) in paragraph at lines 4--5
+\TU/Calibri(0)/m/n/12 memisahkan pernyataan kebutuhan, sumber, alasan, metode v
+erifikasi, dan
+
+Underfull \hbox (badness 6428) in paragraph at lines 6--7
+[]\TU/Calibri(0)/m/n/12 Pada baris sumber, EVID-* menunjuk evidence dan ASM-* m
+enunjuk
+
+Underfull \hbox (badness 1286) in paragraph at lines 6--7
+\TU/Calibri(0)/m/n/12 dan Inspection berarti uji, analisis, dan inspeksi; penca
+ntuman metode tidak
+
+Underfull \hbox (badness 1052) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 skenario verifikasi (VER). ID yang sama digunakan pada di
+agram dan matriks
+[4] [5] [6] [7] [8] [9]) (./sections/05-models.tex
+
+LaTeX Warning: Citation 'omg2019' on page 10 undefined on input line 2.
+
+
+LaTeX Warning: Reference `fig:requirements' on page 10 undefined on input line 
+2.
+
+
+LaTeX Warning: Reference `fig:ibd' on page 10 undefined on input line 2.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[10] [11] [12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[15] [16] [17]) (./sections/06-trace-verification.tex
+
+LaTeX Warning: Reference `tab:traceability' on page 18 undefined on input line 
+3.
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 2 on input line 37.
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+LaTeX Warning: Reference `tab:results' on page 19 undefined on input line 44.
+
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[19]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+LaTeX Warning: Citation 'campo2023' on page 20 undefined on input line 10.
+
+
+Underfull \hbox (badness 4036) in paragraph at lines 10--11
+\TU/Calibri(0)/m/n/12 MBSE tidak membuktikan penghematan kausal proyek ([]). Ak
+ses
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[20])
+
+LaTeX Warning: Empty bibliography on input line 28.
+
+
+Underfull \hbox (badness 5105) in paragraph at lines 15--29
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--29
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+[21] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
+ )
+(see the transcript file for additional information)
+Output written on main.xdv (22 pages, 283136 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Missing bbl file 'main.bbl' in following:
+ No file main.bbl.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'biber main'...
+Rule 'biber main':  Reasons for rerun
+Changed files or newly in use/created:
+  main.bcf
+Category 'no_dest':
+  biber main
+
+------------
+Run number 1 of rule 'biber main'
+------------
+------------
+Running 'biber  "main.bcf"'
+------------
+INFO - This is Biber 2.21
+INFO - Logfile is 'main.blg'
+INFO - Reading 'main.bcf'
+INFO - Found 6 citekeys in bib section 0
+INFO - Processing section 0
+INFO - Looking for bibtex file 'bibliography.bib' for section 0
+INFO - LaTeX decoding ...
+INFO - Found BibTeX data source 'bibliography.bib'
+INFO - Overriding locale 'indonesian' defaults 'variable = shifted' with 'variable = non-ignorable'
+INFO - Overriding locale 'indonesian' defaults 'normalization = NFD' with 'normalization = prenormalized'
+INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'indonesian'
+INFO - No sort tailoring available for locale 'indonesian'
+INFO - Writing 'main.bbl' with encoding 'UTF-8'
+INFO - Output to main.bbl
+Latexmk: Found biber source file(s) [bibliography.bib, main.bcf]
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.bbl
+  main.out
+  main.run.xml
+
+------------
+Run number 2 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+[3]
+Underfull \hbox (badness 3679) in paragraph at lines 4--5
+\TU/Calibri(0)/m/n/12 memisahkan pernyataan kebutuhan, sumber, alasan, metode v
+erifikasi, dan
+
+Underfull \hbox (badness 6428) in paragraph at lines 6--7
+[]\TU/Calibri(0)/m/n/12 Pada baris sumber, EVID-* menunjuk evidence dan ASM-* m
+enunjuk
+
+Underfull \hbox (badness 1286) in paragraph at lines 6--7
+\TU/Calibri(0)/m/n/12 dan Inspection berarti uji, analisis, dan inspeksi; penca
+ntuman metode tidak
+
+Underfull \hbox (badness 1052) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 skenario verifikasi (VER). ID yang sama digunakan pada di
+agram dan matriks
+[4] [5] [6] [7] [8] [9]) (./sections/05-models.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[10] [11] [12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[15] [16] [17]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[19]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[20])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[21]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[22] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
+ )
+(see the transcript file for additional information)
+Output written on main.xdv (23 pages, 307252 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.out
+  main.run.xml
+
+------------
+Run number 3 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+[3]
+Underfull \hbox (badness 3679) in paragraph at lines 4--5
+\TU/Calibri(0)/m/n/12 memisahkan pernyataan kebutuhan, sumber, alasan, metode v
+erifikasi, dan
+
+Underfull \hbox (badness 6428) in paragraph at lines 6--7
+[]\TU/Calibri(0)/m/n/12 Pada baris sumber, EVID-* menunjuk evidence dan ASM-* m
+enunjuk
+
+Underfull \hbox (badness 1286) in paragraph at lines 6--7
+\TU/Calibri(0)/m/n/12 dan Inspection berarti uji, analisis, dan inspeksi; penca
+ntuman metode tidak
+
+Underfull \hbox (badness 1052) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 skenario verifikasi (VER). ID yang sama digunakan pada di
+agram dan matriks
+[4] [5] [6] [7] [8] [9]) (./sections/05-models.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[10] [11] [12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[15] [16] [17]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[19]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[20])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[21]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[22] (./main.aux) )
+(see the transcript file for additional information)
+Output written on main.xdv (23 pages, 307400 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.run.xml
+
+------------
+Run number 4 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+[3]
+Underfull \hbox (badness 3679) in paragraph at lines 4--5
+\TU/Calibri(0)/m/n/12 memisahkan pernyataan kebutuhan, sumber, alasan, metode v
+erifikasi, dan
+
+Underfull \hbox (badness 6428) in paragraph at lines 6--7
+[]\TU/Calibri(0)/m/n/12 Pada baris sumber, EVID-* menunjuk evidence dan ASM-* m
+enunjuk
+
+Underfull \hbox (badness 1286) in paragraph at lines 6--7
+\TU/Calibri(0)/m/n/12 dan Inspection berarti uji, analisis, dan inspeksi; penca
+ntuman metode tidak
+
+Underfull \hbox (badness 1052) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 skenario verifikasi (VER). ID yang sama digunakan pada di
+agram dan matriks
+[4] [5] [6] [7] [8] [9]) (./sections/05-models.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[10] [11] [12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[15] [16] [17]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[19]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[20])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[21]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[22] (./main.aux) )
+(see the transcript file for additional information)
+Output written on main.xdv (23 pages, 307400 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xdvipdfmx'...
+Rule 'xdvipdfmx':  Reasons for rerun
+Changed files or newly in use/created:
+  main.xdv
+Category 'changed_source_rules':
+  xelatex
+
+------------
+Run number 1 of rule 'xdvipdfmx'
+------------
+------------
+Running 'xdvipdfmx -E -o "main.pdf"  "main.xdv"'
+------------
+main.xdv -> main.pdf
+[1][2][3][4][5][6][7][8][9][10][11][12
+xdvipdfmx:warning: PDF file is tagged... Ignoring tags.
+][13][14][15][16][17][18][19][20][21][22][23]
+433001 bytes written
+Latexmk: All targets (main.xdv main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+
+```
+
+## 2026-11-05 12:57:34 WIB — make build
+
+- Command: `make build`
+- Lecture: `lecture/01-pengantar-mbse.md`
+- Exit code: 0
+- Result: render/compile succeeded; log and release QC still required
+
+```text
+python3 model/verification/check_model.py
+PASS: 576 order pairs, maximum wait 208s; category/tie/input/state and 24 requirement links checked.
+mmdc --version
+12.0.0
+plantuml -version
+PlantUML version 1.2026.9 / 18d0aae [2026-10-17 08:25:10 UTC]
+(GPL source distribution)
+
+Build Version: 1.2026.9
+Git Commit: 18d0aae
+Compile Time: 2026-10-17 08:25:10 UTC
+
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: ID
+ 
+PLANTUML_LIMIT_SIZE: 4096
+
+GraphViz: dot - graphviz version 12.2.1 (20241206.2353)
+Installation seems OK. File generation OK
+java -version
+openjdk version "21.0.1" 2023-10-17
+OpenJDK Runtime Environment (build 21.0.1+12-29)
+OpenJDK 64-Bit Server VM (build 21.0.1+12-29, mixed mode, sharing)
+dot -V
+dot - graphviz version 12.2.1 (20241206.2353)
+rsvg-convert --version
+rsvg-convert version 2.60.0
+latexmk -v
+Latexmk, John Collins, 9 March 2026. Version 4.88
+pdflatex --version
+pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 Han The Thanh (pdfTeX) et al.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the pdfTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the pdfTeX source.
+Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
+Compiled with libpng 1.6.55; using libpng 1.6.55
+Compiled with zlib 1.3.2; using zlib 1.3.2
+Compiled with xpdf version 4.06
+xelatex --version
+XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 SIL International, Jonathan Kew and Khaled Hosny.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the XeTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the XeTeX source.
+Primary author of XeTeX: Jonathan Kew.
+Compiled with ICU version 78.2; using 78.2
+Compiled with zlib version 1.3.2; using 1.3.2
+Compiled with FreeType2 version 2.14.1; using 2.14.1
+Compiled with Graphite2 version 1.3.14; using 1.3.14
+Compiled with HarfBuzz version 12.3.2; using 12.3.2
+Compiled with libpng version 1.6.55; using 1.6.55
+Compiled with pplib version v2.2
+Using Mac OS X Core Text and Cocoa frameworks
+biber version: 2.21
+BibTeX 0.99e (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 Oren Patashnik.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the BibTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the BibTeX source.
+Primary author of BibTeX: Oren Patashnik.
+mkdir -p assets/diagrams
+mmdc -i model/requirements/requirements.mmd -o assets/diagrams/requirements.pdf
+Generating single mermaid chart
+Rendering model/behavior/use-case.puml -> assets/diagrams/use-case.svg and .pdf
+Rendering model/behavior/activity.puml -> assets/diagrams/activity.svg and .pdf
+Rendering model/behavior/sequence.puml -> assets/diagrams/sequence.svg and .pdf
+Rendering model/behavior/state-machine.puml -> assets/diagrams/state-machine.svg and .pdf
+Rendering model/structure/bdd.puml -> assets/diagrams/bdd.svg and .pdf
+Rendering model/structure/ibd.puml -> assets/diagrams/ibd.svg and .pdf
+latexmk -xelatex -cd -interaction=nonstopmode -halt-on-error -file-line-error report/main.tex
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'report/'
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  ../assets/diagrams/activity.pdf
+  ../assets/diagrams/bdd.pdf
+  ../assets/diagrams/ibd.pdf
+  ../assets/diagrams/requirements.pdf
+  ../assets/diagrams/sequence.pdf
+  ../assets/diagrams/state-machine.pdf
+  ../assets/diagrams/use-case.pdf
+  sections/04-requirements.tex
+Category 'changed_user':
+  ../assets/diagrams/activity.pdf
+  ../assets/diagrams/bdd.pdf
+  ../assets/diagrams/ibd.pdf
+  ../assets/diagrams/requirements.pdf
+  ../assets/diagrams/sequence.pdf
+  ../assets/diagrams/state-machine.pdf
+  ../assets/diagrams/use-case.pdf
+  sections/04-requirements.tex
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+[3]
+Underfull \hbox (badness 3679) in paragraph at lines 4--5
+\TU/Calibri(0)/m/n/12 memisahkan pernyataan kebutuhan, sumber, alasan, metode v
+erifikasi, dan
+
+Underfull \hbox (badness 6428) in paragraph at lines 6--7
+[]\TU/Calibri(0)/m/n/12 Pada baris sumber, EVID-* menunjuk evidence dan ASM-* m
+enunjuk
+
+Underfull \hbox (badness 1286) in paragraph at lines 6--7
+\TU/Calibri(0)/m/n/12 dan Inspection berarti uji, analisis, dan inspeksi; penca
+ntuman metode tidak
+
+Underfull \hbox (badness 1052) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 skenario verifikasi (VER). ID yang sama digunakan pada di
+agram dan matriks
+[4] [5] [6] [7] [8] [9] [10]) (./sections/05-models.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[11] [12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[15] [16] [17]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[19]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[20])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[21]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[22] (./main.aux)
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
+ )
+(see the transcript file for additional information)
+Output written on main.xdv (23 pages, 307404 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.run.xml
+
+------------
+Run number 2 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+[3]
+Underfull \hbox (badness 3679) in paragraph at lines 4--5
+\TU/Calibri(0)/m/n/12 memisahkan pernyataan kebutuhan, sumber, alasan, metode v
+erifikasi, dan
+
+Underfull \hbox (badness 6428) in paragraph at lines 6--7
+[]\TU/Calibri(0)/m/n/12 Pada baris sumber, EVID-* menunjuk evidence dan ASM-* m
+enunjuk
+
+Underfull \hbox (badness 1286) in paragraph at lines 6--7
+\TU/Calibri(0)/m/n/12 dan Inspection berarti uji, analisis, dan inspeksi; penca
+ntuman metode tidak
+
+Underfull \hbox (badness 1052) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 skenario verifikasi (VER). ID yang sama digunakan pada di
+agram dan matriks
+[4] [5] [6] [7] [8] [9] [10]) (./sections/05-models.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[11] [12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[15] [16] [17]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[19]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[20])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[21]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[22] (./main.aux) )
+(see the transcript file for additional information)
+Output written on main.xdv (23 pages, 307404 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.run.xml
+
+------------
+Run number 3 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit 
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah, 
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+[3]
+Underfull \hbox (badness 3679) in paragraph at lines 4--5
+\TU/Calibri(0)/m/n/12 memisahkan pernyataan kebutuhan, sumber, alasan, metode v
+erifikasi, dan
+
+Underfull \hbox (badness 6428) in paragraph at lines 6--7
+[]\TU/Calibri(0)/m/n/12 Pada baris sumber, EVID-* menunjuk evidence dan ASM-* m
+enunjuk
+
+Underfull \hbox (badness 1286) in paragraph at lines 6--7
+\TU/Calibri(0)/m/n/12 dan Inspection berarti uji, analisis, dan inspeksi; penca
+ntuman metode tidak
+
+Underfull \hbox (badness 1052) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 skenario verifikasi (VER). ID yang sama digunakan pada di
+agram dan matriks
+[4] [5] [6] [7] [8] [9] [10]) (./sections/05-models.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\TU/Calibri(0)/m/n/12 Setiap gambar adalah hasil render source Mermaid atau P
+lantUML.
+
+Underfull \hbox (badness 1442) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 Bentuk renderer dipetakan secara eksplisit ke elemen SysM
+L; gambar bukan
+
+Underfull \hbox (badness 1210) in paragraph at lines 2--3
+\TU/Calibri(0)/m/n/12 stereotype/annotation yang dijelaskan dalam traceability;
+ pemaknaan elemen
+[11] [12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[15] [16] [17]) (./sections/06-trace-verification.tex
+Underfull \hbox (badness 1189) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 block mengarah melalui dependency satisfy ke requirement;
+ setiap test case
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity, 
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow, 
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tersedia, tetapi tidak dipromosikan menjadi measured resu
+lt. VER-15/20/21
+[19]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+[20])
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[21]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+
+Underfull \hbox (badness 2165) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Object Management Group, 2019. \TU/Calibri(0)/m/it/12
+ OMG Systems Modeling Language (OMG
+[22] (./main.aux) )
+(see the transcript file for additional information)
+Output written on main.xdv (23 pages, 307404 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xdvipdfmx'...
+Rule 'xdvipdfmx':  Reasons for rerun
+Changed files or newly in use/created:
+  main.xdv
+Category 'changed_source_rules':
+  xelatex
+
+------------
+Run number 1 of rule 'xdvipdfmx'
+------------
+------------
+Running 'xdvipdfmx -E -o "main.pdf"  "main.xdv"'
+------------
+main.xdv -> main.pdf
+[1][2][3][4][5][6][7][8][9][10][11][12
+xdvipdfmx:warning: PDF file is tagged... Ignoring tags.
+][13][14][15][16][17][18][19][20][21][22][23]
+433119 bytes written
+Latexmk: All targets (main.xdv main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+latexmk -pdf -cd -interaction=nonstopmode -halt-on-error -file-line-error presentation/main.tex
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'presentation/'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  ../assets/diagrams/use-case.pdf
+Category 'changed_user':
+  ../assets/diagrams/use-case.pdf
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2026/01/22 v3.77 A class for typesetting presentations
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasedecode.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/size11.clo)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex))) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/base/atbegshi-ltx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+
+Package hyperref Message: Stopped early.
+
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasecompatibility.st
+y) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasesection.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframe.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.
+sty) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenotes.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/enumerate.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenavigationsymbol
+s.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemedefault.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerouterthemedefault.st
+y))) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.
+sty)) (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmss.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./main.out) (./main.out)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-basic-dicti
+onary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-bibliograph
+y-dictionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-environment
+-dictionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-months-dict
+ionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-numbers-dic
+tionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-theorem-dic
+tionary-English.dict) (./main.nav) [1{/usr/local/texlive/2026/texmf-var/fonts/m
+ap/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips
+/lm/lm-ec.enc}] [2] (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmss.fd
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd) [3] [4]
+[5{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [6] [7 <../asset
+s/diagrams/use-case.pdf>] [8] [9] [10] [11{/usr/local/texlive/2026/texmf-dist/f
+onts/enc/dvips/lm/lm-rm.enc}] [12] [13] (./main.bbl
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd)) [14] (./main.aux) 
+)</usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loc
+al/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2
+026/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2026/texmf-dist/fonts
+/type1/public/lm/lmss8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
+ic/lm/lmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lm
+sso10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsso8.pfb>
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loca
+l/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
+Output written on main.pdf (14 pages, 256423 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ../report/bibliography.bib
+Latexmk: All targets (main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+test -s report/main.pdf
+test -s presentation/main.pdf
+
+```

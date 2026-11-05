@@ -1,6 +1,6 @@
-\chapter{Perancangan Model SysML}
-Setiap gambar adalah hasil render source Mermaid atau PlantUML. Bentuk renderer dipetakan secara eksplisit ke elemen SysML; gambar bukan sumber semantik yang berdiri sendiri. Model menggunakan ID konsisten dan stereotype/annotation yang dijelaskan dalam traceability. Gambar~\ref{fig:requirements} sampai Gambar~\ref{fig:ibd} menyajikan tujuh view.
-\section{Requirement view}
+\section{Perancangan Model SysML}
+Setiap gambar adalah hasil render source Mermaid atau PlantUML. Bentuk renderer dipetakan secara eksplisit ke elemen SysML; gambar bukan sumber semantik yang berdiri sendiri. Model menggunakan ID konsisten dan stereotype/annotation yang dijelaskan dalam traceability; pemaknaan elemen dan relasi mengikuti subset SysML 1.6 \parencite[bagian 15.3.1.2, 16.3.2.7, 16.3.2.9]{omg2019}. Gambar~\ref{fig:requirements} sampai Gambar~\ref{fig:ibd} menyajikan tujuh view.
+\subsection{Requirement view}
 Requirement view menampilkan empat requirement inti dengan dependency satisfy dan satu verify. Seluruh 24 requirement tetap terdaftar dan terhubung pada katalog serta matrix; ini partial view, bukan penghilangan requirement.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.60\textheight,keepaspectratio]{requirements.pdf}
@@ -8,9 +8,8 @@ Requirement view menampilkan empat requirement inti dengan dependency satisfy da
 \sumber{Pemodelan proyek berdasarkan asumsi desain ASM-001--010 (2026)}
 \end{figure}
 \clearpage
-\clearpage
 \begin{landscape}
-\section{Use case view}
+\subsection{Use case view}
 UC-02 mencakup MaintainSafeSignals, sedangkan HandleDataFailure memperluas pelayanan pada kondisi dataFault. TrafficDataSource tetap di luar boundary; komponen internal tidak dijadikan actor.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.66\textwidth,keepaspectratio]{use-case.pdf}
@@ -20,7 +19,7 @@ UC-02 mencakup MaintainSafeSignals, sedangkan HandleDataFailure memperluas pelay
 \clearpage
 \end{landscape}
 \clearpage
-\section{Activity view}
+\subsection{Activity view}
 Alokasi action ke block tercantum pada dictionary model. Loop menerima event sample atau phase timer; transisi clearance hanya berjalan bila event STM-01 mengaktifkannya, bukan delay blocking setiap sampel.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.76\textheight,keepaspectratio]{activity.pdf}
@@ -28,9 +27,8 @@ Alokasi action ke block tercantum pada dictionary model. Loop menerima event sam
 \sumber{Pemodelan proyek berdasarkan asumsi desain ASM-001--010 (2026)}
 \end{figure}
 \clearpage
-\clearpage
 \begin{landscape}
-\section{Sequence view}
+\subsection{Sequence view}
 Lifeline mereferensikan part yang sama dengan IBD. DataFault dilatch selama green, tetapi grant tetap sampai timer berakhir; mode berikutnya diputuskan pada boundary aman.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.66\textwidth,keepaspectratio]{sequence.pdf}
@@ -40,7 +38,7 @@ Lifeline mereferensikan part yang sama dengan IBD. DataFault dilatch selama gree
 \clearpage
 \end{landscape}
 \clearpage
-\section{State machine view}
+\subsection{State machine view}
 STM-01 dimiliki SignalController. Normal/Fallback merupakan variabel controller, bukan region sinyal concurrent. SafetyHold berada di luar composite Running dan keluar hanya melalui restart.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.76\textheight,keepaspectratio]{state-machine.pdf}
@@ -48,9 +46,8 @@ STM-01 dimiliki SignalController. Normal/Fallback merupakan variabel controller,
 \sumber{Pemodelan proyek berdasarkan asumsi desain ASM-001--010 (2026)}
 \end{figure}
 \clearpage
-\clearpage
 \begin{landscape}
-\section{Block Definition Diagram}
+\subsection{Block Definition Diagram}
 BDD mendefinisikan tipe BLK-01 sampai BLK-06 dan composition part dengan multiplicity. InterfaceBlock/value types didefinisikan dalam dictionary model; port receiver memakai conjugation.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.66\textwidth,keepaspectratio]{bdd.pdf}
@@ -61,7 +58,7 @@ BDD mendefinisikan tipe BLK-01 sampai BLK-06 dan composition part dengan multipl
 \end{landscape}
 \clearpage
 \begin{landscape}
-\section{Internal Block Diagram}
+\subsection{Internal Block Diagram}
 IBD memakai part dari BDD dalam context BLK-01. P01--P12 mengacu ke port bertipe pada dictionary. C01--C06 adalah assembly connector dengan item flow; panah menunjukkan flow, bukan dependency satisfy.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.66\textwidth,keepaspectratio]{ibd.pdf}

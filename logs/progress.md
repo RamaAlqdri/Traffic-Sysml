@@ -116,3 +116,23 @@ Gunakan template berikut untuk entri berikutnya:
 - Skills used: pdf:pdf untuk render/visual QA dan penyerahan PDF; academic-research-suite → academic-paper WORKFLOW dan formatter/citation_compliance diterapkan inline untuk preservasi konten/sitasi; ponytail:ponytail untuk perubahan secukupnya. Tidak ada reviewer independen atau eksperimen traffic baru.
 - Status: source-complete, build-verified, release-complete untuk revisi format artefak konseptual pada receipt terbaru.
 - Next step: laporan siap ditinjau pengguna; source memerlukan Calibri lokal sebagaimana dokumentasi. Tidak ada pekerjaan format wajib yang tersisa.
+
+## 2026-11-05 12:50:53 WIB — Revisi struktur laporan menjadi poin pembahasan
+
+- Stage: revisi laporan sesuai instruksi pengguna.
+- Action: hilangkan input ringkasan, daftar isi/tabel/gambar dan dasar teori/studi literatur; ubah chapter ke section dan turunannya; nomor tabel/gambar/persamaan berurutan; jaga setiap entri requirement utuh; pertahankan sitasi pada pembahasan relevan.
+- Files changed: report/main.tex, report/gaya/ubtesis.sty, enam sections aktif, report/TEMPLATE-UB.md, MASTER_PROMPT.md, AGENT.md, README.md, PDF dan log. Build meregenerasi PDF diagram/presentasi dan timestamp receipt checker; source model/Beamer, metadata sampul dan bibliography tidak berubah.
+- Validation: make build exit0; kompilasi akhir laporan melalui latexmk XeLaTeX exit0. PDF 19 halaman: sampul langsung disambung poin 1 Pendahuluan. Bagian yang diminta dihapus dan label BAB tidak muncul; tujuh diagram, 24 requirement dan enam referensi tetap tersedia. Teks requirement identik setelah normalisasi heading/minipage, 15 source terlindungi identik HEAD. Calibri tetap tertanam. Seluruh 19 halaman diperiksa pada render/contact sheet; halaman requirement dan persamaan ditinjau lebih besar.
+- Skills used: pdf:pdf untuk render/QA; academic-research-suite academic-paper, formatter/citation_compliance diterapkan inline untuk preservasi isi/sitasi sesuai scope pengguna; ponytail:ponytail untuk perubahan terbatas. Tidak menjalankan pencarian literatur atau eksperimen baru.
+- Status: source-complete, build-verified, release-complete untuk revisi struktur laporan dengan batas verifikasi model sebelumnya tetap berlaku.
+- Next step: PDF revisi siap ditinjau pengguna.
+
+## 2026-11-05 13:00:47 WIB — Perbaikan keterbacaan bagian 3 Requirements
+
+- Stage: revisi tata letak laporan.
+- Action: susun ulang 24 requirement menjadi kartu tabel, pisahkan Pernyataan/Sumber/Alasan/Verifikasi/Penelusuran, tambahkan enam kelompok sesuai katalog dan panduan singkat pembacaan kode.
+- Files changed in this revision: report/sections/04-requirements.tex, macro requirementcard pada report/gaya/ubtesis.sty, report/TEMPLATE-UB.md, report/main.pdf dan log; make build meregenerasi aset PDF/presentasi serta timestamp checker. Perubahan sebelumnya dalam workspace dipertahankan.
+- Validation: make build exit0. PDF 23 halaman, bagian 3 pada PDF 5–11. Seluruh 24 field set identik snapshot sebelum revisi dan masing-masing kartu utuh pada satu halaman; 13 source dokumen/model terlindungi tidak berubah. Enam citation keys sesuai bibliography; font Calibri tertanam. Enam contact sheet seluruh 23 halaman ditinjau, dua halaman requirement diperiksa lebih besar. Tidak ada clipping/overlap material.
+- Skills used: pdf:pdf untuk render/QA; pedoman academic-research-suite academic-paper formatter/citation_compliance diterapkan inline untuk menjaga isi dan tautan sitasi, tanpa audit penerbit baru; ponytail:ponytail untuk perubahan terbatas pada layout. Tidak ada eksperimen atau validasi model baru.
+- Status: source-complete, build-verified, release-complete untuk revisi keterbacaan ini, dengan batas model/sumber sebelumnya tetap berlaku.
+- Next step: PDF revisi siap dibaca pengguna.

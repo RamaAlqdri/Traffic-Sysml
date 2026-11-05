@@ -1,15 +1,15 @@
-\chapter{Diskusi}
-\section{Konsistensi dan keterbatasan model}
+\section{Diskusi}
+\subsection{Konsistensi dan keterbatasan model}
 Model menghubungkan alasan desain ke requirement dan memisahkan definisi block dari pemakaian part. Ringkasan diagram tidak mengubah statement katalog, dan arah satisfy/verify mengikuti standar. Namun textual rendering tools tidak menyediakan seluruh validasi semantik SysML; inspection source dan dictionary tetap diperlukan. Tidak ada klaim sertifikasi formal atau kemampuan interchange model.
 
 Aturan sekali pelayanan per round memberi bound analitis yang mudah diaudit, tetapi mengharuskan pelayanan count nol dan membatasi optimasi throughput. Kategori mengkuantisasi data: dua hitungan berbeda dapat memperoleh durasi sama. Prioritas density hanya berlaku pada eligible, sehingga ruas padat tidak mengulang pelayanan dalam round yang sama. Tradeoff ini dipilih untuk fairness konseptual, bukan dinyatakan optimal oleh jurnal.
 
 Bound 208 s bergantung pada clock ideal, green maksimal 30, clearance 4 dan empat pelayanan per round. Bound tersebut bukan jaminan individual queue delay, antrean habis, atau kapasitas lokasi. SafetyHold/restart mengecualikan bound, dan actuator/listrik/network failure di luar fault model. Perlu kalibrasi geometri, detector, clearance, latensi dan validasi lapangan sebelum aplikasi fisik. Proyek ini tidak membuat deployment tersebut.
 
-\section{Integritas evidence dan langkah lanjutan}
-Klaim 31.05\%,96\%,90\% berasal dari artikel dan tidak menjadi hasil proyek. Artikel traffic memiliki perbedaan konteks serta istilah yang didisposisikan; kajian MBSE tidak membuktikan penghematan kausal proyek. Akses penerbit dan peringatan xref lokal tetap dinyatakan. Catatan kuliah yang diperluas tidak diatribusikan sebagai slide asli yang sudah dicocokkan. Seluruh file jurnal pengguna dipertahankan.
+\subsection{Integritas evidence dan langkah lanjutan}
+Klaim 31.05\%,96\%,90\% berasal dari artikel dan tidak menjadi hasil proyek. Artikel traffic memiliki perbedaan konteks serta istilah yang didisposisikan; kajian MBSE tidak membuktikan penghematan kausal proyek \parencite{campo2023}. Akses penerbit dan peringatan xref lokal tetap dinyatakan. Catatan kuliah yang diperluas tidak diatribusikan sebagai slide asli yang sudah dicocokkan. Seluruh file jurnal pengguna dipertahankan.
 
 Langkah lanjutan yang bermakna adalah mengimplementasikan scheduler/phase engine dan menjalankan timeline fault/recovery, kemudian menguji detector dan perangkat lampu pada lingkungan yang sesuai. Analisis throughput memerlukan simulator, skenario input, pembanding dan data yang dapat direplikasi; itu belum dilakukan. Tidak perlu menambah ML atau emergency preemption hanya untuk memperbanyak fitur.
 
-\chapter{Kesimpulan}
+\section{Kesimpulan}
 Proyek menghasilkan model konseptual Smart Traffic Light dengan 24 requirement dan tujuh view SysML, serta traceability ke 21 skenario. Receiver count, klasifikasi kategori, scheduler round, signal lifecycle dan output lampu memiliki tanggung jawab serta interface yang jelas. Parameter baseline merupakan asumsi desain yang dapat diubah dengan revisi terkontrol. Pemeriksaan referensi menghasilkan bound service waiting 208 s pada 576 pasangan urutan round, di bawah batas 210 s, dan memeriksa contoh input/tie/output-state. Hasil ini terbatas pada kontrak model; fault/recovery penuh, traffic throughput dan keselamatan hardware belum diverifikasi. Laporan tidak menyamakan keberhasilan build dengan bukti eksperimen fisik.

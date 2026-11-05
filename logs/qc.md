@@ -85,3 +85,47 @@ Date: 2026-11-03 09:50:01 WIB. Status: **release-complete untuk artefak akademik
 | `report/main.tex` | `5ea832e044557b76c0921319b4d0ade003206c5ce580e097648a436c851baa63` |
 | `report/latexmkrc` | `6a22787f89caa22e6f63de4a8395d0ebb95fbedeba4e65e81338b3b771f3631b` |
 | `Makefile` | `4a71c50a93eb048b385a0e1eb9067ad47ac37d5dd73f2a13961ae1515be472b8` |
+
+## 2026-11-05 12:50:53 WIB — QC laporan tanpa BAB/daftar awal/teori
+
+- Scope: revisi struktur dari pengguna; menggantikan snapshot laporan 30 halaman pada receipt sebelumnya. Laporan final kini 19 halaman (sampul + 18 halaman isi/referensi), Calibri asli, template UB dengan pengecualian struktur yang diminta.
+- Structure: langsung poin 1 Pendahuluan, 2 Analisis Permasalahan dan Asumsi Desain, 3 Requirements, 4 Perancangan Model SysML, 5 Traceability dan Verification Scenarios, 6 Diskusi, 7 Kesimpulan, kemudian Daftar Referensi. Tidak ada penyebutan BAB pada output, ringkasan, daftar isi/tabel/gambar atau dasar teori/studi literatur. Tabel dan diagram di dalam pembahasan tetap dipakai; nomornya berurutan, termasuk persamaan (1).
+- Build: make build exit0, kemudian latexmk XeLaTeX laporan final exit0 setelah normalisasi EOF. Raw command/output append-only di logs/build.md. Checker kontrak dan cross-links baseline kembali lulus; status not-run serta batas hardware/runtime tidak dipromosikan menjadi passed.
+- Content checks: 24 requirement utuh; teks statement/source/rationale/verification/trace identik HEAD setelah normalisasi heading dan wrapper layout. Semua tujuh PDF diagram ada pada main.fls. Semua enam key bibliography disitasi tanpa missing/orphan; citation keys dan bibliography bersama tidak berubah. Sitasi OMG dan Campo dipakai pada pembahasan yang relevan setelah bagian teori dikeluarkan.
+- Preserved: 15 source terlindungi identik HEAD, mencakup bibliography, source Beamer, checker, katalog/matrix/scenario, source diagram, metadata/sampul. Source ringkasan/teori yang tidak di-input dan seluruh source riset tetap tersedia. Folder sumber template pengguna tidak ditulis.
+- Visual QA: seluruh 19 halaman final dirender dan ditinjau pada lima contact sheet; halaman requirement/persamaan diperiksa lebih besar. Judul langsung, nomor halaman, tabel, diagram, referensi dan sampul terbaca tanpa clipping/overlap material. Entri requirement tidak lagi terbelah antarhalaman.
+- Font/logs: Calibri-Bold dan Calibri-Italic tertanam bersama Calibri; tidak ada Carlito. Final .log/.blg laporan dan presentasi tanpa error, undefined citation/reference, Overfull atau warning LaTeX/paket. 57 Underfull hbox tetap dilaporkan dan didisposisikan melalui QA sesuai aturan justification template. Warning tag PDF impor dan keterbatasan sumber pada receipt sebelumnya tetap berlaku, tanpa klaim aksesibilitas/validasi lapangan baru.
+- Diff whitespace: lulus untuk source/administrasi; logs/build.md mentah dikecualikan sesuai kebijakan append-only.
+
+### Snapshot revisi struktur
+
+| File | SHA-256 |
+|---|---|
+| `report/main.pdf` | `fe8b1174430f9543f637db517106edbee1d8c4d1ca5aaf02594a3b9e50d84a26` |
+| `presentation/main.pdf` | `105c26bfad6be7433f900702b26dcaa6d4ad03e67ea7f668fe76c6b889ccd65c` |
+| `report/main.tex` | `0ed9e2e2c711959be8b44a362aae7c9685818e65fd3841a108488ce0683f348e` |
+| `report/gaya/ubtesis.sty` | `3529b2238f3558d7c916847b2cc6c52a6efc6ae0fdf80da9730414e5c0039fce` |
+| `report/sections/04-requirements.tex` | `314e86101e7f53eef85c923149351597b80bd2a32996cc265ff4aaef1000944d` |
+| `report/sections/05-models.tex` | `af2745815ec0a70a77ad18846de4e1fb2ee60d99a13f9ea7231757b038a7a76c` |
+| `report/sections/07-discussion-conclusion.tex` | `9d37437bc6948a5aa83b7da38c36674f7bdbf1c95f94ea81b13e365a683531ff` |
+
+## 2026-11-05 13:00:47 WIB — QC keterbacaan Requirements (snapshot laporan terbaru)
+
+- Scope: menggantikan snapshot laporan 19 halaman pada receipt sebelumnya. PDF final 23 halaman, bagian 3 pada halaman PDF 5–11 / nomor isi 4–10. Struktur tanpa BAB, daftar isi/tabel/gambar, ringkasan atau dasar teori tetap dipertahankan.
+- Layout: 24 kartu tabel dua kolom, lima atribut terpisah dengan label Indonesia, enam kelompok sesuai type katalog. Ukuran Calibri 12 pt, arraystretch 1.18, jarak antarkartu; setiap kartu utuh dalam minipage. Panduan kode EVID/ASM serta alur UC→ACT→BLK→VER ada di awal bagian. Definisi kartu terpusat pada style, format lain tidak diubah.
+- Preservation: perbandingan persis terhadap enam field per kartu (ID/nama, statement, source, rationale, verification, trace) lulus untuk seluruh 24 entri. Tidak menambah atau mengubah kewajiban/nilai/desain model. Ketiga belas source terlindungi pada snapshot sebelum revisi identik, termasuk enam section lain, main.tex, metadata, bibliography, source Beamer, katalog, trace matrix dan checker.
+- PDF checks: 24 judul ID unik pada kartu; tiap halaman requirement mengandung jumlah baris Pernyataan/Sumber/Alasan/Verifikasi/Penelusuran yang sama dengan jumlah kartu, tanpa kartu terbelah. Seluruh enam bibliography keys tersitasi dan tidak ada missing/orphan; tidak mengklaim verifikasi penerbit baru. Calibri tertanam dan Carlito tidak dipakai.
+- Build: make build final exit0, checker baseline/cross-links lulus; kedua dokumen terkompilasi. Raw draft/final build log disimpan append-only. Error macro sementara telah diperbaiki sebelum build final.
+- Visual QA: 23 halaman final dirender menjadi PNG, ditinjau pada enam contact sheet. Dua halaman requirement dilihat pada ukuran lebih besar; seluruh tujuh halaman bagian 3 ditinjau, termasuk kategori panjang dan sumber multi-ID. Tidak ada clipping, overlap material, heading kelompok terlepas dari kartu atau kartu terbelah. Perancangan Model SysML beserta gambar pertamanya kembali dimulai bersama pada halaman berikutnya.
+- Logs/limits: final .log/.blg laporan/presentasi tanpa error, Overfull, undefined references/citations atau warning LaTeX/paket. 51 Underfull hbox tersisa akibat aturan justification/no-hyphenation template dan telah didisposisikan visual. Tag warning PDF impor dan batas sumber/semantik/runtime pada receipt sebelumnya tetap berlaku. Penataan laporan tidak membuktikan pengujian sistem fisik.
+- Source diff whitespace: diperiksa dengan raw logs/build.md dikecualikan untuk menjaga histori terminal.
+
+### Snapshot keluaran dan source revisi
+
+| File | SHA-256 |
+|---|---|
+| `report/main.pdf` | `8e6df756b6f5bafffbf0dfeaaf71a4d833f7b92e8849baa24bee368b627bc377` |
+| `presentation/main.pdf` | `eda01fe81940cda6324abdeaa73b9f4e88901ef2c84440021b0dc5b420575879` |
+| `report/main.tex` | `0ed9e2e2c711959be8b44a362aae7c9685818e65fd3841a108488ce0683f348e` |
+| `report/gaya/ubtesis.sty` | `79a57918002aa045aacf7ea406bc7f6e8d7874f478936b0850c894449e2e196a` |
+| `report/sections/04-requirements.tex` | `9a910db2b3e6fc6fbd93d68f0ef8ab6b8e7522318b702c4d41c9e8c20e3b7cd4` |

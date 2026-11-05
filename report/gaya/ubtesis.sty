@@ -104,6 +104,12 @@
 \setcounter{secnumdepth}{3}   % [spek C] sampai X.X.X.X
 \setcounter{tocdepth}{2}      % [spek B.2] daftar isi memuat 3 tingkat
 
+% Revisi pengguna 5 November 2026: pembahasan langsung sebagai poin, tanpa BAB.
+\renewcommand\thesection{\arabic{section}}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{equation}{chapter}
+
 % [spek C] "BAB 1 PENDAHULUAN" satu baris, 16 pt tebal KAPITAL tengah,
 % ganti halaman, 0 pt sebelum / 18 pt sesudah.
 \newcommand\labelbab{BAB}
@@ -230,7 +236,7 @@
 \RequirePackage{amsmath}   % fleqn sudah diteruskan di bagian huruf
 % amssymb tidak dimuat: newtxmath sudah menyediakan simbolnya (bentrok \Bbbk).
 \setlength{\mathindent}{0.38cm}
-\renewcommand\theequation{\thechapter.\arabic{equation}}
+\renewcommand\theequation{\arabic{equation}}
 
 % ---------------------------------------------------------------- daftar
 % [spek B.2] "1." / bullet, gantung 0,60 cm, 6 pt antar-butir.
@@ -357,4 +363,23 @@
 \RequirePackage[hidelinks,bookmarksnumbered]{hyperref}
 \RequirePackage{xurl}
 \urlstyle{same}
+
+
+% Kartu requirement: tiap atribut terpisah dan seluruh entri tetap satu halaman.
+\newcommand{\requirementcard}[6]{%
+  \par\addvspace{10pt}\noindent
+  \begin{minipage}{\linewidth}
+  \setlength{\tabcolsep}{6pt}%
+  \renewcommand{\arraystretch}{1.18}%
+  \begin{tabular}{|>{\bfseries\raggedright\arraybackslash}p{2.7cm}|>{\raggedright\arraybackslash}p{\dimexpr\linewidth-2.7cm-4\tabcolsep-3\arrayrulewidth\relax}|}
+  \hline
+  \multicolumn{2}{|l|}{\textbf{#1}} \\ \hline
+  Pernyataan & #2 \\ \hline
+  Sumber & #3 \\ \hline
+  Alasan & #4 \\ \hline
+  Verifikasi & #5 \\ \hline
+  Penelusuran & #6 \\ \hline
+  \end{tabular}
+  \end{minipage}\par\addvspace{10pt}%
+}
 \endinput

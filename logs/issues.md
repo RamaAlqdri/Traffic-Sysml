@@ -100,3 +100,21 @@ Template:
 - Status: blocker resolved; make build final exit0, tanpa undefined reference/citation, error, overfull atau warning paket pada log final.
 - Disposition: 73 underfull hbox tetap dilaporkan pada log laporan karena perataan penuh dan pemenggalan nonaktif mengikuti style UB. Seluruh 30 halaman ditinjau; tidak ada clipping/overlap material. Tidak menyembunyikan warning atau mengubah aturan style untuk menghilangkannya. xdvipdfmx mengabaikan tag struktur pada PDF Mermaid yang diimpor; diagram tetap tertampil, bukan klaim PDF aksesibel/bertanda struktur penuh.
 - Verification: font Calibri/Calibri-Bold/Calibri-Italic embedded, Carlito tidak dipakai; metadata PDF dan sampul benar, 24 ID requirement dan enam key sitasi terpelihara; hasil di logs/qc.md.
+
+## ISSUE-007 — Penomoran persamaan dan entri requirement setelah penghapusan BAB
+
+- Date: 2026-11-05 12:50:53 WIB
+- Severity: formatting.
+- Cause: style UB mendefinisikan theequation dengan nomor chapter sesudah pengaturan counter; struktur section langsung meninggalkan label (0.1). Pemisahan halaman juga dapat meninggalkan baris verification dari satu requirement pada halaman berikutnya.
+- Attempted fix: gunakan nomor persamaan berurutan dalam style; samepage belum mencegah pemisahan pada kombinasi heading template, sehingga diganti minipage per entri dengan indent dan parskip eksplisit.
+- Status: resolved. Nomor persamaan (1), 24 entri utuh pada halaman masing-masing; tanpa perubahan teks requirement. Hasil final ditinjau melalui render, termasuk halaman requirement pada ukuran lebih besar.
+- Disposition: 57 Underfull hbox akibat justification/no-hyphenation template tetap tersimpan dan diperiksa visual; bukan error build. Tidak ada Overfull, undefined reference/citation, warning paket atau error pada log final.
+
+## ISSUE-008 — Requirements padat dan sulit dipindai
+
+- Date: 2026-11-05 13:00:47 WIB
+- Severity: readability.
+- Cause: Source/Rationale serta Verification/Trace digabung per paragraf, jarak antar-entri sempit dan tidak ada kelompok type yang terlihat jelas.
+- Attempted fix: kartu tabel dengan lima atribut per baris, enam kelompok, panduan kode dan jarak antarkartu. Draft awal macro diletakkan sesudah endinput sehingga tidak terbaca; pindahkan definisi sebelum endinput dan kompilasi ulang.
+- Status: resolved. Seluruh 24 kartu tampil lengkap tanpa split; semua atribut dan ID cocok snapshot. make build final exit0; semua halaman final ditinjau melalui render.
+- Disposition: log percobaan gagal tetap tersimpan. 51 Underfull hbox pada laporan mengikuti batas tipografi template dan telah dinilai visual; tidak ada Overfull, undefined reference/citation atau error final. Warning tag PDF Mermaid tetap sebatas struktur PDF impor.

@@ -247,27 +247,16 @@ Buat struktur modular:
 - `sections/`
 - `bibliography.bib`
 
-Isi minimal:
+Isi laporan mengikuti revisi pengguna 5 November 2026: judul langsung berupa poin pembahasan bernomor, tanpa penyebutan BAB; tanpa ringkasan, daftar isi, daftar tabel, daftar gambar dan bagian dasar teori/studi literatur. Kajian lengkap tetap pada `research/literature-review.md`; sitasi yang relevan tetap ada pada pembahasan desain.
+
 1. Pendahuluan
-2. Landasan Teori
-   - MBSE
-   - SysML
-   - Adaptive/Smart Traffic Signal
-3. Studi Literatur
-4. Analisis Permasalahan
-5. Requirements
-6. Perancangan Model
-   - Requirement Diagram
-   - Use Case
-   - Activity
-   - Sequence
-   - State Machine
-   - BDD
-   - IBD
-7. Traceability dan Verification Scenario
-8. Diskusi
-9. Kesimpulan
-10. Daftar Pustaka
+2. Analisis Permasalahan dan Asumsi Desain
+3. Requirements
+4. Perancangan Model SysML (Requirement, Use Case, Activity, Sequence, State Machine, BDD, IBD)
+5. Traceability dan Verification Scenarios
+6. Diskusi
+7. Kesimpulan
+8. Daftar Referensi
 
 Aturan akademik:
 - gunakan sitasi yang valid,

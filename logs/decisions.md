@@ -113,3 +113,27 @@ Template:
 - Rationale: pengguna menentukan template dan font. Calibri lokal tersedia di instalasi Microsoft Word; fontspec/XeLaTeX memakai font tersebut tanpa menyalin binari berlisensi ke repository.
 - Consequences: laporan XeLaTeX+Biber; Beamer mandiri tetap pdfLaTeX/BibTeX. Satu engine/backend berlaku per artefak. Program Studi Magister Ilmu Komputer mengikuti konteks MILKOM; jenis naskah LAPORAN PROYEK. Metadata anggota berasal dari pengguna, bukan asumsi identitas. Source map tahun n.d. menyesuaikan keluaran t.t. tanpa mengubah bibliography bersama. Build lintas mesin memerlukan Calibri dan konfigurasi path yang dicatat di report/TEMPLATE-UB.md.
 - Evidence: instruksi chat; template lokal beserta PANDUAN.md; perbandingan style setelah blok font dan logo identik; make build exit0 dan QC receipt terbaru. Folder template sumber tidak diubah; semantik model SysML dan klaim penelitian tetap baseline.
+
+## ADR-009 — Pembahasan langsung tanpa BAB dan bagian awal tambahan
+
+- Date: 2026-11-05 12:50:53 WIB
+- Status: accepted; revisi struktur laporan mengungguli rincian format pada ADR-008.
+- Decision: tampilkan judul pembahasan langsung sebagai poin bernomor, tanpa penyebutan BAB; keluarkan ringkasan, daftar isi, daftar tabel/gambar dan bagian Landasan Teori dan Studi Literatur dari PDF.
+- Context: pengguna memberikan instruksi eksplisit penyederhanaan laporan setelah revisi template UB.
+- Options: menyembunyikan kata BAB pada chapter; atau memakai section/subsection langsung dan penomoran tabel/gambar/persamaan berurutan.
+- Chosen: section/subsection langsung dengan poin 1–7, kemudian referensi. Pertahankan sampul UB, Calibri dan format isi/caption dari template; source bagian yang tidak disertakan tetap tersimpan tanpa di-input.
+- Rationale: memenuhi struktur yang diminta dan menghindari prefiks chapter nol. Sitasi normatif SysML serta Campo dipindahkan ke pembahasan model/diskusi yang relevan sehingga klaim yang tersisa tetap bersumber.
+- Consequences: laporan 19 halaman, tanpa teori terpisah. Kajian dan evidence lengkap tetap di research/. Entri requirement dibungkus minipage agar tidak terbelah; statement, ID dan trace tidak berubah. MASTER_PROMPT.md, AGENT.md dan dokumentasi template mengikuti struktur baru. Source model dan Beamer tidak direvisi.
+- Evidence: instruksi pengguna; make build exit0; kompilasi laporan final exit0; receipt QC dan inspeksi seluruh 19 halaman.
+
+## ADR-010 — Kartu requirement dengan atribut terpisah
+
+- Date: 2026-11-05 13:00:47 WIB
+- Status: accepted.
+- Decision: ubah tata letak bagian 3 menjadi satu kartu tabel per requirement, dikelompokkan menurut enam jenis katalog.
+- Context: pengguna menyatakan bagian Requirements belum rapi dan membingungkan; susunan minipage paragraf sebelumnya terlalu padat.
+- Options: menambah jarak antarpraf saja; atau memisahkan seluruh atribut dalam baris berlabel dan mengelompokkan jenis kebutuhan.
+- Chosen: kartu dua kolom dengan judul ID/nama, baris Pernyataan, Sumber, Alasan, Verifikasi dan Penelusuran. Kelompok fungsional, kinerja/waktu, keselamatan, antarmuka, keandalan/failure handling dan batasan desain mengikuti type katalog; tidak menambah requirement.
+- Rationale: label dan batas visual memudahkan pembaca membedakan kewajiban dari rationale/evidence, metode pemeriksaan dan relasi model. Panduan EVID/ASM/UC/ACT/BLK/VER menjelaskan cara membaca kode.
+- Consequences: ukuran teks Calibri 12 pt dipertahankan, baris dan jarak antar-kartu diperlonggar; kartu utuh pada satu halaman. Bagian dimulai dan diakhiri pada batas halaman agar model view berikutnya tidak terpisah dari narasinya. Laporan menjadi 23 halaman; bagian 3 pada halaman PDF 5–11 (nomor isi 4–10). Seluruh 24 ID dan lima atribut substantif disalin tanpa perubahan dari snapshot sebelum revisi.
+- Evidence: instruksi pengguna, perbandingan field-per-field 24 kartu, make build exit0, render/QA final.
