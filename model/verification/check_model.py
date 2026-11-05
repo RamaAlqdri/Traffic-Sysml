@@ -102,7 +102,7 @@ def main():
             assert not any(ord(c) < 32 for c in line), 'Control character in graphics dimensions'
             assert re.search(r'height=[.0-9]+\\text(?:width|height)', line), line
 
-    actions = re.findall(r':(ACT-\d+)', (ROOT / 'model/behavior/activity.puml').read_text())
+    actions = re.findall(r'action def \w+;\s*// (ACT-\d+)', (ROOT / 'model/behavior/activity.sysml').read_text())
     assert len(actions) == len(set(actions)) == 10, 'Activity nodes need distinct model IDs'
 
     req = (ROOT / 'model/requirements/requirements.md').read_text()
@@ -121,9 +121,9 @@ def main():
             assert f'## {ver} ' in scenarios, ver
     assert len(re.findall(r'^## VER-', scenarios, re.M)) == 21
     for file in ('use-case', 'activity', 'sequence', 'state-machine'):
-        assert (ROOT / f'model/behavior/{file}.puml').is_file()
+        assert (ROOT / f'model/behavior/{file}.sysml').is_file()
     for file in ('bdd', 'ibd'):
-        assert (ROOT / f'model/structure/{file}.puml').is_file()
+        assert (ROOT / f'model/structure/{file}.sysml').is_file()
 
     stamp = datetime.now(ZoneInfo('Asia/Jakarta')).strftime('%Y-%m-%d %H:%M:%S %Z')
     receipt = f'''# Verification receipt
