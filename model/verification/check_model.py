@@ -76,7 +76,7 @@ def main():
     assert all(v.count('Green') <= 1 for v in vectors)
     assert (YELLOW, ALL_RED) == (3, 1)
 
-    good = [dict(approach=a, vehicleCount=5, observedAt=10, valid=True) for a in APPROACHES]
+    good: list[dict[str, object]] = [dict(approach=a, vehicleCount=5, observedAt=10, valid=True) for a in APPROACHES]
     assert valid_frame(good, 13, {})
     assert not valid_frame(good, 14, {})
     for bad_value in (-1, True, float('nan'), 2147483648):
@@ -97,19 +97,19 @@ def main():
     assert 211 > deadline_s  # already missed => no feasible sequence can restore this deadline
 
     # Regression guard: a Python \t escape once reduced included diagrams to near-zero size.
-    for line in (ROOT / 'report/sections/05-models.tex').read_text().splitlines():
+    for line in (ROOT / 'report/sections/05-models.tex').read_text(encoding='utf-8').splitlines():
         if r'\includegraphics' in line:
             assert not any(ord(c) < 32 for c in line), 'Control character in graphics dimensions'
             assert re.search(r'height=[.0-9]+\\text(?:width|height)', line), line
 
-    actions = re.findall(r':(ACT-\d+)', (ROOT / 'model/behavior/activity.puml').read_text())
+    actions = re.findall(r'action def \w+;\s*// (ACT-\d+)', (ROOT / 'model/behavior/activity.sysml').read_text(encoding='utf-8'))
     assert len(actions) == len(set(actions)) == 10, 'Activity nodes need distinct model IDs'
 
-    req = (ROOT / 'model/requirements/requirements.md').read_text()
-    trace = (ROOT / 'model/traceability/traceability-matrix.md').read_text()
-    scenarios = (ROOT / 'model/verification/verification-scenarios.md').read_text()
-    evidence = (ROOT / 'research/evidence-matrix.md').read_text()
-    assumptions = (ROOT / 'research/design-assumptions.md').read_text()
+    req = (ROOT / 'model/requirements/requirements.md').read_text(encoding='utf-8')
+    trace = (ROOT / 'model/traceability/traceability-matrix.md').read_text(encoding='utf-8')
+    scenarios = (ROOT / 'model/verification/verification-scenarios.md').read_text(encoding='utf-8')
+    evidence = (ROOT / 'research/evidence-matrix.md').read_text(encoding='utf-8')
+    assumptions = (ROOT / 'research/design-assumptions.md').read_text(encoding='utf-8')
     ids = re.findall(r'^## (REQ-[A-Z]-\d+)', req, re.M)
     assert len(ids) == len(set(ids)) == 24
     for section in re.split(r'^## ', req, flags=re.M)[1:]:
@@ -121,9 +121,9 @@ def main():
             assert f'## {ver} ' in scenarios, ver
     assert len(re.findall(r'^## VER-', scenarios, re.M)) == 21
     for file in ('use-case', 'activity', 'sequence', 'state-machine'):
-        assert (ROOT / f'model/behavior/{file}.puml').is_file()
+        assert (ROOT / f'model/behavior/{file}.sysml').is_file()
     for file in ('bdd', 'ibd'):
-        assert (ROOT / f'model/structure/{file}.puml').is_file()
+        assert (ROOT / f'model/structure/{file}.sysml').is_file()
 
     stamp = datetime.now(ZoneInfo('Asia/Jakarta')).strftime('%Y-%m-%d %H:%M:%S %Z')
     receipt = f'''# Verification receipt
@@ -146,7 +146,7 @@ VER-02/04/05/06/07/08/11/12/17/18/19 remain **not-run** as dynamic/complete insp
 
 The worst-case wait proof assumes every approach served exactly once per round, green≤30 s, clearance=4 s, ideal clock and no SafetyHold/restart. Changing these assumptions invalidates the bound. No parameter/location/hardware calibration was performed.
 '''
-    (ROOT / 'model/verification/verification-results.md').write_text(receipt)
+    (ROOT / 'model/verification/verification-results.md').write_text(receipt, encoding='utf-8')
     print(f'PASS: {pair_count} order pairs, maximum wait {maximum}s; category/tie/input/state and 24 requirement links checked.')
 
 
