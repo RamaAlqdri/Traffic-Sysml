@@ -31,7 +31,7 @@ build:
 
 _build:
 	@set -eu -o pipefail; missing=0; \
-	for tool in python3 mmdc plantuml java dot rsvg-convert latexmk pdflatex; do \
+	for tool in python3 mmdc plantuml java dot rsvg-convert latexmk pdflatex xelatex biber; do \
 	  if ! command -v "$$tool" >/dev/null 2>&1; then \
 	    printf 'Missing tool: %s\n' "$$tool"; missing=1; \
 	  fi; \
@@ -51,6 +51,7 @@ _build:
 	rsvg-convert --version
 	latexmk -v
 	pdflatex --version
+	xelatex --version
 	@set -eu -o pipefail; for backend in biber bibtex; do \
 	  if command -v "$$backend" >/dev/null 2>&1; then "$$backend" --version; fi; \
 	done
@@ -62,7 +63,7 @@ _build:
 	  plantuml -failfast2 -tsvg -pipe < "$$source" > "assets/diagrams/$$name.svg"; \
 	  rsvg-convert -f pdf -o "assets/diagrams/$$name.pdf" "assets/diagrams/$$name.svg"; \
 	done
-	latexmk -pdf -cd -interaction=nonstopmode -halt-on-error -file-line-error report/main.tex
+	latexmk -xelatex -cd -interaction=nonstopmode -halt-on-error -file-line-error report/main.tex
 	latexmk -pdf -cd -interaction=nonstopmode -halt-on-error -file-line-error presentation/main.tex
 	test -s report/main.pdf
 	test -s presentation/main.pdf

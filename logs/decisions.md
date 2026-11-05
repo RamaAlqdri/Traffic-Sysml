@@ -101,3 +101,15 @@ Template:
 - Rationale: satu sumber model dan satu bibliography, build lokal dapat diaudit. Diagram menampilkan partial view bila dinyatakan; seluruh requirement tetap pada katalog/matrix.
 - Consequences: make build menjalankan checker, render dan kedua kompilasi; output21halaman/14slide, source dan metadata sumber dipertahankan. Rilis adalah artefak akademik konseptual; test runtime tidak otomatis passed. QC snapshot/hashes ada di logs/qc.md.
 - Evidence: instruksi pengguna, hasil make build, inspection subset dan visual QA.
+
+## ADR-008 — Template UB dan Calibri asli untuk laporan
+
+- Date: 2026-11-05 12:37:23 WIB
+- Status: accepted; supersedes ADR-007 untuk format/toolchain laporan.
+- Decision: gunakan salinan style, sampul, dan logo dari template UB pengguna; sesuaikan font ke Calibri asli dan metadata dua anggota.
+- Context: pengguna meminta template di `/Users/ramadhanial-qadri/Documents/My_File/Tesis/Flood Simulation/tesis-literatur/template-latex-ub`, lalu memberikan nama/NIM, Departemen Teknik Informatika dan instruksi Calibri.
+- Options: meniru tampilan template secara terpisah; atau mengimpor paket gaya dan sampul sebenarnya dengan adaptasi terbatas.
+- Chosen: impor `gaya/ubtesis.sty`, `awal/sampul.tex`, `gambar/logo-ub.jpg`; ubah hanya blok engine/font pada style dan blok identitas sampul. Metadata terpusat di report/metadata.tex. BAB, margin, leading, daftar awal, tabel grid, caption dan Harvard mengikuti style sumber.
+- Rationale: pengguna menentukan template dan font. Calibri lokal tersedia di instalasi Microsoft Word; fontspec/XeLaTeX memakai font tersebut tanpa menyalin binari berlisensi ke repository.
+- Consequences: laporan XeLaTeX+Biber; Beamer mandiri tetap pdfLaTeX/BibTeX. Satu engine/backend berlaku per artefak. Program Studi Magister Ilmu Komputer mengikuti konteks MILKOM; jenis naskah LAPORAN PROYEK. Metadata anggota berasal dari pengguna, bukan asumsi identitas. Source map tahun n.d. menyesuaikan keluaran t.t. tanpa mengubah bibliography bersama. Build lintas mesin memerlukan Calibri dan konfigurasi path yang dicatat di report/TEMPLATE-UB.md.
+- Evidence: instruksi chat; template lokal beserta PANDUAN.md; perbandingan style setelah blok font dan logo identik; make build exit0 dan QC receipt terbaru. Folder template sumber tidak diubah; semantik model SysML dan klaim penelitian tetap baseline.

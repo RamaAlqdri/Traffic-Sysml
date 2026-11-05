@@ -302,7 +302,7 @@ Kompilasi:
 - report PDF
 - presentation PDF
 
-Gunakan satu entry point dari root repository: `make build`. `Makefile` merender seluruh diagram lalu membangun report dan presentation, berhenti dengan exit code nonzero bila prasyarat/render/compile gagal, dan append hasil ke `logs/build.md`. Versi tool dan perintah aktual harus tercatat. Tetapkan satu engine LaTeX serta satu backend bibliography secara konsisten; baseline build menggunakan pdfLaTeX melalui latexmk, dan pilihan backend harus didokumentasikan sebelum penulisan LaTeX.
+Gunakan satu entry point dari root repository: `make build`. `Makefile` merender seluruh diagram lalu membangun report dan presentation, berhenti dengan exit code nonzero bila prasyarat/render/compile gagal, dan append hasil ke `logs/build.md`. Versi tool dan perintah aktual harus tercatat. Tetapkan satu engine LaTeX serta satu backend bibliography secara konsisten; laporan mengikuti revisi pengguna 5 November 2026: template UB dan Calibri asli melalui XeLaTeX/Biber, dengan asal/adaptasi di report/TEMPLATE-UB.md. Presentasi mandiri tetap pdfLaTeX/BibTeX; konsistensi engine/backend berlaku per artefak.
 
 Simpan konfigurasi dan lockfile dependency bila dikelola package manager; jangan memakai versi `latest` sebagai spesifikasi reproducibility. Catat dependensi sistem/font dan perubahan toolchain. Satu perintah build saja belum menjamin PDF identik lintas mesin.
 

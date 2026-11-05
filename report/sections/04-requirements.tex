@@ -1,8 +1,8 @@
-\section{Requirements}
+\chapter{Requirements}
 
 Katalog memuat 24 requirement atomic. Source menunjuk EVID-* atau ASM-* yang terdaftar; angka tetap asumsi. Metode verification menyatakan cara memeriksa, bukan otomatis verdict passed.
 
-\subsubsection*{REQ-F-001 --- Klasifikasi}
+\section*{REQ-F-001 --- Klasifikasi}
 
 DensityAnalysis harus memetakan count valid ke LOW (0..5), MEDIUM (6..15), atau HIGH ($\geq$16).
 
@@ -10,7 +10,7 @@ DensityAnalysis harus memetakan count valid ke LOW (0..5), MEDIUM (6..15), atau 
 
 \textbf{Verification:} Test / VER-01. \textbf{Trace:} UC-01 $\rightarrow$ ACT-02 $\rightarrow$ BLK-03 $\rightarrow$ VER-01.
 
-\subsubsection*{REQ-F-002 --- Eligibility}
+\section*{REQ-F-002 --- Eligibility}
 
 TrafficController harus mengeluarkan pendekat dari eligible setelah grant green hingga round berikutnya.
 
@@ -18,7 +18,7 @@ TrafficController harus mengeluarkan pendekat dari eligible setelah grant green 
 
 \textbf{Verification:} Analysis / VER-02. \textbf{Trace:} UC-02 $\rightarrow$ ACT-08 $\rightarrow$ BLK-04 $\rightarrow$ VER-02.
 
-\subsubsection*{REQ-F-003 --- Prioritas}
+\section*{REQ-F-003 --- Prioritas}
 
 TrafficController harus memilih eligible menurut kategori menurun, waktu tunggu menurun, lalu jarak ring dari pointer bila deadline nominal masih layak.
 
@@ -26,7 +26,7 @@ TrafficController harus memilih eligible menurut kategori menurun, waktu tunggu 
 
 \textbf{Verification:} Test / VER-03. \textbf{Trace:} UC-02 $\rightarrow$ ACT-03 $\rightarrow$ BLK-04 $\rightarrow$ VER-03.
 
-\subsubsection*{REQ-F-004 --- Grant green}
+\section*{REQ-F-004 --- Grant green}
 
 TrafficController harus mengunci grant 10/20/30 s untuk LOW/MEDIUM/HIGH hingga green berakhir pada mode Normal.
 
@@ -34,7 +34,7 @@ TrafficController harus mengunci grant 10/20/30 s untuk LOW/MEDIUM/HIGH hingga g
 
 \textbf{Verification:} Test / VER-04. \textbf{Trace:} UC-02 $\rightarrow$ ACT-04 $\rightarrow$ BLK-04 $\rightarrow$ VER-04.
 
-\subsubsection*{REQ-F-005 --- Timer tunggu}
+\section*{REQ-F-005 --- Timer tunggu}
 
 TrafficController harus mengukur wait sejak green terakhir berakhir, nol selama green dan sejak startup untuk pendekat belum dilayani.
 
@@ -42,7 +42,7 @@ TrafficController harus mengukur wait sejak green terakhir berakhir, nol selama 
 
 \textbf{Verification:} Test / VER-05. \textbf{Trace:} UC-02 $\rightarrow$ ACT-03 $\rightarrow$ BLK-04 $\rightarrow$ VER-05.
 
-\subsubsection*{REQ-P-001 --- Observasi}
+\section*{REQ-P-001 --- Observasi}
 
 VehicleDetection harus menerima frame nominal lengkap pada cadence 1 s di model.
 
@@ -50,7 +50,7 @@ VehicleDetection harus menerima frame nominal lengkap pada cadence 1 s di model.
 
 \textbf{Verification:} Test / VER-06. \textbf{Trace:} UC-01 $\rightarrow$ ACT-01 $\rightarrow$ BLK-02 $\rightarrow$ VER-06.
 
-\subsubsection*{REQ-P-002 --- Boundary keputusan}
+\section*{REQ-P-002 --- Boundary keputusan}
 
 TrafficController harus menerbitkan grant berikutnya hanya pada tick 1 s di akhir all-red.
 
@@ -58,7 +58,7 @@ TrafficController harus menerbitkan grant berikutnya hanya pada tick 1 s di akhi
 
 \textbf{Verification:} Analysis / VER-07. \textbf{Trace:} UC-02 $\rightarrow$ ACT-03 $\rightarrow$ BLK-04 $\rightarrow$ VER-07.
 
-\subsubsection*{REQ-P-003 --- Minimum green}
+\section*{REQ-P-003 --- Minimum green}
 
 SignalController harus mempertahankan green yang diterima sekurang-kurangnya 10 s kecuali masuk SafetyHold.
 
@@ -66,7 +66,7 @@ SignalController harus mempertahankan green yang diterima sekurang-kurangnya 10 
 
 \textbf{Verification:} Test / VER-08. \textbf{Trace:} UC-03 $\rightarrow$ ACT-05 $\rightarrow$ BLK-05 $\rightarrow$ VER-08.
 
-\subsubsection*{REQ-P-004 --- Maximum green}
+\section*{REQ-P-004 --- Maximum green}
 
 SignalController harus mengakhiri setiap grant green paling lambat 30 s setelah grant dimulai.
 
@@ -74,7 +74,7 @@ SignalController harus mengakhiri setiap grant green paling lambat 30 s setelah 
 
 \textbf{Verification:} Analysis / VER-08. \textbf{Trace:} UC-03 $\rightarrow$ ACT-05 $\rightarrow$ BLK-05 $\rightarrow$ VER-08.
 
-\subsubsection*{REQ-P-005 --- Maximum waiting}
+\section*{REQ-P-005 --- Maximum waiting}
 
 TrafficController harus menjadwalkan setiap pendekat kembali green dalam 210 s sejak green sebelumnya berakhir pada operasi round baseline tanpa SafetyHold/restart.
 
@@ -82,7 +82,7 @@ TrafficController harus menjadwalkan setiap pendekat kembali green dalam 210 s s
 
 \textbf{Verification:} Analysis / VER-09. \textbf{Trace:} UC-02 $\rightarrow$ ACT-03 $\rightarrow$ BLK-04 $\rightarrow$ VER-09.
 
-\subsubsection*{REQ-S-001 --- Eksklusivitas}
+\section*{REQ-S-001 --- Eksklusivitas}
 
 SignalController harus menghasilkan paling banyak satu pendekat green pada setiap state model.
 
@@ -90,7 +90,7 @@ SignalController harus menghasilkan paling banyak satu pendekat green pada setia
 
 \textbf{Verification:} Analysis / VER-10. \textbf{Trace:} UC-03 $\rightarrow$ ACT-05 $\rightarrow$ BLK-05 $\rightarrow$ VER-10.
 
-\subsubsection*{REQ-S-002 --- Yellow}
+\section*{REQ-S-002 --- Yellow}
 
 SignalController harus menjalankan yellow 3 s pada pendekat aktif sebelum clearance all-red setelah grant normal berakhir.
 
@@ -98,7 +98,7 @@ SignalController harus menjalankan yellow 3 s pada pendekat aktif sebelum cleara
 
 \textbf{Verification:} Test / VER-11. \textbf{Trace:} UC-03 $\rightarrow$ ACT-06 $\rightarrow$ BLK-05 $\rightarrow$ VER-11.
 
-\subsubsection*{REQ-S-003 --- All-red}
+\section*{REQ-S-003 --- All-red}
 
 SignalController harus mempertahankan semua pendekat merah selama 1 s pada startup dan setiap clearance sebelum green berikutnya.
 
@@ -106,7 +106,7 @@ SignalController harus mempertahankan semua pendekat merah selama 1 s pada start
 
 \textbf{Verification:} Test / VER-11. \textbf{Trace:} UC-03 $\rightarrow$ ACT-06 $\rightarrow$ BLK-05 $\rightarrow$ VER-11.
 
-\subsubsection*{REQ-S-004 --- Command rejection}
+\section*{REQ-S-004 --- Command rejection}
 
 SignalController harus masuk SafetyHold all-red bila menerima command di luar domain atau command green yang melompati clearance.
 
@@ -114,7 +114,7 @@ SignalController harus masuk SafetyHold all-red bila menerima command di luar do
 
 \textbf{Verification:} Test / VER-12. \textbf{Trace:} UC-03 $\rightarrow$ ACT-09 $\rightarrow$ BLK-05 $\rightarrow$ VER-12.
 
-\subsubsection*{REQ-S-005 --- Deadline precedence}
+\section*{REQ-S-005 --- Deadline precedence}
 
 TrafficController harus mengganti urutan nominal dengan earliest-deadline-first jika proyeksi sisa round nominal melampaui deadline 210 s.
 
@@ -122,7 +122,7 @@ TrafficController harus mengganti urutan nominal dengan earliest-deadline-first 
 
 \textbf{Verification:} Test / VER-13. \textbf{Trace:} UC-02 $\rightarrow$ ACT-03 $\rightarrow$ BLK-04 $\rightarrow$ VER-13.
 
-\subsubsection*{REQ-S-006 --- Infeasible plan}
+\section*{REQ-S-006 --- Infeasible plan}
 
 TrafficController harus meminta SafetyHold bila urutan earliest-deadline-first juga tidak memenuhi deadline.
 
@@ -130,7 +130,7 @@ TrafficController harus meminta SafetyHold bila urutan earliest-deadline-first j
 
 \textbf{Verification:} Test / VER-13. \textbf{Trace:} UC-03 $\rightarrow$ ACT-03 $\rightarrow$ BLK-04 $\rightarrow$ VER-13.
 
-\subsubsection*{REQ-I-001 --- Input frame}
+\section*{REQ-I-001 --- Input frame}
 
 VehicleDetection harus memvalidasi CountsFrame sesuai domain field, empat ID unik dan aturan timestamp pada kontrak operasi.
 
@@ -138,7 +138,7 @@ VehicleDetection harus memvalidasi CountsFrame sesuai domain field, empat ID uni
 
 \textbf{Verification:} Test / VER-14. \textbf{Trace:} UC-01 $\rightarrow$ ACT-01 $\rightarrow$ BLK-02 $\rightarrow$ VER-14.
 
-\subsubsection*{REQ-I-002 --- Output lampu}
+\section*{REQ-I-002 --- Output lampu}
 
 TrafficLights harus menerima LampVector empat indikasi yang masing-masing bernilai Red, Yellow atau Green dari SignalController.
 
@@ -146,7 +146,7 @@ TrafficLights harus menerima LampVector empat indikasi yang masing-masing bernil
 
 \textbf{Verification:} Inspection / VER-15. \textbf{Trace:} UC-03 $\rightarrow$ ACT-05 $\rightarrow$ BLK-06 $\rightarrow$ VER-15.
 
-\subsubsection*{REQ-R-001 --- Deteksi data fault}
+\section*{REQ-R-001 --- Deteksi data fault}
 
 VehicleDetection harus melatch dataFault ketika frame invalid, valid=false, cache tidak lengkap atau umur cached sample lebih dari 3 s.
 
@@ -154,7 +154,7 @@ VehicleDetection harus melatch dataFault ketika frame invalid, valid=false, cach
 
 \textbf{Verification:} Test / VER-16. \textbf{Trace:} UC-04 $\rightarrow$ ACT-01 $\rightarrow$ BLK-02 $\rightarrow$ VER-16.
 
-\subsubsection*{REQ-R-002 --- Masuk fallback}
+\section*{REQ-R-002 --- Masuk fallback}
 
 TrafficController harus memakai Fallback pada boundary aman berikutnya setelah dataFault dilatch tanpa mengubah grant aktif.
 
@@ -162,7 +162,7 @@ TrafficController harus memakai Fallback pada boundary aman berikutnya setelah d
 
 \textbf{Verification:} Test / VER-17. \textbf{Trace:} UC-04 $\rightarrow$ ACT-07 $\rightarrow$ BLK-04 $\rightarrow$ VER-17.
 
-\subsubsection*{REQ-R-003 --- Fallback timing}
+\section*{REQ-R-003 --- Fallback timing}
 
 TrafficController harus melayani eligible dalam urutan ring dengan green 10 s pada Fallback.
 
@@ -170,7 +170,7 @@ TrafficController harus melayani eligible dalam urutan ring dengan green 10 s pa
 
 \textbf{Verification:} Test / VER-18. \textbf{Trace:} UC-04 $\rightarrow$ ACT-07 $\rightarrow$ BLK-04 $\rightarrow$ VER-18.
 
-\subsubsection*{REQ-R-004 --- Pemulihan}
+\section*{REQ-R-004 --- Pemulihan}
 
 TrafficController harus kembali Normal hanya pada awal round setelah tiga frame lengkap fresh/valid dengan timestamp baru berturut-turut di tick berbeda.
 
@@ -178,7 +178,7 @@ TrafficController harus kembali Normal hanya pada awal round setelah tiga frame 
 
 \textbf{Verification:} Test / VER-19. \textbf{Trace:} UC-04 $\rightarrow$ ACT-07 $\rightarrow$ BLK-04 $\rightarrow$ VER-19.
 
-\subsubsection*{REQ-D-001 --- Scope}
+\section*{REQ-D-001 --- Scope}
 
 Model harus membatasi operasi pada empat pendekat lurus tanpa pedestrian, dedicated turn, emergency atau ML.
 
@@ -186,7 +186,7 @@ Model harus membatasi operasi pada empat pendekat lurus tanpa pedestrian, dedica
 
 \textbf{Verification:} Inspection / VER-20. \textbf{Trace:} UC-02 $\rightarrow$ ACT-03 $\rightarrow$ BLK-01 $\rightarrow$ VER-20.
 
-\subsubsection*{REQ-D-002 --- SysML}
+\section*{REQ-D-002 --- SysML}
 
 Model harus mempertahankan identitas dan semantik subset SysML 1.6 dalam tujuh view dan pemetaan renderer yang terdokumentasi.
 

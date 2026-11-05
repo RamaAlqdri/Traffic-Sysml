@@ -1,50 +1,62 @@
-\section{Traceability dan Verification Scenarios}
-\subsection{Penelusuran requirement}
-Matrix berikut memuat seluruh requirement. Sources tersedia pada katalog. Setiap block mengarah melalui dependency satisfy ke requirement; setiap test case melalui verify ke requirement. Action dialokasikan ke block, dengan arah allocation dari action ke block. Hubungan ini menyatakan tanggung jawab desain, bukan verdict pelaksanaan.
-\begin{longtable}{lllll}
-\toprule Requirement & Use case & Action & Block & TestCase \\\midrule\endhead
-REQ-F-001 & UC-01 & ACT-02 & BLK-03 & VER-01 \\
-REQ-F-002 & UC-02 & ACT-08 & BLK-04 & VER-02 \\
-REQ-F-003 & UC-02 & ACT-03 & BLK-04 & VER-03 \\
-REQ-F-004 & UC-02 & ACT-04 & BLK-04 & VER-04 \\
-REQ-F-005 & UC-02 & ACT-03 & BLK-04 & VER-05 \\
-REQ-P-001 & UC-01 & ACT-01 & BLK-02 & VER-06 \\
-REQ-P-002 & UC-02 & ACT-03 & BLK-04 & VER-07 \\
-REQ-P-003 & UC-03 & ACT-05 & BLK-05 & VER-08 \\
-REQ-P-004 & UC-03 & ACT-05 & BLK-05 & VER-08 \\
-REQ-P-005 & UC-02 & ACT-03 & BLK-04 & VER-09 \\
-REQ-S-001 & UC-03 & ACT-05 & BLK-05 & VER-10 \\
-REQ-S-002 & UC-03 & ACT-06 & BLK-05 & VER-11 \\
-REQ-S-003 & UC-03 & ACT-06 & BLK-05 & VER-11 \\
-REQ-S-004 & UC-03 & ACT-09 & BLK-05 & VER-12 \\
-REQ-S-005 & UC-02 & ACT-03 & BLK-04 & VER-13 \\
-REQ-S-006 & UC-03 & ACT-03 & BLK-04 & VER-13 \\
-REQ-I-001 & UC-01 & ACT-01 & BLK-02 & VER-14 \\
-REQ-I-002 & UC-03 & ACT-05 & BLK-06 & VER-15 \\
-REQ-R-001 & UC-04 & ACT-01 & BLK-02 & VER-16 \\
-REQ-R-002 & UC-04 & ACT-07 & BLK-04 & VER-17 \\
-REQ-R-003 & UC-04 & ACT-07 & BLK-04 & VER-18 \\
-REQ-R-004 & UC-04 & ACT-07 & BLK-04 & VER-19 \\
-REQ-D-001 & UC-02 & ACT-03 & BLK-01 & VER-20 \\
-REQ-D-002 & UC-02 & ACT-03 & BLK-01 & VER-21 \\
-\bottomrule\end{longtable}
-\subsection{Interface internal}
+\chapter{Traceability dan Verification Scenarios}
+\section{Penelusuran requirement}
+Tabel~\ref{tab:traceability} memuat seluruh requirement. Sources tersedia pada katalog. Setiap block mengarah melalui dependency satisfy ke requirement; setiap test case melalui verify ke requirement. Action dialokasikan ke block, dengan arah allocation dari action ke block. Hubungan ini menyatakan tanggung jawab desain, bukan verdict pelaksanaan.
+\begin{longtable}{|l|l|l|l|l|}
+\caption{Traceability requirement, behavior, structure, dan verification}\label{tab:traceability}\\
+\hline
+\textbf{Requirement} & \textbf{Use case} & \textbf{Action} & \textbf{Block} & \textbf{TestCase} \\ \hline
+\endfirsthead
+\lanjutan{5}
+\hline
+\textbf{Requirement} & \textbf{Use case} & \textbf{Action} & \textbf{Block} & \textbf{TestCase} \\ \hline
+\endhead
+REQ-F-001 & UC-01 & ACT-02 & BLK-03 & VER-01 \\ \hline
+REQ-F-002 & UC-02 & ACT-08 & BLK-04 & VER-02 \\ \hline
+REQ-F-003 & UC-02 & ACT-03 & BLK-04 & VER-03 \\ \hline
+REQ-F-004 & UC-02 & ACT-04 & BLK-04 & VER-04 \\ \hline
+REQ-F-005 & UC-02 & ACT-03 & BLK-04 & VER-05 \\ \hline
+REQ-P-001 & UC-01 & ACT-01 & BLK-02 & VER-06 \\ \hline
+REQ-P-002 & UC-02 & ACT-03 & BLK-04 & VER-07 \\ \hline
+REQ-P-003 & UC-03 & ACT-05 & BLK-05 & VER-08 \\ \hline
+REQ-P-004 & UC-03 & ACT-05 & BLK-05 & VER-08 \\ \hline
+REQ-P-005 & UC-02 & ACT-03 & BLK-04 & VER-09 \\ \hline
+REQ-S-001 & UC-03 & ACT-05 & BLK-05 & VER-10 \\ \hline
+REQ-S-002 & UC-03 & ACT-06 & BLK-05 & VER-11 \\ \hline
+REQ-S-003 & UC-03 & ACT-06 & BLK-05 & VER-11 \\ \hline
+REQ-S-004 & UC-03 & ACT-09 & BLK-05 & VER-12 \\ \hline
+REQ-S-005 & UC-02 & ACT-03 & BLK-04 & VER-13 \\ \hline
+REQ-S-006 & UC-03 & ACT-03 & BLK-04 & VER-13 \\ \hline
+REQ-I-001 & UC-01 & ACT-01 & BLK-02 & VER-14 \\ \hline
+REQ-I-002 & UC-03 & ACT-05 & BLK-06 & VER-15 \\ \hline
+REQ-R-001 & UC-04 & ACT-01 & BLK-02 & VER-16 \\ \hline
+REQ-R-002 & UC-04 & ACT-07 & BLK-04 & VER-17 \\ \hline
+REQ-R-003 & UC-04 & ACT-07 & BLK-04 & VER-18 \\ \hline
+REQ-R-004 & UC-04 & ACT-07 & BLK-04 & VER-19 \\ \hline
+REQ-D-001 & UC-02 & ACT-03 & BLK-01 & VER-20 \\ \hline
+REQ-D-002 & UC-02 & ACT-03 & BLK-01 & VER-21 \\ \hline
+\end{longtable}
+\sumber{Katalog requirement dan model SysML proyek (2026)}
+
+\section{Interface internal}
 Proxy port bertipe InterfaceBlock; port penerima dikonjugasikan. Connector C01 membawa CountsFrame dari sensor ke analysis, C02 DensityFrame dari analysis ke controller, C03 fault/streak dari sensor ke controller, C04 PhaseCommand dari controller ke signals, C05 BoundaryEvent (SafeBoundary atau GrantAccepted) dari signals ke controller, dan C06 LampVector ke empat lights. Setiap light memiliki approach yang berbeda dan mengambil entry vector yang sesuai. Annotation part dan port PlantUML tidak diklaim sebagai validasi native SysML.
-\subsection{Skenario dan receipt pelaksanaan}
+\section{Skenario dan receipt pelaksanaan}
 Sebanyak 21 test case didefinisikan dalam source verification. Cakupan meliputi kategori, sekali pelayanan per round, tie/ring, grant freeze, wait timer, cadence, boundary, min/max green, fairness, exclusivity, clearance, command rejection, deadline override, domain input, output flow, stale, fault, fallback, recovery, scope dan semantik SysML. Setiap skenario memuat kondisi awal, stimulus/timeline, expected behavior, kriteria lulus/gagal dan metode.
 Checker referensi \texttt{model/verification/check\_model.py} benar-benar dijalankan. Ia tidak mengeksekusi source diagram atau perangkat fisik. Hasil yang tersedia diringkas pada Tabel~\ref{tab:results}.
-\begin{table}[htbp]\centering\small
-\caption{Hasil analisis yang dijalankan dan batas cakupannya.}\label{tab:results}
-\begin{tabular}{lp{.70\linewidth}}\toprule TestCase & Evidence aktual \\\midrule
-VER-01,03 & Contoh boundary kategori, tie/ring/wait/category pada fungsi referensi \\
-VER-09 & 576 pasangan permutasi, 2304 service waits, maksimum 208 s; startup 103 s \\
-VER-10 & Sembilan vector output state, masing-masing paling banyak satu Green \\
-VER-13 & Contoh aritmetika deadline nominal gagal, EDF layak, deadline sudah terlewat \\
-VER-14 & Predikat referensi menolak count/ID/timestamp/validity salah \\
-VER-16 & Umur 3 fresh, umur 4 stale; transisi mode belum dieksekusi \\
-Cross-links & 24 ID requirement unik, sumber dan 21 definisi verification terlacak \\\bottomrule
-\end{tabular}\end{table}
+\begin{table}[htbp]\centering
+\caption{Hasil analisis yang dijalankan dan batas cakupannya}\label{tab:results}
+\begin{tabular}{|p{.22\linewidth}|p{.65\linewidth}|}
+\hline
+\textbf{TestCase} & \textbf{Evidence aktual} \\ \hline
+VER-01,03 & Contoh boundary kategori, tie/ring/wait/category pada fungsi referensi \\ \hline
+VER-09 & 576 pasangan permutasi, 2304 service waits, maksimum 208 s; startup 103 s \\ \hline
+VER-10 & Sembilan vector output state, masing-masing paling banyak satu Green \\ \hline
+VER-13 & Contoh aritmetika deadline nominal gagal, EDF layak, deadline sudah terlewat \\ \hline
+VER-14 & Predikat referensi menolak count/ID/timestamp/validity salah \\ \hline
+VER-16 & Umur 3 fresh, umur 4 stale; transisi mode belum dieksekusi \\ \hline
+Cross-links & 24 ID requirement unik, sumber dan 21 definisi verification terlacak \\ \hline
+\end{tabular}
+\sumber{Receipt analisis kontrak referensi proyek (2026)}\end{table}
 VER-02/04/05/06/07/08/11/12/17/18/19 tetap not-run sebagai dynamic/complete inspections pada receipt executable. Expected timeline tersedia, tetapi tidak dipromosikan menjadi measured result. VER-15/20/21 diperiksa secara terpisah pada source dan dicatat dalam manual-inspection.md. Pemeriksaan semantik terpisah pada dictionary/model dilakukan secara inspection source dan tidak mengubah klaim cakupan eksekusi checker.
-\subsection{Contoh timeline konseptual}
+\section{Contoh timeline konseptual}
 Jika N mendapat green pada t=1 sampai 11, perubahan kategori pada t=2 tidak mengubah grant tersebut. Yellow berlangsung 11--14, all-red 14--15, dan green berikutnya paling awal 15. Jika dataFault muncul saat grant 30 s pada t=5, green N berakhir 31, yellow 31--34, all-red 34--35, lalu Fallback memberi green 10 pada boundary 35. Ini expected behavior dari kontrak, bukan hasil runtime controller.
 Pemulihan menuntut tiga timestamp baru yang valid dan round baru. Retransmisi timestamp yang sama tidak meningkatkan streak. Deadline precedence diuji secara aritmetika: pada t=200, melayani N selama 30 s ditambah clearance 4 akan membuat S dengan deadline 210 mulai 234; urutan EDF dapat memilih S pada 200. Jika deadline sudah terlewat sebelum keputusan, tidak ada pengurutan yang mengembalikannya dan SafetyHold diminta.

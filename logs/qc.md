@@ -58,3 +58,30 @@ Date: 2026-11-03 09:50:01 WIB. Status: **release-complete untuk artefak akademik
 | `model/verification/verification-scenarios.md` | `8d6fdfcd584e8c76d47515b6292329b89f92f02e2e00e3707dec364beb32aad0` |
 | `research/problem-formulation.md` | `c8866b9f4ce73b87f824d99c6a70735fce9f019b6eefe83cfba2b7724b24a683` |
 | `research/design-assumptions.md` | `60385f541237532858635aecb18a01e744b6d3633d84fe02ee21f58af5fd9b85` |
+
+## 2026-11-05 12:37:23 WIB — QC revisi template UB (menggantikan snapshot format laporan sebelumnya)
+
+- Status: source-complete → build-verified → release-complete untuk artefak akademik konseptual dengan batas verifikasi baseline tetap berlaku.
+- Scope: laporan memakai template lokal UB yang diminta, bukan style tiruan. Snapshot laporan lama 21 halaman/pdfLaTeX/BibTeX dan metadata generik pada receipt sebelumnya tidak berlaku untuk laporan terkini. Laporan sekarang 30 halaman (6 awal, 24 isi/referensi), XeLaTeX+Biber. Beamer tetap 14 slide/pdfLaTeX/BibTeX dan source-nya tidak berubah.
+- Command: make build final exit0; log mentah append-only ada di logs/build.md. Checker mengulangi 576 pasangan urutan/2304 service waits (maksimum 208 s), cross-links 24 requirement/21 definisi verification. Ini bukan eksekusi timeline diagram, simulator traffic atau perangkat fisik; skenario not-run tetap not-run.
+- Template: gaya setelah `\RequirePackage{textcomp}` identik sumber; logo identik byte. Font/engine dan blok penyusun disesuaikan secara eksplisit; sumber template tidak ditulis. Asal/adaptasi dan konfigurasi font ada di report/TEMPLATE-UB.md.
+- Cover: Edy Rahman (256150100011007), Ramadhani Al-Qadri (256150100011010), Departemen Teknik Informatika. Program Studi Magister Ilmu Komputer mengikuti konteks MILKOM. Nama/NIM/departemen diperiksa visual dan ekstraksi teks (normalisasi glyph hyphen Unicode), author metadata PDF benar.
+- Font: pdffonts mengonfirmasi Calibri, Calibri-Bold dan Calibri-Italic TrueType tertanam; tidak ada Carlito. Sumber font `/Applications/Microsoft Word.app/Contents/Resources/DFonts/`. Font matematika dan font internal diagram mengikuti aset/style dan bukan penggantian font body. Font berlisensi tidak disalin ke repo.
+- Content: seluruh 24 ID/statement/source/trace requirement terpelihara persis setelah normalisasi perubahan heading. Bibliography, source Beamer, source diagram, katalog, checker dan matrix/scenario model identik HEAD; hanya receipt hasil diperbarui oleh build. Semua enam key bibliography disitasi tanpa orphan/missing; semua tujuh PDF diagram terdaftar pada report/main.fls.
+- Visual: semua 30 halaman ditinjau melalui contact sheet; sampul, ringkasan, daftar isi/tabel, bab, tabel berlanjut dan diagram diperiksa lebih besar. Setelah penyesuaian skala, activity/sequence/IBD diperiksa ulang. Sampul dan referensi PDF hasil make build akhir ditinjau kembali. Tidak ada gambar hilang, konten terpotong atau overlap material. Penomoran Romawi/Arab, BAB, grid/caption/sumber dan margin mengikuti style UB.
+- Logs: final report/presentation .log/.blg tanpa error, undefined citation/reference, Overfull, LaTeX/Package warning. Laporan memiliki 73 Underfull hbox akibat format justification tanpa hyphenation; diterima setelah QA visual, tidak disamarkan sebagai nol warning tipografi. Peringatan xdvipdfmx tag PDF Mermaid diabaikan pada impor dan tidak mengubah gambar; tidak ada klaim aksesibilitas. Build percobaan lama tetap tercatat utuh.
+- Batas sumber/model: ISSUE-004 dan batas model/kalibrasi/hardware pada receipt sebelumnya tetap berlaku. Tidak mengklaim verifikasi baru semantik SysML atau performance kendaraan hanya karena migrasi format berhasil.
+- Whitespace: diff source/administrasi diperiksa dengan logs/build.md dikecualikan; whitespace raw terminal log dipertahankan sesuai append-only.
+
+### Snapshot artefak revisi
+
+| File | SHA-256 |
+|---|---|
+| `report/main.pdf` | `0cf89cc1d747a44e2429a93eceae5de6d99e919c02598854dee5bbafb26c5993` |
+| `presentation/main.pdf` | `d4f0d8289fe4eb5eea8fdff216e87e8b4fdbca7958886190a4312fc2606b5dac` |
+| `report/gaya/ubtesis.sty` | `3e52a390c7660e22a3e3bb53be9f0a5dceaccaabd1d71c89e738abf5e1896e14` |
+| `report/awal/sampul.tex` | `b26a19ab6a2a61e0fa71bcbf4b02e3647f50533ede9e4bed86ccd9609d41d10d` |
+| `report/metadata.tex` | `91b6c9049089b510500c4ce4a6b28f7ab5749b9c167c74aba219411e38b4b434` |
+| `report/main.tex` | `5ea832e044557b76c0921319b4d0ade003206c5ce580e097648a436c851baa63` |
+| `report/latexmkrc` | `6a22787f89caa22e6f63de4a8395d0ebb95fbedeba4e65e81338b3b771f3631b` |
+| `Makefile` | `4a71c50a93eb048b385a0e1eb9067ad47ac37d5dd73f2a13961ae1515be472b8` |

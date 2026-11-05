@@ -90,3 +90,13 @@ Template:
 - Date: 2026-11-03 09:50:01 WIB
 - Status: deferred sebagai keterbatasan yang dinyatakan pada artefak
 - Resolution: peringatan xref/akses tidak dinyatakan telah diperbaiki. Kajian memakai locator bagian/identitas PDF yang terbaca serta confidence terbatas; laporan memuat batas tersebut. Tidak mengubah sumber atau melewati batas akses. Tidak menghalangi rilis artefak konseptual dengan batas klaim yang sudah diperiksa.
+
+## ISSUE-006 — Migrasi template UB: backend dan disposition tipografi
+
+- Date: 2026-11-05 12:37:23 WIB
+- Severity: build blocker sementara; typography advisory tersisa.
+- Cause: file main.bbl lama berasal dari BibTeX/natbib dan tidak kompatibel dengan biblatex/Biber. Probe Calibri berdasarkan nama awalnya mencari font belum terdaftar sebelum path lokal dipakai.
+- Attempted fix: simpan PDF dan intermediate lama di tmp/template-ub-backup; regenerasi intermediate laporan melalui XeLaTeX+Biber; cari file Calibri Word terlebih dahulu sebelum lookup font sistem. Source template dan bibliography tidak diubah.
+- Status: blocker resolved; make build final exit0, tanpa undefined reference/citation, error, overfull atau warning paket pada log final.
+- Disposition: 73 underfull hbox tetap dilaporkan pada log laporan karena perataan penuh dan pemenggalan nonaktif mengikuti style UB. Seluruh 30 halaman ditinjau; tidak ada clipping/overlap material. Tidak menyembunyikan warning atau mengubah aturan style untuk menghilangkannya. xdvipdfmx mengabaikan tag struktur pada PDF Mermaid yang diimpor; diagram tetap tertampil, bukan klaim PDF aksesibel/bertanda struktur penuh.
+- Verification: font Calibri/Calibri-Bold/Calibri-Italic embedded, Carlito tidak dipakai; metadata PDF dan sampul benar, 24 ID requirement dan enam key sitasi terpelihara; hasil di logs/qc.md.

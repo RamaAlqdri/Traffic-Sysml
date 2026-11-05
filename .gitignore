@@ -20,3 +20,16 @@
 /presentation/*.nav
 /presentation/*.snm
 /presentation/*.toc
+
+# UB report / biblatex intermediates
+/report/*.bcf
+/report/*.run.xml
+/report/*.lof
+/report/*.lot
+/report/*.lop
+/report/*.xdv
+
+/report/*.bcf-SAVE-ERROR
+/report/*.bbl-SAVE-ERROR
+/report/missfont.log
+/report/mfput.log
