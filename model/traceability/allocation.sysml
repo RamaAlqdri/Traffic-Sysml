@@ -1,7 +1,8 @@
 package StlTraceability {
     doc /* Relasi satisfy (part -> requirement) dan allocate (action -> part).
            Sesuai model/traceability/traceability-matrix.md. Satisfy adalah klaim desain,
-           bukan bukti bahwa verifikasi sudah passed. */
+           bukan bukti bahwa verifikasi sudah passed. Part mengikuti ibd.puml
+           (lights = lights[4]; label diagram "analysis" = densityAnalysis). */
 
     private import StlContext::*;
     private import StlRequirements::*;
@@ -40,7 +41,7 @@ package StlTraceability {
     satisfy reqDeadlinePrecedence  by smartTrafficLight.controller;
     satisfy reqInfeasiblePlan      by smartTrafficLight.controller;
     satisfy reqInputFrame          by smartTrafficLight.sensor;
-    satisfy reqOutputLamps         by smartTrafficLight.lightNorth;
+    satisfy reqOutputLamps         by smartTrafficLight.lights;
     satisfy reqDataFaultDetection  by smartTrafficLight.sensor;
     satisfy reqFallbackEntry       by smartTrafficLight.controller;
     satisfy reqFallbackTiming      by smartTrafficLight.controller;

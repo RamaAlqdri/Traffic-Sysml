@@ -4,17 +4,27 @@ package StlStateMachine {
            Perubahan mode/grant hanya pada Ready; dataFault dilatch pada fase aktif mana pun. */
 
     private import ScalarValues::*;
+    private import ISQ::*;
     private import SI::*;
     private import StlTypes::*;
 
     item def GrantEvent {
+        doc /* Event grant dari PhaseCommand: pendekat i dan lama green g (10..30 s). */
         attribute approach : Approach;
         attribute greenSeconds : Natural;
     }
-    item def InvalidCommandEvent;
-    item def RestartEvent;
+    item def InvalidCommandEvent {
+        doc /* Command di luar domain atau green yang melompati clearance (REQ-S-004). */
+    }
+    item def InfeasiblePlanEvent {
+        doc /* Permintaan SafetyHold dari TrafficController: urutan EDF pun tidak memenuhi deadline (REQ-S-006). */
+    }
+    item def RestartEvent {
+        doc /* Restart eksplisit: satu-satunya jalan keluar dari SafetyHold. */
+    }
 
     state def SignalLifecycle {
+        doc /* STM-01: Running (Startup, Ready, Green(i), Yellow(i), Clearance) dan SafetyHold. */
         entry; then running;
 
         state running {
@@ -29,7 +39,8 @@ package StlStateMachine {
                 entry action requestPlan;
             }
             state green {
-                doc /* Green(i): hanya pendekat i Green, lain Red. */
+                doc /* Green(i): hanya pendekat i Green, lain Red. lockedGreen = g yang dikunci saat grant. */
+                attribute lockedGreen : DurationValue;
                 entry action setOnlyApproachGreen;
             }
             state yellow {
@@ -55,7 +66,7 @@ package StlStateMachine {
 
             transition greenExpiry
                 first green
-                accept after 30 [s]
+                accept after green.lockedGreen
                 do action recordLastGreenEnd
                 then yellow;
 
@@ -79,6 +90,11 @@ package StlStateMachine {
         transition toSafetyHold
             first running
             accept invalid : InvalidCommandEvent
+            then safetyHold;
+
+        transition toSafetyHoldInfeasible
+            first running
+            accept infeasible : InfeasiblePlanEvent
             then safetyHold;
 
         transition restart

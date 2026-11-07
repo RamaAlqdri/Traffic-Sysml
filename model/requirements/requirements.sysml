@@ -1,6 +1,7 @@
 package StlRequirements {
     doc /* Katalog 24 requirement baseline (3 November 2026) sebagai SysML v2 requirement usage.
-           Statement lengkap = sumber requirement; angka adalah asumsi desain ASM-*. */
+           Statement lengkap = sumber requirement; angka adalah asumsi desain ASM-*.
+           Subject mengikuti part pada ibd.puml. */
 
     private import StlStructure::*;
 
@@ -102,7 +103,7 @@ package StlRequirements {
     requirement <'REQ-I-002'> reqOutputLamps {
         doc /* TrafficLights harus menerima LampVector empat indikasi yang masing-masing bernilai Red, Yellow
                atau Green dari SignalController. Source: EVID-TRF-002, ASM-008. Verification: Inspection; VER-15. */
-        subject light : TrafficLights;
+        subject lights : TrafficLights[4];
     }
 
     // ================================================================ Reliability / failure handling

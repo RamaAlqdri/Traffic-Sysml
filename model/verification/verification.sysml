@@ -1,7 +1,8 @@
 package StlVerification {
     doc /* 21 verification case (VER-01..21). Semua berstatus not-run pada definisi; status pelaksanaan
            hanya pada model/verification/verification-results.md. Ini analisis/walkthrough konseptual,
-           bukan pengujian perangkat nyata. */
+           bukan pengujian perangkat nyata.
+           Subject mengikuti part pada ibd.puml. */
 
     private import StlStructure::*;
     private import StlRequirements::*;
@@ -88,7 +89,7 @@ package StlVerification {
     }
     verification def <'VER-15'> InterfaceOutput {
         doc /* Telusuri C06 dan approach tiap lampu: empat lampu mengambil entry masing-masing. Method: inspection. */
-        subject light : TrafficLights;
+        subject lights : TrafficLights[4];
         objective { verify reqOutputLamps; }
     }
     verification def <'VER-16'> StaleFault {

@@ -1,23 +1,50 @@
 package StlActivity {
-    doc /* ACT-00 ManageTraffic - activity event-driven; ACT-01..10 adalah action.
+    doc /* ACT-00 ManageTraffic - activity event-driven (activity.puml); ACT-01..10 adalah action.
            Alokasi action ke block: lihat model/traceability/allocation.sysml. */
 
     private import ScalarValues::*;
 
-    action def ValidateFrameCache;   // ACT-01 validasi frame/cache, update dataFault + recovery streak
-    action def ClassifyCounts;       // ACT-02 klasifikasi count fresh valid
-    action def RankEligible;         // ACT-03 refresh eligible, ranking, cek deadline
-    action def PrepareGrant;         // ACT-04 siapkan grant green beku
-    action def AdvancePhaseTimer;    // ACT-05 majukan timer fase
-    action def StmTransition;        // ACT-06 transisi STM-01 yang enabled
-    action def SelectMode;           // ACT-07 pilih Normal/Fallback
-    action def MarkServed;           // ACT-08 tandai served, majukan pointer ring
-    action def ApplyGrant;           // ACT-09 validasi dan terapkan grant
-    action def Startup;              // ACT-10 startup all-red 1 s
-    action def AcceptEvent;          // penerimaan event sample/tick/timer
-    action def RequestSafetyHold;    // permintaan SafetyHold all-red
+    action def <'ACT-01'> ValidateFrameCache {
+        doc /* Validasi frame/cache; update dataFault dan recovery streak; clear dataFault setelah 3 frame baru yang baik. */
+    }
+    action def <'ACT-02'> ClassifyCounts {
+        doc /* Klasifikasi count fresh valid menjadi LOW/MEDIUM/HIGH. */
+    }
+    action def <'ACT-03'> RankEligible {
+        doc /* Refresh eligible pada round baru, ranking, dan cek deadline. */
+    }
+    action def <'ACT-04'> PrepareGrant {
+        doc /* Siapkan grant green beku (10/20/30 s Normal, 10 s Fallback). */
+    }
+    action def <'ACT-05'> AdvancePhaseTimer {
+        doc /* Majukan timer fase yang telah diberikan. */
+    }
+    action def <'ACT-06'> StmTransition {
+        doc /* Lakukan hanya transisi STM-01 yang enabled: green expiry, yellow expiry, clearance expiry. */
+    }
+    action def <'ACT-07'> SelectMode {
+        doc /* Pilih mode Normal/Fallback; pemulihan ke Normal hanya pada awal round. */
+    }
+    action def <'ACT-08'> MarkServed {
+        doc /* Pada grantAccepted: tandai pendekat served dan majukan pointer ring. */
+    }
+    action def <'ACT-09'> ApplyGrant {
+        doc /* Validasi dan terapkan grant, lalu emit grantAccepted(i). */
+    }
+    action def <'ACT-10'> Startup {
+        doc /* Startup: semua lampu merah selama 1 s. */
+    }
+    action def AcceptEvent {
+        doc /* Penerimaan event sample, observation tick atau phase timer. */
+    }
+    action def RequestSafetyHold {
+        doc /* Permintaan SafetyHold all-red bila rencana tidak feasible. */
+    }
 
-    action def ManageTraffic {       // ACT-00
+    action def <'ACT-00'> ManageTraffic {
+        doc /* Aktivitas utama event-driven: startup lalu loop terima event, validasi, klasifikasi,
+               majukan timer, pilih mode, ranking, grant, tandai served dan transisi STM-01. */
+        in attribute sampleOrTick : Boolean;
         in attribute freshValidCache : Boolean;
         in attribute safeBoundaryAtTick : Boolean;
         in attribute feasiblePlan : Boolean;
@@ -36,6 +63,7 @@ package StlActivity {
         action holdRequest : RequestSafetyHold;
 
         merge loopTop;
+        decide sampleCheck;
         decide cacheOk;
         decide boundaryNow;
         decide planOk;
@@ -44,7 +72,12 @@ package StlActivity {
         then startup;
         then loopTop;
         then acceptEvent;
-        then validateFrame;
+        then sampleCheck;
+
+        if sampleOrTick then validateFrame;
+        else advanceTimer;
+
+        first validateFrame;
         then cacheOk;
 
         if freshValidCache then classify;

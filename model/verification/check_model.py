@@ -102,7 +102,7 @@ def main():
             assert not any(ord(c) < 32 for c in line), 'Control character in graphics dimensions'
             assert re.search(r'height=[.0-9]+\\text(?:width|height)', line), line
 
-    actions = re.findall(r'action def \w+;\s*// (ACT-\d+)', (ROOT / 'model/behavior/activity.sysml').read_text(encoding='utf-8'))
+    actions = re.findall(r"action def <'(ACT-(?:0[1-9]|10))'> \w+", (ROOT / 'model/behavior/activity.sysml').read_text(encoding='utf-8'))
     assert len(actions) == len(set(actions)) == 10, 'Activity nodes need distinct model IDs'
 
     req = (ROOT / 'model/requirements/requirements.md').read_text(encoding='utf-8')

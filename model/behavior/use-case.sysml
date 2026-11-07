@@ -1,5 +1,5 @@
 package StlUseCases {
-    doc /* Use case view SmartTrafficLightSystem (BLK-01). UC-01..04.
+    doc /* Use case view SmartTrafficLightSystem (BLK-01). UC-01..04, sesuai use-case.puml.
            TrafficDataSource dan RoadUsers adalah aktor eksternal; komponen internal bukan aktor. */
 
     private import StlStructure::*;
