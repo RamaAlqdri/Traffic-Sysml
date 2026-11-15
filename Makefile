@@ -45,7 +45,7 @@ _build:
 	  fi; \
 	done; \
 	for source in "$(LECTURE)" $(SYSML_SOURCES) package-lock.json node_modules/sysml-v2-lsp/package.json node_modules/sysml-v2-support/package.json \
-	  report/main.tex report/bibliography.bib presentation/main.tex; do \
+	  report/main.tex report/bibliography.bib presentation/main.tex assets/diagrams/syson-composition.svg; do \
 	  if [ ! -s "$$source" ]; then printf 'Missing/empty source: %s\n' "$$source"; missing=1; fi; \
 	done; \
 	if [ "$$missing" -ne 0 ]; then \
@@ -64,6 +64,7 @@ _build:
 	@set -eu; for name in $(DIAGRAMS); do \
 	  rsvg-convert -f pdf -o "assets/diagrams/$$name.pdf" "assets/diagrams/$$name.svg"; \
 	done
+	rsvg-convert -f pdf -o assets/diagrams/syson-composition.pdf assets/diagrams/syson-composition.svg
 	latexmk -xelatex -cd -interaction=nonstopmode -halt-on-error -file-line-error report/main.tex
 	latexmk -pdf -cd -interaction=nonstopmode -halt-on-error -file-line-error presentation/main.tex
 	test -s report/main.pdf

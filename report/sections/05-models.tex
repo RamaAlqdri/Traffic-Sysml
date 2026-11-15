@@ -1,69 +1,62 @@
 \section{Perancangan Model SysML}
-Seluruh diagram dihasilkan langsung dari hasil parsing berkas SysML v2.0 melalui language server dan renderer SysML yang versinya dikunci. Berkas \texttt{.sysml} menjadi sumber model; SVG dan PDF merupakan artefak turunannya. Definisi elemen dan relasi mengacu ke spesifikasi SysML v2 \parencite{omg2026}. Gambar~\ref{fig:requirements} sampai Gambar~\ref{fig:ibd} menyajikan tujuh view. Pemeriksaan parser dan kontrak statis tidak menyatakan seluruh perilaku telah dieksekusi dalam engine SysML.
-\subsection{Requirement view}
-Requirement view menampilkan empat requirement inti dari model native. Relasi satisfy dan verify diperiksa pada source alokasi dan verification; tidak seluruh relasi ditampilkan pada overview ini. Seluruh 24 requirement tetap terdaftar dan terhubung pada katalog serta matrix; ini partial view, bukan penghilangan requirement.
+Definisi elemen dan relasi disimpan dalam berkas \texttt{.sysml} yang mengacu pada spesifikasi SysML 2.0 \parencite{omg2026}. Diagram komposisi ditata di Eclipse SysON v2026.11.0. Perender SysML menghasilkan enam diagram lainnya dari model yang sama.
+\subsection{Kebutuhan sistem}
+Gambar~\ref{fig:requirements} menampilkan empat kebutuhan sebagai gambaran awal. Katalog memuat seluruh 24 kebutuhan. Hubungan \texttt{satisfy} dan \texttt{verify} dapat diperiksa pada berkas alokasi dan verifikasi.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.60\textheight,keepaspectratio]{requirements.pdf}
-\caption{Requirement view dari model baseline}\label{fig:requirements}
-\sumber{Pemodelan proyek berdasarkan asumsi desain ASM-001--010 (2026)}
+\caption{Kebutuhan sistem pada model SysML v2}\label{fig:requirements}
 \end{figure}
 \clearpage
 \begin{landscape}
-\subsection{Use case view}
-UC-02 mengikutsertakan MaintainSafeSignals. HandleDataFailure memiliki dependency ke ServeApproach; kondisi dataFault dinyatakan pada dokumentasi model, bukan relasi UML extend. TrafficDataSource dan RoadUsers merupakan aktor eksternal. Overview native menampilkan aktor dan use case; hubungan include/dependency tidak ditampilkan lengkap pada view ini dan tetap ditelusuri pada source.
+\subsection{Kasus penggunaan}
+Use case UC-02 menyertakan MaintainSafeSignals. HandleDataFailure bergantung pada ServeApproach, dan dokumentasi model menjelaskan kapan \texttt{dataFault} berlaku. TrafficDataSource dan RoadUsers berada di luar sistem. Berkas model memuat relasi \texttt{include} dan dependensi yang tidak tampak pada diagram ringkas.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.66\textwidth,keepaspectratio]{use-case.pdf}
-\caption{Use case view dari model baseline}\label{fig:use-case}
-\sumber{Pemodelan proyek berdasarkan asumsi desain ASM-001--010 (2026)}
+\caption{Kasus penggunaan pada model SysML v2}\label{fig:use-case}
 \end{figure}
 \clearpage
 \end{landscape}
 \clearpage
-\subsection{Activity view}
-Alokasi action ke block tercantum pada dictionary model. Loop menerima event sample atau phase timer; transisi clearance hanya berjalan bila event STM-01 mengaktifkannya, bukan delay blocking setiap sampel.
+\subsection{Alur aktivitas}
+Alur aktivitas menanggapi dua jenis kejadian. Sampel atau detak observasi memicu pemeriksaan data, sedangkan pewaktu fase memicu pemeriksaan transisi pada STM-01. Daftar alokasi model menunjukkan komponen yang menjalankan setiap aksi.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.76\textheight,keepaspectratio]{activity.pdf}
-\caption{Activity view dari model baseline}\label{fig:activity}
-\sumber{Pemodelan proyek berdasarkan asumsi desain ASM-001--010 (2026)}
+\caption{Alur aktivitas pada model SysML v2}\label{fig:activity}
 \end{figure}
 \clearpage
 \begin{landscape}
-\subsection{Sequence view}
-Lifeline mereferensikan part yang sama dengan IBD. DataFault dilatch selama green, tetapi grant tetap sampai timer berakhir; mode berikutnya diputuskan pada boundary aman.
+\subsection{Urutan interaksi}
+Peserta pada diagram urutan merujuk pada komponen di diagram interkoneksi. Jika gangguan data terdeteksi saat lampu hijau, pengendali mencatat gangguan dan menyelesaikan durasi hijau yang sudah ditetapkan. Mode pelayanan berikutnya dipilih setelah jeda semua merah.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.66\textwidth,keepaspectratio]{sequence.pdf}
-\caption{Sequence view dari model baseline}\label{fig:sequence}
-\sumber{Pemodelan proyek berdasarkan asumsi desain ASM-001--010 (2026)}
+\caption{Urutan interaksi pada model SysML v2}\label{fig:sequence}
 \end{figure}
 \clearpage
 \end{landscape}
 \clearpage
-\subsection{State machine view}
-STM-01 dimiliki SignalController. Normal/Fallback merupakan variabel controller, bukan region sinyal concurrent. SafetyHold berada di luar composite Running dan keluar hanya melalui restart.
+\subsection{Transisi fase lampu}
+SignalController menjalankan STM-01. Normal dan Fallback adalah pilihan mode penjadwalan. SafetyHold berada di luar keadaan Running dan hanya dapat ditinggalkan setelah sistem dimulai ulang.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.76\textheight,keepaspectratio]{state-machine.pdf}
-\caption{State machine view dari model baseline}\label{fig:state-machine}
-\sumber{Pemodelan proyek berdasarkan asumsi desain ASM-001--010 (2026)}
+\caption{Transisi fase lampu pada model SysML v2}\label{fig:state-machine}
 \end{figure}
 \clearpage
 \begin{landscape}
-\subsection{Definisi struktur}
-View definisi struktur menampilkan graf enam part definition. Garis menunjukkan kepemilikan part yang diagregasi menurut tipe target, diturunkan dari model; bentuk garis mengikuti native Graph View, bukan notasi diamond UML. Atribut dan port rinci ditelusuri pada source dan view interkoneksi. Sebutan BDD dipertahankan sebagai nama berkas keluaran; elemen model memakai konsep SysML v2, bukan stereotype block UML.
+\subsection{Komposisi internal}
+SmartTrafficLightSystem (BLK-01) terdiri atas adapter masukan, pengolah kepadatan, pengendali prioritas, pengendali fase, dan empat lampu. Diagram dari SysON memperlihatkan jalur data dan perintah di antara komponen tersebut. Empat cabang C06 menuju lampu pada masing-masing pendekat. Gambar~\ref{fig:ibd} merinci portnya.
 \begin{figure}[htbp]\centering
-\includegraphics[width=\linewidth,height=.66\textwidth,keepaspectratio]{bdd.pdf}
-\caption{Part definitions pada model SysML v2}\label{fig:bdd}
-\sumber{Pemodelan proyek berdasarkan asumsi desain ASM-001--010 (2026)}
+\includegraphics[width=\linewidth,height=.66\textwidth,keepaspectratio]{syson-composition.pdf}
+\caption{Komposisi internal dan aliran sinyal pada SysON}\label{fig:bdd}
 \end{figure}
 \clearpage
 \end{landscape}
 \clearpage
 \begin{landscape}
 \subsection{Interkoneksi internal}
-View interkoneksi menampilkan part usage dan port yang diwarisi dari definisi tipe BLK-01. C00 menghubungkan sumber eksternal ke input sensor; C01--C05 menghubungkan komponen internal, dan C06 dipecah menjadi empat koneksi lampu. Arah aliran item ditentukan pada source SysML v2. Adapter mengekspansi fitur tipe untuk kebutuhan tampilan.
+C00 membawa hitungan dari penyedia data eksternal ke sensor. Di dalam sistem, C01 meneruskan hitungan yang telah diperiksa, C02 membawa kategori kepadatan, dan C03 membawa status data. Pengendali mengirim perintah fase melalui C04 dan menerima notifikasi batas fase melalui C05. Empat cabang C06 membawa vektor warna yang sama ke setiap lampu.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.66\textwidth,keepaspectratio]{ibd.pdf}
 \caption{Part, port, dan koneksi pada model SysML v2}\label{fig:ibd}
-\sumber{Pemodelan proyek berdasarkan asumsi desain ASM-001--010 (2026)}
 \end{figure}
 \clearpage
 \end{landscape}

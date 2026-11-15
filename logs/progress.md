@@ -154,3 +154,16 @@ Gunakan template berikut untuk entri berikutnya:
 - Files: activity, sequence, BDD dan types; diagram, PDF, receipt verifikasi dan log diperbarui oleh build.
 - Validation: parser menerima 10 berkas, 24 requirement dan 21 verification case terhubung, 5 regression test lolos. Build merender tujuh diagram dan mengompilasi kedua PDF setelah Biber 2.21 ARM64 dipakai lewat PATH lokal.
 - Skill: ponytail. Status: build-verified untuk resolusi merge. Pemeriksaan visual menyeluruh belum diulang.
+
+## 2026-11-15 WIB — Diagram komposisi SysON dan revisi laporan
+
+- Action: impor 10 paket melalui satu dokumen di SysON v2026.11.0. Buat view konteks dan komposisi BLK-01. Pilih Flow Layout dan ekspor diagram komposisi. Rapikan label serta garis pada SVG untuk cetak.
+- Files: Makefile, model/BUILD.md, ekspor komposisi SVG/PDF, sumber LaTeX, dan PDF laporan.
+- Validation: delapan part usage dan sembilan jalur internal tampak pada diagram komposisi. SysON melaporkan 10 referensi payload belum terurai pada guard dan aksi grant. make build sukses dengan Biber ARM64. Setelah penyesuaian posisi label, laporan dibangun ulang dengan XeLaTeX. Pemeriksaan teks PDF mengonfirmasi 23 halaman dan penghapusan istilah yang diminta.
+- Skills: ponytail dan pdf.
+
+## 2026-11-15 WIB — Penyuntingan bahasa dan indentasi laporan
+
+- Action: samakan jarak nomor judul dan indentasi 0,75 cm pada paragraf pertama dan berikutnya. Hapus keterangan Sumber di bawah gambar dan tabel. Kartu kebutuhan tetap menyimpan kode EVID/ASM di baris Rujukan.
+- Editing: gunakan Humanizer B*T dari ClawHub (rilis paket 1.0.0) untuk menyederhanakan narasi, memberi padanan Indonesia pada istilah umum, dan mempertahankan angka, sitasi, identitas model, serta pengungkapan bantuan AI.
+- Validation: laporan dibangun ulang dengan XeLaTeX dan Biber ARM64 lokal. PDF 22 halaman diperiksa dengan render dan ekstraksi teks. 24 kartu tetap sinkron; jarak nomor 3,88–4,18 pt dan indentasi paragraf pertama 21,26 pt. Tidak ada label Sumber, istilah yang sebelumnya dihapus, overfull box, atau referensi tidak terurai pada log kompilasi laporan.

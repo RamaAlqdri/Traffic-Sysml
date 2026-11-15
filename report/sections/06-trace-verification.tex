@@ -1,6 +1,6 @@
-\section{Traceability dan Verification Scenarios}
+\section{Keterlacakan dan skenario verifikasi}
 \subsection{Penelusuran requirement}
-Tabel~\ref{tab:traceability} memuat seluruh requirement. Sources tersedia pada katalog. Setiap part usage pemenuh ditautkan ke requirement melalui satisfy; setiap verification case memiliki objective verify. Action dialokasikan ke block, dengan arah allocation dari action ke block. Hubungan ini menyatakan tanggung jawab desain, bukan verdict pelaksanaan.
+Tabel~\ref{tab:traceability} menghubungkan setiap kebutuhan dengan use case, aksi, komponen, dan skenario verifikasi. Pada model, relasi \texttt{satisfy} menunjukkan komponen yang memenuhi kebutuhan, \texttt{verify} menunjukkan kebutuhan yang diperiksa, dan \texttt{allocate} memasangkan aksi dengan komponen pelaksana. Hasil pemeriksaan dicatat secara terpisah.
 \begin{longtable}{|l|l|l|l|l|}
 \caption{Traceability requirement, behavior, structure, dan verification}\label{tab:traceability}\\
 \hline
@@ -35,28 +35,33 @@ REQ-R-004 & UC-04 & ACT-07 & BLK-04 & VER-19 \\ \hline
 REQ-D-001 & UC-02 & ACT-03 & BLK-01 & VER-20 \\ \hline
 REQ-D-002 & UC-02 & ACT-03 & BLK-01 & VER-21 \\ \hline
 \end{longtable}
-\sumber{Katalog requirement dan model SysML proyek (2026)}
 
-\subsection{Interface internal}
-Port usage bertipe port definition; port penerima dikonjugasikan. Connector C01 membawa CountsFrame dari sensor ke analysis, C02 DensityFrame dari analysis ke controller, C03 fault/streak dari sensor ke controller, C04 PhaseCommand dari controller ke signals, C05 BoundaryEvent (SafeBoundary atau GrantAccepted) dari signals ke controller, dan C06 LampVector ke empat lights. Setiap light memiliki approach yang berbeda dan mengambil entry vector yang sesuai. Definisi dan koneksi berasal dari source SysML v2. Parser memeriksa sintaks dan sebagian semantik, sedangkan checker kontrak memeriksa parameter dan hubungan baseline.
-\subsection{Skenario dan receipt pelaksanaan}
-Sebanyak 21 test case didefinisikan dalam source verification. Cakupan meliputi kategori, sekali pelayanan per round, tie/ring, grant freeze, wait timer, cadence, boundary, min/max green, fairness, exclusivity, clearance, command rejection, deadline override, domain input, output flow, stale, fault, fallback, recovery, scope dan semantik SysML. Setiap skenario memuat kondisi awal, stimulus/timeline, expected behavior, kriteria lulus/gagal dan metode.
-Checker referensi \texttt{model/verification/check\_model.py} benar-benar dijalankan. Ia tidak mengeksekusi source diagram atau perangkat fisik. Hasil yang tersedia diringkas pada Tabel~\ref{tab:results}.
-\begin{table}[htbp]\centering
+\subsection{Antarmuka internal}
+Setiap port menggunakan tipe yang ditetapkan dalam model. Port penerima menggunakan tipe konjugat agar arah masuk sesuai dengan arah keluar pengirim. Pada C05, \texttt{BoundaryEvent} menandai bahwa fase telah mencapai batas aman (SafeBoundary) atau bahwa perintah hijau telah diterima (GrantAccepted). Setiap lampu membaca entri dalam \texttt{LampVector} yang sesuai dengan pendekatnya.
+
+\subsection{Skenario dan hasil verifikasi}
+Model mendefinisikan 21 skenario. Cakupannya meliputi pemilihan giliran, durasi dan transisi fase, tenggat pelayanan, validitas masukan, keluaran lampu, serta respons ketika data terlambat atau berhenti. Setiap skenario mencatat kondisi awal, masukan, perilaku yang diharapkan, kriteria penilaian, dan metode pemeriksaan.
+
+Skrip \texttt{model/verification/check\_model.py} memeriksa fungsi referensi dan menghitung batas waktu tunggu. Tabel~\ref{tab:results} merangkum hasilnya. Perangkat fisik dan eksekusi dinamis model berada di luar cakupan pemeriksaan ini.
+\begin{table}[H]\centering
 \caption{Hasil analisis yang dijalankan dan batas cakupannya}\label{tab:results}
 \begin{tabular}{|p{.22\linewidth}|p{.65\linewidth}|}
 \hline
-\textbf{TestCase} & \textbf{Evidence aktual} \\ \hline
-VER-01,03 & Contoh boundary kategori, tie/ring/wait/category pada fungsi referensi \\ \hline
-VER-09 & 576 pasangan permutasi, 2304 service waits, maksimum 208 s; startup 103 s \\ \hline
-VER-10 & Sembilan vector output state, masing-masing paling banyak satu Green \\ \hline
-VER-13 & Contoh aritmetika deadline nominal gagal, EDF layak, deadline sudah terlewat \\ \hline
-VER-14 & Predikat referensi menolak count/ID/timestamp/validity salah \\ \hline
-VER-16 & Umur 3 fresh, umur 4 stale; transisi mode belum dieksekusi \\ \hline
-Cross-links & 24 ID requirement unik, sumber dan 21 definisi verification terlacak \\ \hline
+\textbf{TestCase} & \textbf{Hasil pemeriksaan} \\ \hline
+VER-01,03 & Batas kategori serta contoh pemilihan menurut kategori, waktu tunggu, dan urutan giliran \\ \hline
+VER-09 & Dari 576 pasangan urutan, diperiksa 2.304 waktu tunggu. Maksimum 208 s. Waktu tunggu terlama saat penyalaan awal 103 s \\ \hline
+VER-10 & Sembilan kombinasi keluaran, masing-masing memuat paling banyak satu lampu hijau \\ \hline
+VER-13 & Contoh hitungan saat urutan nominal gagal, EDF masih layak, dan tenggat sudah terlewat \\ \hline
+VER-14 & Fungsi referensi menolak hitungan, ID, waktu observasi, dan penanda validitas yang salah \\ \hline
+VER-16 & Data berumur 3 s diterima dan data berumur 4 s ditolak. Transisi mode belum dijalankan \\ \hline
+Keterlacakan & 24 ID requirement unik, rujukan dan 21 skenario verifikasi terlacak \\ \hline
 \end{tabular}
-\sumber{Receipt analisis kontrak referensi proyek (2026)}\end{table}
-VER-02/04/05/06/07/08/11/12/17/18/19 tetap not-run sebagai dynamic/complete inspections pada receipt executable. Expected timeline tersedia, tetapi tidak dipromosikan menjadi measured result. Inspection sebelum migrasi pada manual-inspection.md bersifat historis. Pada model v2, syntax, kontrak baseline dan link diperiksa melalui parser serta checker; receipt disimpan pada sysml-validation.json. Pemeriksaan tersebut tidak dipromosikan menjadi eksekusi penuh VER-15/20/21.
-\subsection{Contoh timeline konseptual}
-Jika N mendapat green pada t=1 sampai 11, perubahan kategori pada t=2 tidak mengubah grant tersebut. Yellow berlangsung 11--14, all-red 14--15, dan green berikutnya paling awal 15. Jika dataFault muncul saat grant 30 s pada t=5, green N berakhir 31, yellow 31--34, all-red 34--35, lalu Fallback memberi green 10 pada boundary 35. Ini expected behavior dari kontrak, bukan hasil runtime controller.
-Pemulihan menuntut tiga timestamp baru yang valid dan round baru. Retransmisi timestamp yang sama tidak meningkatkan streak. Deadline precedence diuji secara aritmetika: pada t=200, melayani N selama 30 s ditambah clearance 4 akan membuat S dengan deadline 210 mulai 234; urutan EDF dapat memilih S pada 200. Jika deadline sudah terlewat sebelum keputusan, tidak ada pengurutan yang mengembalikannya dan SafetyHold diminta.
+\end{table}
+Skenario VER-02/04/05/06/07/08/11/12/17/18/19 belum dijalankan sebagai uji dinamis atau inspeksi lengkap. Catatan inspeksi sebelum migrasi tersimpan dalam \texttt{manual-inspection.md}. Untuk SysML v2, parser dan pemeriksa kontrak memvalidasi sintaks, parameter, dan relasi yang dirangkum dalam \texttt{sysml-validation.json}. Pemeriksaan statis ini hanya mencakup sebagian kriteria VER-15/20/21.
+
+\subsection{Contoh urutan kejadian}
+Jika lampu Utara mulai hijau pada detik ke-1 dengan durasi 10 s, perubahan kategori pada detik ke-2 tidak mengubah durasinya. Lampu menjadi kuning pada detik ke-11, lalu semua merah pada detik ke-14. Fase hijau berikutnya dapat mulai pada detik ke-15.
+
+Jika \texttt{dataFault} muncul pada detik ke-5 saat Utara mendapat hijau 30 s, fase hijau selesai pada detik ke-31. Fase kuning berlangsung hingga detik ke-34 dan semua merah hingga detik ke-35. Setelah itu Fallback dapat memberi hijau 10 s. Kedua contoh ini menggambarkan perilaku yang ditetapkan dalam model. Pengiriman ulang data dengan waktu observasi yang sama tidak menambah hitungan pemulihan.
+
+Pemeriksaan tenggat pada detik ke-200 memperlihatkan mengapa urutan nominal perlu diperiksa. Jika Utara dilayani dahulu selama 30 s, ditambah jeda 4 s, Selatan baru dapat mulai pada detik ke-234, melewati tenggat 210 s. EDF dapat memilih Selatan pada detik ke-200. Jika tenggat sudah lewat sebelum keputusan dibuat, pengendali meminta SafetyHold.

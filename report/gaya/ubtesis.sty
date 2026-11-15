@@ -122,16 +122,16 @@
 \titlespacing*{\chapter}{0pt}{-22.5pt}{11pt}   % V2: garis dasar judul 3,53 cm dari tepi atas
 % [spek B.2] 1.1: 14 pt tebal, kiri, 12 pt sebelum / 6 pt sesudah.
 \titleformat{\section}[hang]{\bfseries\ukuran{14}}{\thesection}{0.3em}{}
-\titlespacing*{\section}{0pt}{5.5pt}{1pt}   % V2: teks ke judul 1,01 cm; judul ke baris pertama 0,75 cm
-% [spek B.2, K1] 1.1.1: 13 pt tebal (bukan 14 pt LAMP-A), gantung 1,26 cm.
+\titlespacing{\section}{0pt}{5.5pt}{1pt}   % V2: teks ke judul 1,01 cm; judul ke baris pertama 0,75 cm
+% [spek B.2, K1] 1.1.1: 13 pt tebal dengan jarak nomor yang sama seperti poin utama.
 \titleformat{\subsection}[hang]{\bfseries\ukuran{13}}
-  {\makebox[1.26cm][l]{\thesubsection}}{0pt}{}
-\titlespacing*{\subsection}{0pt}{5.5pt}{0pt}   % V2: judul ke baris pertama 0,73 cm
-% [spek B.2] 1.1.1.1: 12 pt tebal miring, gantung 1,30 cm.
+  {\thesubsection}{0.3em}{}
+\titlespacing{\subsection}{0pt}{5.5pt}{0pt}   % V2: judul ke baris pertama 0,73 cm
+% [spek B.2] 1.1.1.1: 12 pt tebal miring dengan jarak nomor yang sama seperti poin utama.
 \titleformat{\subsubsection}[hang]{\bfseries\itshape\ukuran{12}}
-  {\makebox[1.30cm][l]{\thesubsubsection}}{0pt}{}
-\titlespacing*{\subsubsection}{0pt}{5.5pt}{-3pt}
-\preto\section{\Needspace{4\baselineskip}}
+  {\thesubsubsection}{0.3em}{}
+\titlespacing{\subsubsection}{0pt}{5.5pt}{-3pt}
+\preto\section{\Needspace{7\baselineskip}}
 \preto\subsection{\Needspace{4\baselineskip}}
 \preto\subsubsection{\Needspace{4\baselineskip}}
 
@@ -375,7 +375,7 @@
   \hline
   \multicolumn{2}{|l|}{\textbf{#1}} \\ \hline
   Pernyataan & #2 \\ \hline
-  Sumber & #3 \\ \hline
+  Rujukan & #3 \\ \hline
   Alasan & #4 \\ \hline
   Verifikasi & #5 \\ \hline
   Penelusuran & #6 \\ \hline

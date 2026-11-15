@@ -36,3 +36,9 @@ Keputusan pengguna 7 November 2026 menggantikan stack SysML 1.6/Mermaid/PlantUML
 Parser komunitas ini bukan sertifikasi OMG, validator seluruh constraint normatif, atau interpreter SysML penuh. Tindakan controller sebagian merupakan kontrak aksi konseptual; build tidak mengklaim mengeksekusi scheduler/phase engine SysML lengkap, hardware, detector atau arus kendaraan. Analisis 208 s tetap berlaku pada asumsi nominal yang dinyatakan, dan `not-run` tetap dipertahankan untuk skenario yang belum dieksekusi. Peringatan integritas sumber MBSE yang sudah dinyatakan tidak hilang karena migrasi.
 
 Acuan normatif: https://www.omg.org/spec/SysML/2.0/Language/PDF. Pemetaan ID/owner dan endpoint ada di traceability-matrix.md.
+
+## Diagram komposisi di Eclipse SysON
+
+Laporan memakai `assets/diagrams/syson-composition.svg` sebagai ekspor General View `Komposisi Smart Traffic Light` pada `StlStructure::SmartTrafficLightSystem`. Untuk memperbaruinya, impor sepuluh paket SysML v2 dalam satu dokumen, buka General View pada BLK-01, tampilkan elemen yang sudah ada, pilih Flow Layout, lalu gunakan SVG (Experimental). Ekspor untuk cetak menyederhanakan label port yang bertumpuk serta garis koneksi dan item flow yang sejajar. Periksa delapan part usage dan sembilan jalur internal. Diagram IBD tetap menyediakan C00 dan rincian port.
+
+`make build` mengonversi SVG yang tersimpan ke PDF. Pembaruan SVG dilakukan melalui SysON saat struktur atau perutean diagram berubah. Impor SysON v2026.11.0 melaporkan 10 referensi payload pada guard dan aksi grant yang belum terurai. Gunakan berkas SysML v2 serta pemeriksaan statis untuk meninjau perilaku tersebut.

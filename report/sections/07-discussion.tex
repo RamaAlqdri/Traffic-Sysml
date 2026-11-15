@@ -1,0 +1,12 @@
+\section{Diskusi}
+\subsection{Konsistensi dan keterbatasan model}
+Katalog dan relasi \texttt{satisfy}/\texttt{verify} menghubungkan kebutuhan dengan komponen serta skenario verifikasi. Sepuluh paket dapat diimpor ke Eclipse SysON. SysON melaporkan 10 referensi pada syarat transisi dan aksi penerimaan perintah hijau yang belum terurai. Detail transisi dan parameter diperiksa pada berkas SysML v2 dengan parser dan pemeriksa kontrak statis.
+
+Aturan satu giliran per putaran membatasi waktu tunggu, tetapi pendekat tanpa kendaraan tetap mendapat giliran. Dua pendekat dengan hitungan berbeda juga dapat menerima durasi hijau yang sama jika berada dalam kategori yang sama. Aturan ini mengutamakan pemerataan giliran. Dampaknya terhadap arus kendaraan belum diukur.
+
+Batas 208 s berlaku dengan jam ideal, hijau maksimal 30 s, jeda 4 s, dan satu giliran untuk tiap pendekat per putaran. Batas ini mengukur waktu hingga pendekat mendapat hijau lagi. Antrean kendaraan dapat bertahan melewati beberapa putaran. SafetyHold dan penyalaan ulang berada di luar kondisi nominal yang digunakan dalam perhitungan.
+
+\subsection{Bukti dan pengujian lanjutan}
+Angka 31,05\%, 96\%, dan 90\% yang disebut dalam kajian berasal dari artikel yang dirujuk dan menggambarkan metrik yang berbeda \parencite{mondal2022,mathiane2023}. Kajian \textcite{campo2023} membahas bukti manfaat MBSE. Kinerja rancangan pada lalu lintas nyata belum diukur.
+
+Pengujian berikutnya dapat dimulai dengan menjalankan penjadwal dan pengendali fase untuk memeriksa urutan kejadian saat data gagal dan pulih. Pengukuran arus memerlukan simulator, skenario masukan, dan pembanding yang dapat dijalankan ulang. Penerapan pada simpang nyata juga memerlukan pengujian detektor dan lampu, pengukuran latensi, serta penyesuaian jeda pengaman terhadap kondisi lokasi.
