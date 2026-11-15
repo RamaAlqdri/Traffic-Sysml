@@ -1,7 +1,8 @@
 import {openModelServer} from './lsp.mjs';
 import {checkContract} from './contract.mjs';
+import {renderBehaviorViews} from './behavior-views.mjs';
 import {renderModels} from './render.mjs';
-import {internalStructure,lifecycle,definitionOverview} from './projection.mjs';
+import {internalStructure,definitionOverview} from './projection.mjs';
 import {readFile,readdir,mkdir,writeFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {createHash} from 'node:crypto';
@@ -26,9 +27,9 @@ try{
   const views=JSON.parse(await readFile('tools/views.json','utf8'));
   // Select a legible partial view from parsed elements, never a second hand-authored model.
   for(const view of views){if(view.names){const model=structuredClone(models[view.file]);model.elements=model.elements.flatMap(e=>e.children.filter(c=>view.names.includes(c.name))).map(e=>view.name==='requirements'?{...e,children:[],attributes:{...e.attributes,documentation:(/^Statement: (.*)$/m.exec(e.attributes.documentation||'')||[])[1]||e.attributes.documentation}}:e);models[view.file+'#'+view.name]=model;view.file+='#'+view.name;}}
-  models['model/behavior/state-machine.sysml']=lifecycle(models['model/behavior/state-machine.sysml'],models);
   models['model/structure/ibd.sysml']=internalStructure(models['model/structure/ibd.sysml'],models);
   for(const view of views)if(view.name==='bdd')models[view.file]=definitionOverview(models[view.file]);
-  await renderModels(models,views);
+  renderBehaviorViews(models,sources);
+  await renderModels(models,views.filter(view=>!['use-case','activity','state-machine'].includes(view.name)));
  }
 }finally{server.close();}

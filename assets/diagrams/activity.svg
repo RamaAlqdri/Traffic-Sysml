@@ -1,1 +1,321 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1108" height="1698" viewBox="436 66 1108 1698"><rect x="436" y="66" width="1108" height="1698" fill="#fff"/><rect x="0" y="0" width="1760" height="1760" fill="rgb(255, 255, 255)"/><g><g class="activity-flows"><path d="M 990,540 L 990,560 L 990,560 L 990,580" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 990,840 L 990,860 L 990,860 L 990,880" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 990,1140 L 990,1160 L 990,1160 L 990,1180" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 990,1240 L 990,1260 L 990,1260 L 990,1280" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 990,1340 L 990,1360 L 990,1360 L 990,1380" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 990,1440 L 990,1460 L 990,1460 L 990,1480" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 850,240 L 850,860 L 990,860 L 990,1480" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 990,140 L 990,160 L 570,160 L 570,180" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 570,240 L 570,860 L 990,860 L 990,1480" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 990,1540 L 990,1560 L 1130,1560 L 1130,1580" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 1130,1640 L 1130,1660 L 990,1660 L 990,1680" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 990,1740 L 990,960 L 1410,960 L 1410,180" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 1410,240 L 1410,260 L 990,260 L 990,280" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 990,340 L 990,360 L 1130,360 L 1130,380" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 1130,440 L 1130,460 L 990,460 L 990,480" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 990,640 L 990,660 L 1130,660 L 1130,680" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 1130,740 L 1130,760 L 990,760 L 990,780" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 990,940 L 990,960 L 1130,960 L 1130,980" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 1130,1040 L 1130,1060 L 990,1060 L 990,1080" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/><path d="M 990,140 L 990,160 L 850,160 L 850,180" style="stroke: rgb(24, 92, 148); stroke-width: 2px; fill: none; "/></g><g class="activity-actions"><g class="activity-action" transform="translate(880,80)" style="cursor: pointer;"><circle cx="110" cy="30" r="20" style="stroke: rgb(136, 136, 136); stroke-width: 3px; fill: rgb(39, 104, 54); "/></g><g class="activity-action" transform="translate(460,180)" style="cursor: pointer;"><rect width="220" height="60" rx="8" style="fill: rgb(255, 255, 255); stroke: rgb(24, 92, 148); stroke-width: 2px;"/><text class="node-name-text" data-element-name="startup" x="110" y="25" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">startup</text></g><g class="activity-action" transform="translate(880,1680)" style="cursor: pointer;"><rect width="220" height="60" rx="8" style="fill: rgb(255, 255, 255); stroke: rgb(24, 92, 148); stroke-width: 2px;"/><text class="node-name-text" data-element-name="acceptEvent" x="110" y="25" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">acceptEvent</text></g><g class="activity-action" transform="translate(880,280)" style="cursor: pointer;"><rect width="220" height="60" rx="8" style="fill: rgb(255, 255, 255); stroke: rgb(24, 92, 148); stroke-width: 2px;"/><text class="node-name-text" data-element-name="validateFrame" x="110" y="25" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">validateFrame</text></g><g class="activity-action" transform="translate(880,480)" style="cursor: pointer;"><rect width="220" height="60" rx="8" style="fill: rgb(255, 255, 255); stroke: rgb(24, 92, 148); stroke-width: 2px;"/><text class="node-name-text" data-element-name="classify" x="110" y="25" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">classify</text></g><g class="activity-action" transform="translate(880,580)" style="cursor: pointer;"><rect width="220" height="60" rx="8" style="fill: rgb(255, 255, 255); stroke: rgb(24, 92, 148); stroke-width: 2px;"/><text class="node-name-text" data-element-name="advanceTimer" x="110" y="25" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">advanceTimer</text></g><g class="activity-action" transform="translate(880,780)" style="cursor: pointer;"><rect width="220" height="60" rx="8" style="fill: rgb(255, 255, 255); stroke: rgb(24, 92, 148); stroke-width: 2px;"/><text class="node-name-text" data-element-name="selectMode" x="110" y="25" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">selectMode</text></g><g class="activity-action" transform="translate(880,880)" style="cursor: pointer;"><rect width="220" height="60" rx="8" style="fill: rgb(255, 255, 255); stroke: rgb(24, 92, 148); stroke-width: 2px;"/><text class="node-name-text" data-element-name="rank" x="110" y="25" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">rank</text></g><g class="activity-action" transform="translate(880,1080)" style="cursor: pointer;"><rect width="220" height="60" rx="8" style="fill: rgb(255, 255, 255); stroke: rgb(24, 92, 148); stroke-width: 2px;"/><text class="node-name-text" data-element-name="prepare" x="110" y="25" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">prepare</text></g><g class="activity-action" transform="translate(880,1180)" style="cursor: pointer;"><rect width="220" height="60" rx="8" style="fill: rgb(255, 255, 255); stroke: rgb(24, 92, 148); stroke-width: 2px;"/><text class="node-name-text" data-element-name="apply" x="110" y="25" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">apply</text></g><g class="activity-action" transform="translate(880,1280)" style="cursor: pointer;"><rect width="220" height="60" rx="8" style="fill: rgb(255, 255, 255); stroke: rgb(24, 92, 148); stroke-width: 2px;"/><text class="node-name-text" data-element-name="markServed" x="110" y="25" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">markServed</text></g><g class="activity-action" transform="translate(880,1380)" style="cursor: pointer;"><rect width="220" height="60" rx="8" style="fill: rgb(255, 255, 255); stroke: rgb(24, 92, 148); stroke-width: 2px;"/><text class="node-name-text" data-element-name="stmStep" x="110" y="25" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">stmStep</text></g><g class="activity-action" transform="translate(740,180)" style="cursor: pointer;"><rect width="220" height="60" rx="8" style="fill: rgb(255, 255, 255); stroke: rgb(24, 92, 148); stroke-width: 2px;"/><text class="node-name-text" data-element-name="holdRequest" x="110" y="25" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">holdRequest</text></g><g class="activity-action" transform="translate(880,1480)" style="cursor: pointer;"><path d="M 110,0 L 220,30 L 110,60 L 0,30 Z" style="stroke: rgb(163, 84, 19); stroke-width: 2px; fill: rgb(255, 255, 255); "/><text x="110" y="35" text-anchor="middle" style="font-size: 11px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">loopTop</text></g><g class="activity-action" transform="translate(1020,1580)" style="cursor: pointer;"><path d="M 110,0 L 220,30 L 110,60 L 0,30 Z" style="stroke: rgb(163, 84, 19); stroke-width: 2px; fill: rgb(255, 255, 255); "/><text x="110" y="35" text-anchor="middle" style="font-size: 16px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">?</text></g><g class="activity-action" transform="translate(1300,180)" style="cursor: pointer;"><path d="M 110,0 L 220,30 L 110,60 L 0,30 Z" style="stroke: rgb(163, 84, 19); stroke-width: 2px; fill: rgb(255, 255, 255); "/><text x="110" y="35" text-anchor="middle" style="font-size: 16px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">?</text></g><g class="activity-action" transform="translate(1020,380)" style="cursor: pointer;"><path d="M 110,0 L 220,30 L 110,60 L 0,30 Z" style="stroke: rgb(163, 84, 19); stroke-width: 2px; fill: rgb(255, 255, 255); "/><text x="110" y="35" text-anchor="middle" style="font-size: 16px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">?</text></g><g class="activity-action" transform="translate(1020,680)" style="cursor: pointer;"><path d="M 110,0 L 220,30 L 110,60 L 0,30 Z" style="stroke: rgb(163, 84, 19); stroke-width: 2px; fill: rgb(255, 255, 255); "/><text x="110" y="35" text-anchor="middle" style="font-size: 16px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">?</text></g><g class="activity-action" transform="translate(1020,980)" style="cursor: pointer;"><path d="M 110,0 L 220,30 L 110,60 L 0,30 Z" style="stroke: rgb(163, 84, 19); stroke-width: 2px; fill: rgb(255, 255, 255); "/><text x="110" y="35" text-anchor="middle" style="font-size: 16px; font-weight: bold; fill: rgb(17, 17, 17); user-select: none; font-family: Arial, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">?</text></g></g></g><defs><marker id="activity-arrowhead" viewBox="0 -5 10 10" refX="8" refY="0" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,-5L10,0L0,5" style="stroke-width: 1px; fill: rgb(24, 92, 148); "/></marker></defs></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="909.74pt" height="631.68pt" viewBox="0 0 909.74 631.68">
+    <g font-family="Helvetica" font-size="16" font-weight="bold" text-anchor="middle" fill="#263651">
+    <text x="241.345" y="22">1. Terima kejadian dan periksa data</text>
+    <text x="708.715" y="22">2. Tentukan fase berikutnya</text></g>
+    <g transform="translate(0,33)">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(11.52 577.16)">
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<ellipse fill="#eef2fb" stroke="#405681" cx="63.3" cy="-546.93" rx="37.55" ry="18.71"/>
+<text text-anchor="middle" x="63.3" y="-541.33" font-family="Helvetica,sans-Serif" font-size="13.00">Mulai</text>
+</g>
+<!-- startup -->
+<g id="node3" class="node">
+<title>startup</title>
+<path fill="#eef2fb" stroke="#405681" d="M114.6,-498.76C114.6,-498.76 12,-498.76 12,-498.76 6,-498.76 0,-492.76 0,-486.76 0,-486.76 0,-474.76 0,-474.76 0,-468.76 6,-462.76 12,-462.76 12,-462.76 114.6,-462.76 114.6,-462.76 120.6,-462.76 126.6,-468.76 126.6,-474.76 126.6,-474.76 126.6,-486.76 126.6,-486.76 126.6,-492.76 120.6,-498.76 114.6,-498.76"/>
+<text text-anchor="middle" x="63.3" y="-475.16" font-family="Helvetica,sans-Serif" font-size="13.00">Semua merah 1 s</text>
+</g>
+<!-- start&#45;&gt;startup -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;startup</title>
+<path fill="none" stroke="#405681" d="M63.3,-528.06C63.3,-521.69 63.3,-514.4 63.3,-507.51"/>
+<polygon fill="#405681" stroke="#405681" points="65.75,-507.61 63.3,-500.61 60.85,-507.61 65.75,-507.61"/>
+</g>
+<!-- done -->
+<g id="node2" class="node">
+<title>done</title>
+<ellipse fill="#eef2fb" stroke="#405681" cx="220.3" cy="-403.59" rx="46.56" ry="18.71"/>
+<text text-anchor="middle" x="220.3" y="-397.99" font-family="Helvetica,sans-Serif" font-size="13.00">Selesai</text>
+</g>
+<!-- loopTop -->
+<g id="node4" class="node">
+<title>loopTop</title>
+<ellipse fill="#eef2fb" stroke="#405681" cx="262.3" cy="-546.93" rx="73.61" ry="18.71"/>
+<text text-anchor="middle" x="262.3" y="-541.33" font-family="Helvetica,sans-Serif" font-size="13.00">Siklus kendali</text>
+</g>
+<!-- startup&#45;&gt;loopTop -->
+<g id="edge2" class="edge">
+<title>startup&#45;&gt;loopTop</title>
+<path fill="none" stroke="#405681" d="M111.61,-499.17C119.51,-501.92 127.62,-504.69 135.3,-507.22 158.8,-514.95 184.91,-523 207.32,-529.75"/>
+<polygon fill="#405681" stroke="#405681" points="206.54,-532.07 213.95,-531.74 207.95,-527.38 206.54,-532.07"/>
+</g>
+<!-- runningNow -->
+<g id="node5" class="node">
+<title>runningNow</title>
+<polygon fill="#fff2d2" stroke="#405681" points="262.3,-507.22 143.95,-480.76 262.3,-454.3 380.65,-480.76 262.3,-507.22"/>
+<text text-anchor="middle" x="262.3" y="-475.16" font-family="Helvetica,sans-Serif" font-size="13.00">Masih Running?</text>
+</g>
+<!-- loopTop&#45;&gt;runningNow -->
+<g id="edge3" class="edge">
+<title>loopTop&#45;&gt;runningNow</title>
+<path fill="none" stroke="#405681" d="M262.3,-528.06C262.3,-524.17 262.3,-519.93 262.3,-515.65"/>
+<polygon fill="#405681" stroke="#405681" points="264.75,-515.97 262.3,-508.97 259.85,-515.97 264.75,-515.97"/>
+</g>
+<!-- runningNow&#45;&gt;done -->
+<g id="edge5" class="edge">
+<title>runningNow&#45;&gt;done</title>
+<path fill="none" stroke="#405681" d="M249.47,-456.8C244.57,-448.03 238.97,-438 233.99,-429.09"/>
+<polygon fill="#405681" stroke="#405681" points="236.28,-428.16 230.72,-423.25 232,-430.55 236.28,-428.16"/>
+<text text-anchor="middle" x="254.43" y="-433.85" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#263651">Tidak</text>
+</g>
+<!-- acceptEvent -->
+<g id="node6" class="node">
+<title>acceptEvent</title>
+<path fill="#eef2fb" stroke="#405681" d="M386.98,-421.59C386.98,-421.59 295.62,-421.59 295.62,-421.59 289.62,-421.59 283.62,-415.59 283.62,-409.59 283.62,-409.59 283.62,-397.59 283.62,-397.59 283.62,-391.59 289.62,-385.59 295.62,-385.59 295.62,-385.59 386.98,-385.59 386.98,-385.59 392.98,-385.59 398.98,-391.59 398.98,-397.59 398.98,-397.59 398.98,-409.59 398.98,-409.59 398.98,-415.59 392.98,-421.59 386.98,-421.59"/>
+<text text-anchor="middle" x="341.3" y="-397.99" font-family="Helvetica,sans-Serif" font-size="13.00">Terima kejadian</text>
+</g>
+<!-- runningNow&#45;&gt;acceptEvent -->
+<g id="edge4" class="edge">
+<title>runningNow&#45;&gt;acceptEvent</title>
+<path fill="none" stroke="#405681" d="M284.31,-458.82C294.53,-449.09 306.72,-437.49 317.2,-427.52"/>
+<polygon fill="#405681" stroke="#405681" points="318.66,-429.51 322.05,-422.91 315.29,-425.96 318.66,-429.51"/>
+<text text-anchor="middle" x="317.57" y="-433.85" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#263651">Ya</text>
+</g>
+<!-- eventKind -->
+<g id="node7" class="node">
+<title>eventKind</title>
+<polygon fill="#fff2d2" stroke="#405681" points="341.3,-363.88 222.95,-337.42 341.3,-310.96 459.65,-337.42 341.3,-363.88"/>
+<text text-anchor="middle" x="341.3" y="-331.82" font-family="Helvetica,sans-Serif" font-size="13.00">Sampel / detak?</text>
+</g>
+<!-- acceptEvent&#45;&gt;eventKind -->
+<g id="edge6" class="edge">
+<title>acceptEvent&#45;&gt;eventKind</title>
+<path fill="none" stroke="#405681" d="M341.3,-385.39C341.3,-381.41 341.3,-377.04 341.3,-372.61"/>
+<polygon fill="#405681" stroke="#405681" points="343.75,-372.63 341.3,-365.63 338.85,-372.63 343.75,-372.63"/>
+</g>
+<!-- validateFrame -->
+<g id="node8" class="node">
+<title>validateFrame</title>
+<path fill="#eef2fb" stroke="#405681" d="M312.98,-278.96C312.98,-278.96 239.62,-278.96 239.62,-278.96 233.62,-278.96 227.62,-272.96 227.62,-266.96 227.62,-266.96 227.62,-254.96 227.62,-254.96 227.62,-248.96 233.62,-242.96 239.62,-242.96 239.62,-242.96 312.98,-242.96 312.98,-242.96 318.98,-242.96 324.98,-248.96 324.98,-254.96 324.98,-254.96 324.98,-266.96 324.98,-266.96 324.98,-272.96 318.98,-278.96 312.98,-278.96"/>
+<text text-anchor="middle" x="276.3" y="-255.36" font-family="Helvetica,sans-Serif" font-size="13.00">Validasi data</text>
+</g>
+<!-- eventKind&#45;&gt;validateFrame -->
+<g id="edge7" class="edge">
+<title>eventKind&#45;&gt;validateFrame</title>
+<path fill="none" stroke="#405681" d="M322.5,-314.88C314.46,-305.67 305.04,-294.89 296.82,-285.47"/>
+<polygon fill="#405681" stroke="#405681" points="298.79,-284 292.35,-280.34 295.1,-287.23 298.79,-284"/>
+<text text-anchor="middle" x="315.18" y="-290.51" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#263651">Ya</text>
+</g>
+<!-- advanceTimer -->
+<g id="node11" class="node">
+<title>advanceTimer</title>
+<path fill="#eef2fb" stroke="#405681" d="M356.23,-80.04C356.23,-80.04 254.38,-80.04 254.38,-80.04 248.38,-80.04 242.38,-74.04 242.38,-68.04 242.38,-68.04 242.38,-56.04 242.38,-56.04 242.38,-50.04 248.38,-44.04 254.38,-44.04 254.38,-44.04 356.23,-44.04 356.23,-44.04 362.23,-44.04 368.23,-50.04 368.23,-56.04 368.23,-56.04 368.23,-68.04 368.23,-68.04 368.23,-74.04 362.23,-80.04 356.23,-80.04"/>
+<text text-anchor="middle" x="305.3" y="-56.44" font-family="Helvetica,sans-Serif" font-size="13.00">Majukan pewaktu</text>
+</g>
+<!-- eventKind&#45;&gt;advanceTimer -->
+<g id="edge8" class="edge">
+<title>eventKind&#45;&gt;advanceTimer</title>
+<path fill="none" stroke="#405681" d="M359.19,-314.74C369.04,-300.61 379.3,-281.26 379.3,-261.96 379.3,-261.96 379.3,-261.96 379.3,-118.04 379.3,-103.99 370.6,-93.11 359.17,-84.88"/>
+<polygon fill="#405681" stroke="#405681" points="360.64,-82.91 353.43,-81.15 357.97,-87.02 360.64,-82.91"/>
+<text text-anchor="middle" x="392.43" y="-191.05" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#263651">Tidak</text>
+</g>
+<!-- cacheOk -->
+<g id="node9" class="node">
+<title>cacheOk</title>
+<polygon fill="#fff2d2" stroke="#405681" points="192.3,-221.96 39.45,-195.5 192.3,-169.04 345.15,-195.5 192.3,-221.96"/>
+<text text-anchor="middle" x="192.3" y="-189.9" font-family="Helvetica,sans-Serif" font-size="13.00">Data segar dan valid?</text>
+</g>
+<!-- validateFrame&#45;&gt;cacheOk -->
+<g id="edge9" class="edge">
+<title>validateFrame&#45;&gt;cacheOk</title>
+<path fill="none" stroke="#405681" d="M253.35,-242.62C245.14,-236.42 235.7,-229.29 226.74,-222.52"/>
+<polygon fill="#405681" stroke="#405681" points="228.28,-220.61 221.22,-218.35 225.32,-224.52 228.28,-220.61"/>
+</g>
+<!-- classify -->
+<g id="node10" class="node">
+<title>classify</title>
+<path fill="#eef2fb" stroke="#405681" d="M259.73,-137.04C259.73,-137.04 124.87,-137.04 124.87,-137.04 118.88,-137.04 112.88,-131.04 112.88,-125.04 112.88,-125.04 112.88,-113.04 112.88,-113.04 112.88,-107.04 118.88,-101.04 124.88,-101.04 124.88,-101.04 259.73,-101.04 259.73,-101.04 265.73,-101.04 271.73,-107.04 271.73,-113.04 271.73,-113.04 271.73,-125.04 271.73,-125.04 271.73,-131.04 265.73,-137.04 259.73,-137.04"/>
+<text text-anchor="middle" x="192.3" y="-113.44" font-family="Helvetica,sans-Serif" font-size="13.00">Klasifikasikan hitungan</text>
+</g>
+<!-- cacheOk&#45;&gt;classify -->
+<g id="edge10" class="edge">
+<title>cacheOk&#45;&gt;classify</title>
+<path fill="none" stroke="#405681" d="M192.3,-168.88C192.3,-161.38 192.3,-153.18 192.3,-145.68"/>
+<polygon fill="#405681" stroke="#405681" points="194.75,-145.79 192.3,-138.79 189.85,-145.79 194.75,-145.79"/>
+<text text-anchor="middle" x="198.68" y="-148.59" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#263651">Ya</text>
+</g>
+<!-- cacheOk&#45;&gt;advanceTimer -->
+<g id="edge11" class="edge">
+<title>cacheOk&#45;&gt;advanceTimer</title>
+<path fill="none" stroke="#405681" d="M232.63,-175.75C249.38,-166.21 267.79,-153.2 280.3,-137.04 291.23,-122.93 297.53,-103.77 301.07,-88.48"/>
+<polygon fill="#405681" stroke="#405681" points="303.41,-89.27 302.45,-81.92 298.61,-88.26 303.41,-89.27"/>
+<text text-anchor="middle" x="310.76" y="-114.59" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#263651">Tidak</text>
+</g>
+<!-- classify&#45;&gt;advanceTimer -->
+<g id="edge12" class="edge">
+<title>classify&#45;&gt;advanceTimer</title>
+<path fill="none" stroke="#405681" d="M228.05,-100.64C238.77,-95.42 250.64,-89.64 261.8,-84.21"/>
+<polygon fill="#405681" stroke="#405681" points="262.81,-86.45 268.03,-81.18 260.66,-82.04 262.81,-86.45"/>
+</g>
+<!-- A -->
+<g id="node12" class="node">
+<title>A</title>
+<ellipse fill="#eef2fb" stroke="#405681" cx="305.3" cy="-11.52" rx="11.52" ry="11.52"/>
+<text text-anchor="middle" x="305.3" y="-5.92" font-family="Helvetica,sans-Serif" font-size="13.00">A</text>
+</g>
+<!-- advanceTimer&#45;&gt;A -->
+<g id="edge13" class="edge">
+<title>advanceTimer&#45;&gt;A</title>
+<path fill="none" stroke="#405681" d="M305.3,-43.8C305.3,-39.89 305.3,-35.72 305.3,-31.74"/>
+<polygon fill="#405681" stroke="#405681" points="307.75,-32.02 305.3,-25.02 302.85,-32.02 307.75,-32.02"/>
+</g>
+<!-- B -->
+<g id="node13" class="node">
+<title>B</title>
+<ellipse fill="#eef2fb" stroke="#405681" cx="381.3" cy="-546.93" rx="11.52" ry="11.52"/>
+<text text-anchor="middle" x="381.3" y="-541.33" font-family="Helvetica,sans-Serif" font-size="13.00">B</text>
+</g>
+<!-- B&#45;&gt;loopTop -->
+<g id="edge14" class="edge">
+<title>B&#45;&gt;loopTop</title>
+<path fill="none" stroke="#405681" d="M369.32,-546.93C361.04,-546.93 352.77,-546.93 344.49,-546.93"/>
+<polygon fill="#405681" stroke="#405681" points="344.72,-544.48 337.72,-546.93 344.72,-549.38 344.72,-544.48"/>
+</g>
+</g>
+</g><g transform="translate(507.69,33)">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(11.52 546.4)">
+<!-- boundaryNow -->
+<g id="node1" class="node">
+<title>boundaryNow</title>
+<polygon fill="#fff2d2" stroke="#405681" points="249.41,-490.84 119.81,-464.38 249.41,-437.92 379.01,-464.38 249.41,-490.84"/>
+<text text-anchor="middle" x="249.41" y="-458.78" font-family="Helvetica,sans-Serif" font-size="13.00">Batas fase aman?</text>
+</g>
+<!-- selectMode -->
+<g id="node2" class="node">
+<title>selectMode</title>
+<path fill="#eef2fb" stroke="#405681" d="M247.34,-405.92C247.34,-405.92 187.49,-405.92 187.49,-405.92 181.49,-405.92 175.49,-399.92 175.49,-393.92 175.49,-393.92 175.49,-381.92 175.49,-381.92 175.49,-375.92 181.49,-369.92 187.49,-369.92 187.49,-369.92 247.34,-369.92 247.34,-369.92 253.34,-369.92 259.34,-375.92 259.34,-381.92 259.34,-381.92 259.34,-393.92 259.34,-393.92 259.34,-399.92 253.34,-405.92 247.34,-405.92"/>
+<text text-anchor="middle" x="217.41" y="-382.32" font-family="Helvetica,sans-Serif" font-size="13.00">Pilih mode</text>
+</g>
+<!-- boundaryNow&#45;&gt;selectMode -->
+<g id="edge2" class="edge">
+<title>boundaryNow&#45;&gt;selectMode</title>
+<path fill="none" stroke="#405681" d="M239.29,-439.82C235.74,-431.55 231.73,-422.25 228.14,-413.87"/>
+<polygon fill="#405681" stroke="#405681" points="230.45,-413.04 225.43,-407.58 225.95,-414.98 230.45,-413.04"/>
+<text text-anchor="middle" x="239.79" y="-417.47" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#263651">Ya</text>
+</g>
+<!-- stmStep -->
+<g id="node8" class="node">
+<title>stmStep</title>
+<path fill="#eef2fb" stroke="#405681" d="M364.46,-36C364.46,-36 266.36,-36 266.36,-36 260.36,-36 254.36,-30 254.36,-24 254.36,-24 254.36,-12 254.36,-12 254.36,-6 260.36,0 266.36,0 266.36,0 364.46,0 364.46,0 370.46,0 376.46,-6 376.46,-12 376.46,-12 376.46,-24 376.46,-24 376.46,-30 370.46,-36 364.46,-36"/>
+<text text-anchor="middle" x="315.41" y="-12.4" font-family="Helvetica,sans-Serif" font-size="13.00">Jalankan transisi</text>
+</g>
+<!-- boundaryNow&#45;&gt;stmStep -->
+<g id="edge3" class="edge">
+<title>boundaryNow&#45;&gt;stmStep</title>
+<path fill="none" stroke="#405681" d="M289.45,-445.6C310.68,-433.18 332.41,-414.28 332.41,-388.92 332.41,-388.92 332.41,-388.92 332.41,-74 332.41,-64.05 329.84,-53.53 326.7,-44.37"/>
+<polygon fill="#405681" stroke="#405681" points="329,-43.52 324.25,-37.83 324.41,-45.24 329,-43.52"/>
+<text text-anchor="middle" x="345.54" y="-218.55" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#263651">Tidak</text>
+</g>
+<!-- rank -->
+<g id="node3" class="node">
+<title>rank</title>
+<path fill="#eef2fb" stroke="#405681" d="M251.46,-348.92C251.46,-348.92 147.36,-348.92 147.36,-348.92 141.36,-348.92 135.36,-342.92 135.36,-336.92 135.36,-336.92 135.36,-324.92 135.36,-324.92 135.36,-318.92 141.36,-312.92 147.36,-312.92 147.36,-312.92 251.46,-312.92 251.46,-312.92 257.46,-312.92 263.46,-318.92 263.46,-324.92 263.46,-324.92 263.46,-336.92 263.46,-336.92 263.46,-342.92 257.46,-348.92 251.46,-348.92"/>
+<text text-anchor="middle" x="199.41" y="-325.32" font-family="Helvetica,sans-Serif" font-size="13.00">Urutkan pendekat</text>
+</g>
+<!-- selectMode&#45;&gt;rank -->
+<g id="edge4" class="edge">
+<title>selectMode&#45;&gt;rank</title>
+<path fill="none" stroke="#405681" d="M211.72,-369.52C210.44,-365.61 209.05,-361.38 207.69,-357.22"/>
+<polygon fill="#405681" stroke="#405681" points="210.11,-356.73 205.6,-350.84 205.45,-358.25 210.11,-356.73"/>
+</g>
+<!-- planOk -->
+<g id="node4" class="node">
+<title>planOk</title>
+<polygon fill="#fff2d2" stroke="#405681" points="188.41,-291.92 70.06,-265.46 188.41,-239 306.76,-265.46 188.41,-291.92"/>
+<text text-anchor="middle" x="188.41" y="-259.86" font-family="Helvetica,sans-Serif" font-size="13.00">Rencana layak?</text>
+</g>
+<!-- rank&#45;&gt;planOk -->
+<g id="edge5" class="edge">
+<title>rank&#45;&gt;planOk</title>
+<path fill="none" stroke="#405681" d="M196.41,-312.58C195.69,-308.45 194.9,-303.91 194.11,-299.34"/>
+<polygon fill="#405681" stroke="#405681" points="196.56,-299.12 192.95,-292.65 191.73,-299.96 196.56,-299.12"/>
+</g>
+<!-- prepare -->
+<g id="node5" class="node">
+<title>prepare</title>
+<path fill="#eef2fb" stroke="#405681" d="M284.84,-207C284.84,-207 197.99,-207 197.99,-207 191.99,-207 185.99,-201 185.99,-195 185.99,-195 185.99,-183 185.99,-183 185.99,-177 191.99,-171 197.99,-171 197.99,-171 284.84,-171 284.84,-171 290.84,-171 296.84,-177 296.84,-183 296.84,-183 296.84,-195 296.84,-195 296.84,-201 290.84,-207 284.84,-207"/>
+<text text-anchor="middle" x="241.41" y="-183.4" font-family="Helvetica,sans-Serif" font-size="13.00">Siapkan durasi</text>
+</g>
+<!-- planOk&#45;&gt;prepare -->
+<g id="edge6" class="edge">
+<title>planOk&#45;&gt;prepare</title>
+<path fill="none" stroke="#405681" d="M204.31,-242.12C210.57,-233.33 217.77,-223.22 224.15,-214.25"/>
+<polygon fill="#405681" stroke="#405681" points="226.12,-215.71 228.18,-208.59 222.13,-212.87 226.12,-215.71"/>
+<text text-anchor="middle" x="227.59" y="-218.55" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#263651">Ya</text>
+</g>
+<!-- holdRequest -->
+<g id="node9" class="node">
+<title>holdRequest</title>
+<path fill="#eef2fb" stroke="#405681" d="M157.21,-207C157.21,-207 57.61,-207 57.61,-207 51.61,-207 45.61,-201 45.61,-195 45.61,-195 45.61,-183 45.61,-183 45.61,-177 51.61,-171 57.61,-171 57.61,-171 157.21,-171 157.21,-171 163.21,-171 169.21,-177 169.21,-183 169.21,-183 169.21,-195 169.21,-195 169.21,-201 163.21,-207 157.21,-207"/>
+<text text-anchor="middle" x="107.41" y="-183.4" font-family="Helvetica,sans-Serif" font-size="13.00">Minta SafetyHold</text>
+</g>
+<!-- planOk&#45;&gt;holdRequest -->
+<g id="edge7" class="edge">
+<title>planOk&#45;&gt;holdRequest</title>
+<path fill="none" stroke="#405681" d="M165.85,-243.72C155.44,-234.15 143.05,-222.76 132.36,-212.94"/>
+<polygon fill="#405681" stroke="#405681" points="134.22,-211.32 127.41,-208.38 130.91,-214.92 134.22,-211.32"/>
+<text text-anchor="middle" x="161.04" y="-218.55" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#263651">Tidak</text>
+</g>
+<!-- apply -->
+<g id="node6" class="node">
+<title>apply</title>
+<path fill="#eef2fb" stroke="#405681" d="M294.21,-150C294.21,-150 188.61,-150 188.61,-150 182.61,-150 176.61,-144 176.61,-138 176.61,-138 176.61,-126 176.61,-126 176.61,-120 182.61,-114 188.61,-114 188.61,-114 294.21,-114 294.21,-114 300.21,-114 306.21,-120 306.21,-126 306.21,-126 306.21,-138 306.21,-138 306.21,-144 300.21,-150 294.21,-150"/>
+<text text-anchor="middle" x="241.41" y="-126.4" font-family="Helvetica,sans-Serif" font-size="13.00">Terapkan perintah</text>
+</g>
+<!-- prepare&#45;&gt;apply -->
+<g id="edge8" class="edge">
+<title>prepare&#45;&gt;apply</title>
+<path fill="none" stroke="#405681" d="M241.41,-170.6C241.41,-166.89 241.41,-162.89 241.41,-158.94"/>
+<polygon fill="#405681" stroke="#405681" points="243.86,-158.99 241.41,-151.99 238.96,-158.99 243.86,-158.99"/>
+</g>
+<!-- markServed -->
+<g id="node7" class="node">
+<title>markServed</title>
+<path fill="#eef2fb" stroke="#405681" d="M289.21,-93C289.21,-93 219.61,-93 219.61,-93 213.61,-93 207.61,-87 207.61,-81 207.61,-81 207.61,-69 207.61,-69 207.61,-63 213.61,-57 219.61,-57 219.61,-57 289.21,-57 289.21,-57 295.21,-57 301.21,-63 301.21,-69 301.21,-69 301.21,-81 301.21,-81 301.21,-87 295.21,-93 289.21,-93"/>
+<text text-anchor="middle" x="254.41" y="-69.4" font-family="Helvetica,sans-Serif" font-size="13.00">Catat giliran</text>
+</g>
+<!-- apply&#45;&gt;markServed -->
+<g id="edge9" class="edge">
+<title>apply&#45;&gt;markServed</title>
+<path fill="none" stroke="#405681" d="M245.53,-113.6C246.43,-109.79 247.4,-105.67 248.36,-101.62"/>
+<polygon fill="#405681" stroke="#405681" points="250.71,-102.33 249.93,-94.95 245.94,-101.2 250.71,-102.33"/>
+</g>
+<!-- markServed&#45;&gt;stmStep -->
+<g id="edge10" class="edge">
+<title>markServed&#45;&gt;stmStep</title>
+<path fill="none" stroke="#405681" d="M273.71,-56.6C278.83,-51.98 284.44,-46.93 289.83,-42.06"/>
+<polygon fill="#405681" stroke="#405681" points="291.35,-44 294.9,-37.49 288.06,-40.36 291.35,-44"/>
+</g>
+<!-- B -->
+<g id="node11" class="node">
+<title>B</title>
+<ellipse fill="#eef2fb" stroke="#405681" cx="27.41" cy="-523.36" rx="11.52" ry="11.52"/>
+<text text-anchor="middle" x="27.41" y="-517.76" font-family="Helvetica,sans-Serif" font-size="13.00">B</text>
+</g>
+<!-- stmStep&#45;&gt;B -->
+<g id="edge11" class="edge">
+<title>stmStep&#45;&gt;B</title>
+<path fill="none" stroke="#405681" d="M253.89,-32.58C186.77,-51.09 82.84,-91.47 37.41,-171 -26.38,-282.69 8.09,-448.63 22.26,-503.79"/>
+<polygon fill="#405681" stroke="#405681" points="19.88,-504.34 24.04,-510.48 24.61,-503.08 19.88,-504.34"/>
+</g>
+<!-- holdRequest&#45;&gt;B -->
+<g id="edge12" class="edge">
+<title>holdRequest&#45;&gt;B</title>
+<path fill="none" stroke="#405681" d="M85.85,-207.38C76.78,-215.91 67.04,-226.95 61.41,-239 18.79,-330.34 22.44,-455.45 25.73,-502.98"/>
+<polygon fill="#405681" stroke="#405681" points="23.29,-503.11 26.26,-509.91 28.17,-502.74 23.29,-503.11"/>
+</g>
+<!-- A -->
+<g id="node10" class="node">
+<title>A</title>
+<ellipse fill="#eef2fb" stroke="#405681" cx="249.41" cy="-523.36" rx="11.52" ry="11.52"/>
+<text text-anchor="middle" x="249.41" y="-517.76" font-family="Helvetica,sans-Serif" font-size="13.00">A</text>
+</g>
+<!-- A&#45;&gt;boundaryNow -->
+<g id="edge1" class="edge">
+<title>A&#45;&gt;boundaryNow</title>
+<path fill="none" stroke="#405681" d="M249.41,-511.37C249.41,-507.83 249.41,-503.69 249.41,-499.37"/>
+<polygon fill="#405681" stroke="#405681" points="251.86,-499.49 249.41,-492.49 246.96,-499.49 251.86,-499.49"/>
+</g>
+</g>
+</g></svg>

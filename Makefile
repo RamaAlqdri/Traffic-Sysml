@@ -39,7 +39,7 @@ build:
 
 _build:
 	@set -eu -o pipefail; missing=0; \
-	for tool in node npm python3 rsvg-convert latexmk pdflatex xelatex biber; do \
+	for tool in node npm python3 dot rsvg-convert latexmk pdflatex xelatex biber; do \
 	  if ! command -v "$$tool" >/dev/null 2>&1; then \
 	    printf 'Missing tool: %s\n' "$$tool"; missing=1; \
 	  fi; \
