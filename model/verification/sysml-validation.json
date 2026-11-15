@@ -172,14 +172,14 @@
     "package-lock.json": "46f00683c044aeaad0fa57de2d2e589e7a26a334775f4267eec502d09649cd40"
   },
   "sourceHashes": {
-    "model/behavior/activity.sysml": "639bf85f9d2ef5be8054cc7b378e9f3eceecb5e92b41da0acdcd95dff4269b7c",
-    "model/behavior/sequence.sysml": "78b2cf8f36b3ae8c7f21987b0368f0a2aca58dde83d538d808de1d77452dddff",
+    "model/behavior/activity.sysml": "1ae3e394331f947375b832f70a15c22457558ecfabfff91f8b2b7cdc22738e10",
+    "model/behavior/sequence.sysml": "a9e5fec36c2d2ee449e314b2a29b8b85b68ea9444d7941a9977983035bc5c2c4",
     "model/behavior/state-machine.sysml": "db668c80ac58d91611f0b57379c479f1feec9ead60ed6815b04f659995122d2b",
     "model/behavior/use-case.sysml": "70e1432a8376b626528ca31ef603e739a7d0ea131828e3b076a7684bec65a281",
     "model/requirements/requirements.sysml": "14d86dba1df385f580e3a25b3d365f10aaf24ef834ca4fcf7daabe57a71bdfa4",
-    "model/structure/bdd.sysml": "1e2803465357e0f7d1ab4c411fff554c6b5348ee9311a3653afb178895bd0223",
+    "model/structure/bdd.sysml": "250d2057e909653cc5774f659ac749f681cc38297ece3d06efac2f9a09302772",
     "model/structure/ibd.sysml": "f75f187e0f98f925f90cdf6a5cab6d3209538afe9ed4d2a26912f14739e3b717",
-    "model/structure/types.sysml": "6741986ccf761f7711317cff6c495a91086b7569f7c5e38d41698495748ffd0a",
+    "model/structure/types.sysml": "7f9cd6cd1f1c812eb0367422ae45092561a3682660810fb7426a7141696ee724",
     "model/traceability/allocation.sysml": "6ff73b3d1bc84d06f36b7e870b8c1913983969366e9c31cc200079b2cbecf763",
     "model/verification/verification.sysml": "e9899ff1c91cd3b468e226acc0d683db4065a203cce0ce331a0cfb0e6a6be9bd"
   },

@@ -5,23 +5,43 @@ package StlActivity {
     private import ScalarValues::*;
     private import StlStateMachine::*;
 
-    action def ValidateFrameCache { doc /* ACT-01 validasi frame/cache, update dataFault + recovery streak */ }
-    action def ClassifyCounts { doc /* ACT-02 klasifikasi count fresh valid */ }
-    action def RankEligible { doc /* ACT-03 refresh eligible, ranking, cek deadline */ }
-    action def PrepareGrant { doc /* ACT-04 siapkan grant green beku */ }
-    action def AdvancePhaseTimer { doc /* ACT-05 majukan timer fase */ }
-    action def StmTransition { doc /* ACT-06 transisi STM-01 yang enabled */ }
-    action def SelectMode { doc /* ACT-07 pilih Normal/Fallback */ }
-    action def MarkServed { doc /* ACT-08 tandai served, majukan pointer ring */ }
-    action def ApplyGrant { doc /* ACT-09 validasi dan terapkan grant */ }
-    action def Startup { doc /* ACT-10 startup all-red 1 s */ }
+    action def <'ACT-01'> ValidateFrameCache {
+        doc /* ACT-01. Validasi frame/cache; update dataFault dan recovery streak; clear dataFault setelah 3 frame baru yang baik. */
+    }
+    action def <'ACT-02'> ClassifyCounts {
+        doc /* ACT-02. Klasifikasi count fresh valid menjadi LOW/MEDIUM/HIGH. */
+    }
+    action def <'ACT-03'> RankEligible {
+        doc /* ACT-03. Refresh eligible pada round baru, ranking, dan cek deadline. */
+    }
+    action def <'ACT-04'> PrepareGrant {
+        doc /* ACT-04. Siapkan grant green beku (10/20/30 s Normal, 10 s Fallback). */
+    }
+    action def <'ACT-05'> AdvancePhaseTimer {
+        doc /* ACT-05. Majukan timer fase yang telah diberikan. */
+    }
+    action def <'ACT-06'> StmTransition {
+        doc /* ACT-06. Lakukan hanya transisi STM-01 yang enabled: green expiry, yellow expiry, clearance expiry. */
+    }
+    action def <'ACT-07'> SelectMode {
+        doc /* ACT-07. Pilih mode Normal/Fallback; pemulihan ke Normal hanya pada awal round. */
+    }
+    action def <'ACT-08'> MarkServed {
+        doc /* ACT-08. Pada grantAccepted: tandai pendekat served dan majukan pointer ring. */
+    }
+    action def <'ACT-09'> ApplyGrant {
+        doc /* ACT-09. Validasi dan terapkan grant, lalu emit grantAccepted(i). */
+    }
+    action def <'ACT-10'> Startup {
+        doc /* ACT-10. Startup: semua lampu merah selama 1 s. */
+    }
     action def AcceptEvent { doc /* penerimaan event sample/tick/timer */ }
     action def RequestSafetyHold {
         doc /* Permintaan SafetyHold all-red yang ditangani transition infeasiblePlan pada STM-01. */
         out item request : InfeasiblePlanEvent;
     }
 
-    action def ManageTraffic {
+    action def <'ACT-00'> ManageTraffic {
         doc /* ACT-00 ManageTraffic; sample/observation tick validates cache, phase timer only advances lifecycle. */
         in attribute sampleOrTick : Boolean;
         in attribute isRunning : Boolean;

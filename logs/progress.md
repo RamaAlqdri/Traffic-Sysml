@@ -147,3 +147,10 @@ Gunakan template berikut untuk entri berikutnya:
 - Skills: ponytail untuk perubahan minimum yang menyelesaikan pipeline; academic-research-suite untuk disiplin evidence/ASM serta preservasi provenance; pdf:pdf untuk render/QA/output; pedoman presentations diterapkan dengan format Beamer eksplisit pengguna tetap dipakai. Tidak ada subagent/reviewer independen atau eksperimen traffic baru.
 - Status: source-complete, build-verified, release-complete untuk artefak akademik konseptual dan migrasi toolchain ini; runtime/physical scenarios yang belum dieksekusi tetap not-run.
 - Next: artefak siap ditinjau kelompok; panduan model/BUILD.md menjelaskan penggunaan dan batas tool.
+
+## 2026-11-15 WIB — Resolusi merge model SysML v2
+
+- Action: gabungkan ID ACT/BLK serta penjelasan elemen dan antarmuka dari 2f9d76a. Pertahankan C00, pemetaan empat lampu, tiga frame pemulihan, durasi green terkunci, SafetyHold, dan metadata requirement yang dipakai oleh generator.
+- Files: activity, sequence, BDD dan types; diagram, PDF, receipt verifikasi dan log diperbarui oleh build.
+- Validation: parser menerima 10 berkas, 24 requirement dan 21 verification case terhubung, 5 regression test lolos. Build merender tujuh diagram dan mengompilasi kedua PDF setelah Biber 2.21 ARM64 dipakai lewat PATH lokal.
+- Skill: ponytail. Status: build-verified untuk resolusi merge. Pemeriksaan visual menyeluruh belum diulang.

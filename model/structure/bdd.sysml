@@ -8,7 +8,7 @@ package StlStructure {
     private import StlTypes::*;
     private import StlStateMachine::*;
 
-    part def VehicleDetection {
+    part def <'BLK-02'> VehicleDetection {
         doc /* BLK-02. Adapter masukan count; memvalidasi frame dan melatch dataFault. */
         port countsIn : ~SamplesIF;
         port samplesOut : SamplesIF;
@@ -17,7 +17,7 @@ package StlStructure {
         attribute staleThreshold : DurationValue = StlTypes::staleThreshold;
     }
 
-    part def DensityAnalysis {
+    part def <'BLK-03'> DensityAnalysis {
         doc /* BLK-03. Memetakan count valid ke LOW/MEDIUM/HIGH. */
         port samplesIn : ~SamplesIF;
         port densityOut : DensityIF;
@@ -25,7 +25,7 @@ package StlStructure {
         attribute mediumUpperBound : Natural = StlTypes::mediumUpperBound;
     }
 
-    part def TrafficController {
+    part def <'BLK-04'> TrafficController {
         doc /* BLK-04. Eligibility, prioritas, deadline, grant, mode Normal/Fallback. */
         port densityIn : ~DensityIF;
         port statusIn : ~StatusIF;
@@ -39,7 +39,7 @@ package StlStructure {
         attribute fallbackGreen : DurationValue = StlTypes::fallbackGreen;
     }
 
-    part def SignalController {
+    part def <'BLK-05'> SignalController {
         doc /* BLK-05. Pemilik STM-01; satu-satunya penghasil LampVector. */
         port commandIn : ~CommandIF;
         port boundaryOut : BoundaryIF;
@@ -49,13 +49,13 @@ package StlStructure {
         attribute allRedDuration : DurationValue = StlTypes::allRedDuration;
     }
 
-    part def TrafficLights {
+    part def <'BLK-06'> TrafficLights {
         doc /* BLK-06. Satu lampu logis per pendekat (aktuator ideal). */
         port lampsIn : ~LampsIF;
         attribute approach : Approach;
     }
 
-    part def SmartTrafficLightSystem {
+    part def <'BLK-01'> SmartTrafficLightSystem {
         doc /* BLK-01. System of Interest: satu simpang empat pendekat. */
         part sensor : VehicleDetection[1];
         part densityAnalysis : DensityAnalysis[1];
@@ -78,37 +78,37 @@ package StlStructure {
 
     // Definisi antarmuka antar-port (connector + item flow)
     interface def SamplesInterface {
-        doc /* Connector bertipe untuk aliran CountsFrame. */
+        doc /* C01: CountsFrame dari VehicleDetection (P01) ke DensityAnalysis (P03). */
         end supplier : SamplesIF;
         end consumer : ~SamplesIF;
         flow of CountsFrame from supplier.counts to consumer.counts;
     }
     interface def DensityInterface {
-        doc /* Connector bertipe untuk aliran DensityFrame. */
+        doc /* C02: DensityFrame dari DensityAnalysis (P04) ke TrafficController (P05). */
         end supplier : DensityIF;
         end consumer : ~DensityIF;
         flow of DensityFrame from supplier.density to consumer.density;
     }
     interface def StatusInterface {
-        doc /* Connector bertipe untuk aliran FaultStatus. */
+        doc /* C03: FaultStatus (dataFault, streak) dari VehicleDetection (P02) ke TrafficController (P06). */
         end supplier : StatusIF;
         end consumer : ~StatusIF;
         flow of FaultStatus from supplier.status to consumer.status;
     }
     interface def CommandInterface {
-        doc /* Connector bertipe untuk aliran PhaseCommand. */
+        doc /* C04: PhaseCommand dari TrafficController (P07) ke SignalController (P09). */
         end supplier : CommandIF;
         end consumer : ~CommandIF;
         flow of PhaseCommand from supplier.command to consumer.command;
     }
     interface def BoundaryInterface {
-        doc /* Connector bertipe untuk aliran BoundaryEvent. */
+        doc /* C05: BoundaryEvent (SafeBoundary atau GrantAccepted) dari SignalController (P10) ke TrafficController (P08). */
         end supplier : BoundaryIF;
         end consumer : ~BoundaryIF;
         flow of BoundaryEvent from supplier.boundary to consumer.boundary;
     }
     interface def LampsInterface {
-        doc /* Connector bertipe untuk aliran LampVector. */
+        doc /* C06: LampVector dari SignalController (P11) ke TrafficLights (P12); fan-out ke empat lampu. */
         end supplier : LampsIF;
         end consumer : ~LampsIF;
         flow of LampVector from supplier.lamps to consumer.lamps;

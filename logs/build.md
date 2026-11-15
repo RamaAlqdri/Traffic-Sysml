@@ -32503,3 +32503,1102 @@ up to date in 343ms
 CLI mutation test: python3 check_model.py exit=1; changed greenExpiry to 999 s in isolated copy; native parser/static gate rejected it before PASS.
 
 ```
+
+## 2026-11-15 17:50:57 WIB — make build
+
+- Command: `make build`
+- Lecture: `lecture/01-pengantar-mbse.md`
+- Exit code: 2
+- Result: failed; build-unverified
+
+```text
+node --version
+v24.1.0
+npm --version
+11.3.0
+node tools/sysml.mjs
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/tools/sysml.mjs:18
+ if(errors.length)throw Error(errors.join('\n'));
+                        ^
+
+Error: file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:8: no viable alternative at input '<<'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:29: extraneous input '===' expecting {'abstract', 'accept', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'assign', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'decide', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'first', 'flow', 'for', 'fork', 'function', 'if', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'join', 'language', 'library', 'locale', 'loop', 'member', 'merge', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'send', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'terminate', 'then', 'timeslice', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'view', 'viewpoint', 'while', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:71: extraneous input '>' expecting {'abstract', 'accept', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'assign', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'decide', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'first', 'flow', 'for', 'fork', 'function', 'if', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'join', 'language', 'library', 'locale', 'loop', 'member', 'merge', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'send', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'terminate', 'then', 'timeslice', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'view', 'viewpoint', 'while', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:90: no viable alternative at input '<<'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:93: extraneous input '===' expecting {'abstract', 'accept', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'assign', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'decide', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'first', 'flow', 'for', 'fork', 'function', 'if', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'join', 'language', 'library', 'locale', 'loop', 'member', 'merge', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'send', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'terminate', 'then', 'timeslice', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'view', 'viewpoint', 'while', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:95: extraneous input '>' expecting {'abstract', 'accept', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'assign', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'decide', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'first', 'flow', 'for', 'fork', 'function', 'if', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'join', 'language', 'library', 'locale', 'loop', 'member', 'merge', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'send', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'terminate', 'then', 'timeslice', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'view', 'viewpoint', 'while', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:103: no viable alternative at input '<<'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:104: missing 'send' at ';'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:110: extraneous input '===' expecting {'abstract', 'accept', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'assign', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'decide', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'first', 'flow', 'for', 'fork', 'function', 'if', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'join', 'language', 'library', 'locale', 'loop', 'member', 'merge', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'send', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'terminate', 'then', 'timeslice', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'view', 'viewpoint', 'while', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:111: missing 'send' at ';'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:114: extraneous input '>' expecting {'abstract', 'accept', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'assign', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'decide', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'first', 'flow', 'for', 'fork', 'function', 'if', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'join', 'language', 'library', 'locale', 'loop', 'member', 'merge', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'send', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'terminate', 'then', 'timeslice', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'view', 'viewpoint', 'while', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:115: mismatched input 'then' expecting {'action', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/activity.sysml:145: extraneous input '<EOF>' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'filter', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'timeslice', 'type', 'typed', 'use', 'var', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:8: no viable alternative at input '<<'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:10: extraneous input '===' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'filter', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'timeslice', 'type', 'typed', 'use', 'var', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:11: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:13: mismatched input 'occurrence' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:18: no viable alternative at input '<<'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:25: extraneous input '===' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'then', 'timeslice', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:26: extraneous input 'part' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:26: mismatched input ':' expecting {';', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:32: extraneous input '>' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'then', 'timeslice', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:35: mismatched input 'message' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:41: no viable alternative at input '<<'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:44: extraneous input '===' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'then', 'timeslice', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:45: extraneous input 'message' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:45: mismatched input 'of' expecting {';', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:45: mismatched input 'from' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:45: mismatched input 'to' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:47: extraneous input '>' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'then', 'timeslice', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:50: mismatched input 'message' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:20: Ambiguous name 'sensor': also declared as part in this document (line 27).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:21: Ambiguous name 'densityAnalysis': also declared as part in this document (line 28).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:22: Ambiguous name 'controller': also declared as part in this document (line 29).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:23: Ambiguous name 'signals': also declared as part in this document (line 30).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:27: Ambiguous name 'sensor': also declared as part in this document (line 20).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:28: Ambiguous name 'densityAnalysis': also declared as part in this document (line 21).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:29: Ambiguous name 'controller': also declared as part in this document (line 22).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:30: Ambiguous name 'signals': also declared as part in this document (line 23).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:43: Ambiguous name 'm08': also declared as flow in this document (line 46).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/sequence.sysml:46: Ambiguous name 'm08': also declared as flow in this document (line 43).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:12: no viable alternative at input '<<'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:25: extraneous input '===' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'do', 'doc', 'end', 'entry', 'enum', 'event', 'exhibit', 'exit', 'feature', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'then', 'timeslice', 'transition', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:26: extraneous input 'doc' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:27: mismatched input 'attribute' expecting {';', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:42: extraneous input '>' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'do', 'doc', 'end', 'entry', 'enum', 'event', 'exhibit', 'exit', 'feature', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'then', 'timeslice', 'transition', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:43: extraneous input 'entry' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:43: no viable alternative at input 'thenrunning'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:94: mismatched input '<' expecting {'accept', 'do', 'if', 'then'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:96: mismatched input '===' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:96: mismatched input '=' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:97: mismatched input 'accept' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:97: mismatched input '.' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:98: mismatched input '>' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:99: mismatched input 'do' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:100: no viable alternative at input 'actionrecordLastGreenEndthen'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:100: mismatched input 'then' expecting {';', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:119: extraneous input 'transition' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'filter', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'timeslice', 'type', 'typed', 'use', 'var', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:120: mismatched input 'first' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:121: mismatched input 'accept' expecting 'then'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:122: mismatched input 'then' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:124: no viable alternative at input '<<'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:126: mismatched input '===' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:127: extraneous input 'transition' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:128: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:128: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:128: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:128: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:128: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:128: extraneous input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:128: mismatched input 'f9d76a9361e2113d6f75f19227db925a4ec4ce5' expecting {';', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:129: mismatched input 'first' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:130: mismatched input 'accept' expecting 'then'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:131: mismatched input 'then' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:133: extraneous input 'transition' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'filter', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'timeslice', 'type', 'typed', 'use', 'var', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:134: mismatched input 'first' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:135: mismatched input 'accept' expecting 'then'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:136: mismatched input 'do' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:137: mismatched input 'then' expecting {';', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:139: extraneous input '}' expecting {<EOF>, 'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'filter', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'timeslice', 'type', 'typed', 'use', 'var', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:17: Ambiguous name 'InvalidCommandEvent': also declared as item def in this document (line 30).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:18: Ambiguous name 'InfeasiblePlanEvent': also declared as item def in this document (line 33).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:19: Ambiguous name 'RestartEvent': also declared as item def in this document (line 36).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:21: Ambiguous name 'SignalLifecycle': also declared as state def in this document (line 40).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:30: Ambiguous name 'InvalidCommandEvent': also declared as item def in this document (line 17).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:33: Ambiguous name 'InfeasiblePlanEvent': also declared as item def in this document (line 18).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:36: Ambiguous name 'RestartEvent': also declared as item def in this document (line 19).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/behavior/state-machine.sysml:40: Ambiguous name 'SignalLifecycle': also declared as state def in this document (line 21).
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/requirements/requirements.sysml:186: no viable alternative at input '<<'
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/requirements/requirements.sysml:195: extraneous input '===' expecting {'abstract', 'action', 'actor', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'assume', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'first', 'flow', 'frame', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'require', 'requirement', 'satisfy', 'snapshot', 'stakeholder', 'standard', 'state', 'step', 'subject', 'subsets', 'succession', 'then', 'timeslice', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'verify', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/requirements/requirements.sysml:196: extraneous input 'doc' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/requirements/requirements.sysml:198: mismatched input 'subject' expecting {';', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/requirements/requirements.sysml:199: extraneous input '>' expecting {'abstract', 'action', 'actor', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'assume', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'first', 'flow', 'frame', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'require', 'requirement', 'satisfy', 'snapshot', 'stakeholder', 'standard', 'state', 'step', 'subject', 'subsets', 'succession', 'then', 'timeslice', 'type', 'typed', 'use', 'var', 'variant', 'variation', 'verification', 'verify', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/requirements/requirements.sysml:200: mismatched input '}' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:80: mismatched input '<' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'first', 'flow', 'in', 'include', 'individual', 'inout', 'interface', 'item', 'language', 'library', 'locale', 'message', 'metadata', 'not', 'occurrence', 'out', 'package', 'part', 'perform', 'port', 'private', 'protected', 'public', 'ref', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'succession', 'then', 'timeslice', 'use', 'variant', 'variation', 'verification', 'view', 'viewpoint', '#', '@', '}', REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:82: extraneous input '===' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'filter', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'timeslice', 'type', 'typed', 'use', 'var', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', '}', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:83: extraneous input 'doc' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:84: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:84: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:84: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:84: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:84: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:84: extraneous input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:84: mismatched input 'f9d76a9361e2113d6f75f19227db925a4ec4ce5' expecting {';', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:85: mismatched input 'end' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:90: mismatched input '<' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'first', 'flow', 'in', 'include', 'individual', 'inout', 'interface', 'item', 'language', 'library', 'locale', 'message', 'metadata', 'not', 'occurrence', 'out', 'package', 'part', 'perform', 'port', 'private', 'protected', 'public', 'ref', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'succession', 'then', 'timeslice', 'use', 'variant', 'variation', 'verification', 'view', 'viewpoint', '#', '@', '}', REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:92: extraneous input '===' expecting {<EOF>, 'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'filter', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'timeslice', 'type', 'typed', 'use', 'var', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:93: extraneous input 'doc' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:94: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:94: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:94: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:94: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:94: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:94: extraneous input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:94: mismatched input 'f9d76a9361e2113d6f75f19227db925a4ec4ce5' expecting {';', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:95: mismatched input 'end' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:98: extraneous input '}' expecting {<EOF>, 'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'filter', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'timeslice', 'type', 'typed', 'use', 'var', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:100: mismatched input '<' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'first', 'flow', 'in', 'include', 'individual', 'inout', 'interface', 'item', 'language', 'library', 'locale', 'message', 'metadata', 'not', 'occurrence', 'out', 'package', 'part', 'perform', 'port', 'private', 'protected', 'public', 'ref', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'succession', 'then', 'timeslice', 'use', 'variant', 'variation', 'verification', 'view', 'viewpoint', '#', '@', '}', REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:102: extraneous input '===' expecting {<EOF>, 'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'filter', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'timeslice', 'type', 'typed', 'use', 'var', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:103: extraneous input 'doc' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:104: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:104: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:104: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:104: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:104: mismatched input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:104: extraneous input '>' expecting {'all', 'as', 'behavior', 'crosses', 'false', 'feature', 'function', 'hastype', 'if', 'interaction', 'istype', 'language', 'locale', 'member', 'metaclass', 'multiplicity', 'new', 'not', 'null', 'predicate', 'step', 'true', 'type', 'var', '$', '(', '*', '+', '-', '@', '{', '~', IDENTIFIER, STRING, DOUBLE_STRING, INTEGER, REAL, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:104: mismatched input 'f9d76a9361e2113d6f75f19227db925a4ec4ce5' expecting {';', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:105: mismatched input 'end' expecting {'default', ':=', ';', '=', '{'}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:108: extraneous input '}' expecting {<EOF>, 'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'behavior', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'connection', 'constant', 'constraint', 'crosses', 'default', 'defined', 'dependency', 'derived', 'doc', 'end', 'enum', 'event', 'exhibit', 'feature', 'filter', 'first', 'flow', 'function', 'in', 'include', 'individual', 'inout', 'interaction', 'interface', 'item', 'language', 'library', 'locale', 'member', 'message', 'metaclass', 'metadata', 'multiplicity', 'nonunique', 'not', 'occurrence', 'ordered', 'out', 'package', 'part', 'perform', 'port', 'predicate', 'private', 'protected', 'public', 'redefines', 'ref', 'references', 'rendering', 'rep', 'requirement', 'satisfy', 'snapshot', 'standard', 'state', 'step', 'subsets', 'succession', 'timeslice', 'type', 'typed', 'use', 'var', 'variation', 'verification', 'view', 'viewpoint', '::>', ':>>', ':=', ':>', '=>', '#', ':', ';', '<', '=', '@', '[', '{', IDENTIFIER, STRING, REGULAR_COMMENT}
+file:///Users/ramadhanial-qadri/Documents/My_File/MILKOM/Semester%202/Pengembangan%20Sistem%20Pintar/Traffic/model/structure/bdd.sysml:110: mismatched input '<' expecting {'abstract', 'action', 'alias', 'allocate', 'allocation', 'analysis', 'assert', 'attribute', 'bind', 'binding', 'calc', 'case', 'comment', 'concern', 'connect', 'co
+Node.js v24.1.0
+make[1]: *** [_build] Error 1
+
+```
+
+## 2026-11-15 17:51:36 WIB — make build
+
+- Command: `make build`
+- Lecture: `lecture/01-pengantar-mbse.md`
+- Exit code: 2
+- Result: failed; build-unverified
+
+```text
+node --version
+v24.1.0
+npm --version
+11.3.0
+node tools/sysml.mjs
+Validated 10 SysML v2 files; 24 requirements / 21 verify cases; frozen grant contract PASS.
+Rendered SysML v2: requirements
+Rendered SysML v2: use-case
+Rendered SysML v2: activity
+Rendered SysML v2: sequence
+Rendered SysML v2: state-machine
+Rendered SysML v2: bdd
+Rendered SysML v2: ibd
+python3 tools/sync-requirements.py
+24 SysML requirements synchronized to catalogue/report cards.
+python3 model/verification/check_model.py
+PASS: 576 order pairs, maximum wait 208s; category/tie/input/state and 24 requirement links checked.
+npm test
+
+> test
+> node --test tools/sysml.test.mjs
+
+✔ frozen-grant mutation: a 999 second timer must fail (4.398708ms)
+✔ a removed native verify relationship must fail (2.832375ms)
+✔ IBD projection resolves inherited parts and ports, all four lamp targets (1.000208ms)
+✔ definition overview retains five type targets and four distinct lamp roles (0.180958ms)
+✔ native ANTLR parser rejects malformed SysML instead of trusting comments (223.162208ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 285.034208
+npm notice
+npm notice New minor version of npm available! 11.3.0 -> 11.21.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.21.2
+npm notice To update run: npm install -g npm@11.21.2
+npm notice
+rsvg-convert --version
+rsvg-convert version 2.60.0
+latexmk -v
+Latexmk, John Collins, 9 March 2026. Version 4.88
+xelatex --version
+XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 SIL International, Jonathan Kew and Khaled Hosny.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the XeTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the XeTeX source.
+Primary author of XeTeX: Jonathan Kew.
+Compiled with ICU version 78.2; using 78.2
+Compiled with zlib version 1.3.2; using 1.3.2
+Compiled with FreeType2 version 2.14.1; using 2.14.1
+Compiled with Graphite2 version 1.3.14; using 1.3.14
+Compiled with HarfBuzz version 12.3.2; using 12.3.2
+Compiled with libpng version 1.6.55; using 1.6.55
+Compiled with pplib version v2.2
+Using Mac OS X Core Text and Cocoa frameworks
+biber --version
+usage: lipo <input_file> <command> [<options> ...]
+  command is one of:
+    -create[_album]
+    -info
+    -detailed_info
+    -thin <arch>
+    -extract <arch> [-extract <arch> ...]
+    -remove <arch> [-remove <arch> ...]
+    -replace <arch> <file_name> [-replace <arch> <file_name> ...]
+    -verify_arch <arch> ...
+    -archs
+  options are one or more of:
+    -arch <arch> <input_file>
+    -o <output_file>
+    -segalign <arch> <alignment>
+biber: extracting arm64 binary with lipo failed (wstatus=256)
+make[1]: *** [_build] Error 255
+
+```
+
+## 2026-11-15 17:52:46 WIB — make build
+
+- Command: `make build`
+- Lecture: `lecture/01-pengantar-mbse.md`
+- Exit code: 0
+- Result: render/compile succeeded; log and release QC still required
+
+```text
+node --version
+v24.1.0
+npm --version
+11.3.0
+node tools/sysml.mjs
+Validated 10 SysML v2 files; 24 requirements / 21 verify cases; frozen grant contract PASS.
+Rendered SysML v2: requirements
+Rendered SysML v2: use-case
+Rendered SysML v2: activity
+Rendered SysML v2: sequence
+Rendered SysML v2: state-machine
+Rendered SysML v2: bdd
+Rendered SysML v2: ibd
+python3 tools/sync-requirements.py
+24 SysML requirements synchronized to catalogue/report cards.
+python3 model/verification/check_model.py
+PASS: 576 order pairs, maximum wait 208s; category/tie/input/state and 24 requirement links checked.
+npm test
+
+> test
+> node --test tools/sysml.test.mjs
+
+✔ frozen-grant mutation: a 999 second timer must fail (6.728375ms)
+✔ a removed native verify relationship must fail (3.6835ms)
+✔ IBD projection resolves inherited parts and ports, all four lamp targets (1.320208ms)
+✔ definition overview retains five type targets and four distinct lamp roles (0.321542ms)
+✔ native ANTLR parser rejects malformed SysML instead of trusting comments (501.187334ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 658.325417
+rsvg-convert --version
+rsvg-convert version 2.60.0
+latexmk -v
+Latexmk, John Collins, 9 March 2026. Version 4.88
+xelatex --version
+XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)
+kpathsea version 6.4.2
+Copyright 2026 SIL International, Jonathan Kew and Khaled Hosny.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the XeTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the XeTeX source.
+Primary author of XeTeX: Jonathan Kew.
+Compiled with ICU version 78.2; using 78.2
+Compiled with zlib version 1.3.2; using 1.3.2
+Compiled with FreeType2 version 2.14.1; using 2.14.1
+Compiled with Graphite2 version 1.3.14; using 1.3.14
+Compiled with HarfBuzz version 12.3.2; using 12.3.2
+Compiled with libpng version 1.6.55; using 1.6.55
+Compiled with pplib version v2.2
+Using Mac OS X Core Text and Cocoa frameworks
+biber --version
+biber version: 2.21
+latexmk -xelatex -cd -interaction=nonstopmode -halt-on-error -file-line-error report/main.tex
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'report/'
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  ../assets/diagrams/activity.pdf
+  ../assets/diagrams/bdd.pdf
+  ../assets/diagrams/ibd.pdf
+  ../assets/diagrams/requirements.pdf
+  ../assets/diagrams/sequence.pdf
+  ../assets/diagrams/state-machine.pdf
+  ../assets/diagrams/use-case.pdf
+Category 'changed_user':
+  ../assets/diagrams/activity.pdf
+  ../assets/diagrams/bdd.pdf
+  ../assets/diagrams/ibd.pdf
+  ../assets/diagrams/requirements.pdf
+  ../assets/diagrams/sequence.pdf
+  ../assets/diagrams/state-machine.pdf
+  ../assets/diagrams/use-case.pdf
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(./gaya/ubtesis.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/id/babel-indonesia
+n.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-english/english.ldf)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def))))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty)) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+xurl: Set penalties for biblatex
+)) (./metadata.tex) (./main.aux)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/omlntxmi.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx)
+(./main.bbl) (./main.out) (./main.out) (./awal/sampul.tex [1])
+(./sections/01-introduction.tex
+Underfull \hbox (badness 2012) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Pemodelan perlu menjelaskan batas sistem, tanggung jawa
+b komponen,
+
+Underfull \hbox (badness 3179) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 transisi sinyal, dan cara memeriksa kebutuhan. Catatan ku
+liah menekankan
+
+Underfull \hbox (badness 2351) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 behavior, structure dan verification menjadi dasar audit
+desain; keberadaan
+
+Underfull \hbox (badness 2293) in paragraph at lines 8--9
+[]\TU/Calibri(0)/m/n/12 Masalah desain adalah bagaimana merepresentasikan penge
+ndali empat
+
+Underfull \hbox (badness 4752) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 pendekat yang adaptif, tidak memberi green berkonflik, me
+mpunyai batas
+
+Underfull \hbox (badness 1314) in paragraph at lines 11--12
+[]\TU/Calibri(0)/m/n/12 Urutan kerja adalah audit sumber, kajian terarah tiga j
+urnal yang dipilih
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+\TU/Calibri(0)/m/n/12 pengguna, pencatatan evidence/asumsi, formulasi masalah,
+requirements,
+) (./sections/03-problem.tex [1]
+Underfull \hbox (badness 1708) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 South, East, West, hanya gerak lurus. Tidak ada pedestria
+n, dedicated turn,
+
+Underfull \hbox (badness 1442) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 emergency, dashboard, machine learning (ML) atau koordina
+si antarsimpang.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 berbeda dianggap berkonflik secara konservatif. TrafficDa
+taSource adalah
+
+Underfull \hbox (badness 6252) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 aktor eksternal penyedia hitungan, RoadUsers penerima sin
+yal, sedangkan
+
+Underfull \hbox (badness 3503) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 kelompok/dosen meninjau artefak dan pengelola lalu lintas
+ berkepentingan
+
+Underfull \hbox (badness 1603) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 VehicleDetection adalah adapter input, bukan sensor kam
+era yang telah
+
+Underfull \hbox (badness 1527) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diimplementasikan. CountsFrame berisi empat record dengan
+ approach unik,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newtx/untxsyc.fd)
+Underfull \hbox (badness 1968) in paragraph at lines 23--24
+[]\TU/Calibri(0)/m/n/12 Angka artikel seperti cycle 120 s atau amber 2.5 s pada
+ Mondal tidak
+
+Underfull \hbox (badness 1033) in paragraph at lines 26--27
+\TU/Calibri(0)/m/n/12 count nol. Eligible hanya memuat pendekat yang belum dila
+yani pada round
+[2]) (./sections/04-requirements.tex
+Underfull \hbox (badness 2582) in paragraph at lines 39--1
+[]\TU/Calibri(0)/m/n/12 SignalController menolak command yang di luar domain at
+au melewati
+[3]
+Underfull \hbox (badness 3679) in paragraph at lines 4--5
+\TU/Calibri(0)/m/n/12 memisahkan pernyataan kebutuhan, sumber, alasan, metode v
+erifikasi, dan
+
+Underfull \hbox (badness 6428) in paragraph at lines 6--7
+[]\TU/Calibri(0)/m/n/12 Pada baris sumber, EVID-* menunjuk evidence dan ASM-* m
+enunjuk
+
+Underfull \hbox (badness 1286) in paragraph at lines 6--7
+\TU/Calibri(0)/m/n/12 dan Inspection berarti uji, analisis, dan inspeksi; penca
+ntuman metode tidak
+
+Underfull \hbox (badness 1052) in paragraph at lines 8--9
+\TU/Calibri(0)/m/n/12 skenario verifikasi (VER). ID yang sama digunakan pada di
+agram dan matriks
+[4] [5] [6] [7] [8] [9] [10]) (./sections/05-models.tex
+Underfull \hbox (badness 1168) in paragraph at lines 4--10
+\TU/Calibri(0)/m/n/12 relasi ditampilkan pada overview ini. Seluruh 24 requirem
+ent tetap terdaftar
+[11] [12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+[]\TU/Calibri(0)/m/n/12 STM-01 dimiliki SignalController. Normal/Fallback merup
+akan variabel
+[15] [16] [17]) (./sections/06-trace-verification.tex [18]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 C01 membawa CountsFrame dari sensor ke analysis, C02 Dens
+ityFrame
+
+Underfull \hbox (badness 4556) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 dari analysis ke controller, C03 fault/streak dari sensor
+ ke controller, C04
+
+Underfull \hbox (badness 1394) in paragraph at lines 41--42
+\TU/Calibri(0)/m/n/12 PhaseCommand dari controller ke signals, C05 BoundaryEven
+t (SafeBoundary
+
+Underfull \hbox (badness 7415) in paragraph at lines 50--50
+[]|\TU/Calibri(0)/m/n/12 Contoh boundary kategori, tie/ring/wait/category
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\TU/Calibri(0)/m/n/12 576 pasangan permutasi, 2304 service waits,
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/Calibri(0)/m/n/12 Predikat referensi menolak
+
+Underfull \hbox (badness 3088) in paragraph at lines 56--56
+[]|\TU/Calibri(0)/m/n/12 24 ID requirement unik, sumber dan 21 definisi
+
+Underfull \hbox (badness 2980) in paragraph at lines 43--60
+[]\TU/Calibri(0)/m/n/12 Sebanyak 21 test case didefinisikan dalam source verifi
+cation. Cakupan
+
+Underfull \hbox (badness 1082) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 cadence, boundary, min/max green, fairness, exclusivity,
+clearance, command
+
+Underfull \hbox (badness 1210) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 rejection, deadline override, domain input, output flow,
+stale, fault, fallback,
+
+Underfull \hbox (badness 1939) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 recovery, scope dan semantik SysML. Setiap skenario memua
+t kondisi awal,
+
+Underfull \hbox (badness 4024) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 referensi \TU/lmtt/m/n/12 model/verification/check_model.
+py \TU/Calibri(0)/m/n/12 benar-benar dijalankan. Ia
+
+Underfull \hbox (badness 1603) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 tidak mengeksekusi source diagram atau perangkat fisik. H
+asil yang tersedia
+
+Underfull \hbox (badness 2035) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 migrasi pada manual-inspection.md bersifat historis. Pada
+ model v2, syntax,
+
+Underfull \hbox (badness 1490) in paragraph at lines 43--60
+\TU/Calibri(0)/m/n/12 pada sysml-validation.json. Pemeriksaan tersebut tidak di
+promosikan menjadi
+[19]) (./sections/07-discussion-conclusion.tex
+Underfull \hbox (badness 1259) in paragraph at lines 61--1
+\TU/Calibri(0)/m/n/12 aritmetika: pada t=200, melayani N selama 30 s ditambah c
+learance 4 akan
+
+Underfull \hbox (badness 2894) in paragraph at lines 3--4
+[]\TU/Calibri(0)/m/n/12 Model menghubungkan alasan desain ke requirement dan me
+misahkan
+
+Underfull \hbox (badness 2418) in paragraph at lines 3--4
+\TU/Calibri(0)/m/n/12 katalog, dan arah satisfy/verify mengikuti standar. Namun
+ textual rendering
+
+Underfull \hbox (badness 1348) in paragraph at lines 5--6
+[]\TU/Calibri(0)/m/n/12 Aturan sekali pelayanan per round memberi bound analiti
+s yang mudah
+
+Underfull \hbox (badness 2384) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 diaudit, tetapi mengharuskan pelayanan count nol dan memb
+atasi optimasi
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\TU/Calibri(0)/m/n/12 throughput. Kategori mengkuantisasi data: dua hitungan be
+rbeda dapat
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[]\TU/Calibri(0)/m/n/12 Langkah lanjutan yang bermakna adalah mengimplementasik
+an
+
+Underfull \hbox (badness 3919) in paragraph at lines 12--13
+\TU/Calibri(0)/m/n/12 scheduler/phase engine dan menjalankan timeline fault/rec
+overy, kemudian
+)
+Underfull \hbox (badness 5105) in paragraph at lines 15--28
+[]\TU/Calibri(0)/m/n/12 Proyek menghasilkan model konseptual Smart Traffic Ligh
+t dengan 24
+
+Underfull \hbox (badness 3690) in paragraph at lines 15--28
+\TU/Calibri(0)/m/n/12 hardware belum diverifikasi. Laporan tidak menyamakan keb
+erhasilan build
+[21]
+Underfull \hbox (badness 1342) in paragraph at lines 28--28
+[][]\TU/Calibri(0)/m/n/12 Mathiane, M.J., Tu, C., Adewale, P. dan Nawej, M., 20
+23. A Vehicle Density
+[22] (./main.aux) )
+(see the transcript file for additional information)
+Output written on main.xdv (23 pages, 315768 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.xdv'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Sources for biber
+  bibliography.bib
+  main.bcf
+Latexmk: applying rule 'xdvipdfmx'...
+Rule 'xdvipdfmx':  Reasons for rerun
+Changed files or newly in use/created:
+  main.xdv
+Category 'changed_source_rules':
+  xelatex
+
+------------
+Run number 1 of rule 'xdvipdfmx'
+------------
+------------
+Running 'xdvipdfmx -E -o "main.pdf"  "main.xdv"'
+------------
+main.xdv -> main.pdf
+[1][2][3][4][5][6][7][8][9][10][11][12][13][14][15][16][17][18][19][20][21][22][23]
+522265 bytes written
+Latexmk: All targets (main.xdv main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+latexmk -pdf -cd -interaction=nonstopmode -halt-on-error -file-line-error presentation/main.tex
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Changing directory to 'presentation/'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  ../assets/diagrams/use-case.pdf
+Category 'changed_user':
+  ../assets/diagrams/use-case.pdf
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2026/01/22 v3.77 A class for typesetting presentations
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasedecode.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/size11.clo)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex))) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/base/atbegshi-ltx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+
+Package hyperref Message: Stopped early.
+
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasecompatibility.st
+y) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty)))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasesection.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframe.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.
+sty) (/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenotes.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/enumerate.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasenavigationsymbol
+s.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemedefault.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerouterthemedefault.st
+y))) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.st
+y)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.
+sty)) (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmss.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./main.out) (./main.out)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-basic-dicti
+onary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-bibliograph
+y-dictionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-environment
+-dictionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-months-dict
+ionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-numbers-dic
+tionary-English.dict)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translator/translator-theorem-dic
+tionary-English.dict) (./main.nav) [1{/usr/local/texlive/2026/texmf-var/fonts/m
+ap/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips
+/lm/lm-ec.enc}] [2] (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmss.fd
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd) [3] [4]
+[5{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [6] [7 <../asset
+s/diagrams/use-case.pdf>] [8] [9] [10] [11{/usr/local/texlive/2026/texmf-dist/f
+onts/enc/dvips/lm/lm-rm.enc}] [12] [13] (./main.bbl
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd)) [14] (./main.aux)
+)</usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loc
+al/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2
+026/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2026/texmf-dist/fonts
+/type1/public/lm/lmss8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
+ic/lm/lmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lm
+sso10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsso8.pfb>
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/loca
+l/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
+Output written on main.pdf (14 pages, 257286 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ../report/bibliography.bib
+Latexmk: All targets (main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+test -s report/main.pdf
+test -s presentation/main.pdf
+
+```

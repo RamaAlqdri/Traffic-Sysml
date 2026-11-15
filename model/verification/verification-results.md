@@ -1,6 +1,6 @@
 # Verification receipt
 
-Run: 2026-11-07 15:28:47 WIB. Command: `python3 model/verification/check_model.py`.
+Run: 2026-11-15 17:53:08 WIB. Command: `python3 model/verification/check_model.py`.
 Scope: parameters loaded from validated SysML v2 parser receipt, frozen-grant static contract checks, reference analysis and cross-links; not execution of diagrams, hardware, or vehicle-flow simulation. Python assertions must be enabled (do not use `-O`).
 
 | TestCase | Verdict | Actual evidence / limit |

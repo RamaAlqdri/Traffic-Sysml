@@ -7,7 +7,8 @@ package StlInteraction {
     private import StlContext::*;
 
     occurrence def InteractionINT01 {
-        doc /* Urutan pesan dinyatakan oleh succession antar-message. */
+        doc /* Urutan pesan dinyatakan oleh succession antar-message.
+               ACT-03, ACT-09 dan ACT-08 dimodelkan di StlActivity sebagai aksi internal. */
 
         ref part source : TrafficDataSource = trafficDataSource;
         ref part sensor : VehicleDetection = smartTrafficLight.sensor;

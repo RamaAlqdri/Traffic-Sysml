@@ -129,3 +129,10 @@ Template:
 - Rendering: warna tema VS Code, padding/crop canvas, inherited part/port, exhibit state dan fake ordinal-seconds memerlukan adapter eksplisit. Satu draft mengalami timeout ekspor; timeout tetap fail-closed, diagnostic/screenshot ditambahkan, seed layout dikunci dan build akhir berhasil. Tidak menyatakan penyebab internal timeout upstream telah dibuktikan.
 - Status: resolved untuk scope migrasi dan artefak; batas renderer/API experimental yang dinyatakan tetap berlaku. CaseView adalah overview aktor/use case, tidak menampilkan semua include/dependency; struktur memakai graf agregasi, bukan diamond UML. Detail tetap pada source/narasi.
 - Disposition: parser0error, advisory16 berupa naming-convention hints; missing-doc sudah tidak ada. Final LaTeX tanpa error/Overfull/unresolved citations. 49 Underfull hbox tetap dinilai visual sesuai template. Tidak ada klaim eksekusi controller/hardware lengkap.
+
+## ISSUE-010 — Konflik merge dan Biber pada macOS
+
+- Date: 2026-11-15 WIB.
+- Cause: commit 2f9d76a dan main memodifikasi bagian model yang sama. Pada build setelah resolusi, Biber universal gagal mengekstrak executable ARM64.
+- Fix: gabungkan ID dan dokumentasi yang kompatibel dengan pipeline SysML v2. Ekstrak Biber lokal menggunakan `lipo -thin arm64 /Library/TeX/texbin/biber -output "$traffic_bin/biber"` dengan `traffic_bin` direktori sementara, lalu jalankan `PATH="$traffic_bin:$PATH" make build`.
+- Status: konflik terselesaikan dan build sukses dengan executable lokal. Instalasi MacTeX sistem masih menggunakan Biber universal.
