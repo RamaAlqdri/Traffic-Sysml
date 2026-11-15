@@ -8,33 +8,36 @@ package StlContext {
     part trafficDataSource : TrafficDataSource;
     part roadUsers : RoadUsers;
 
+    connection c00 connect trafficDataSource.countsOut to smartTrafficLight.sensor.countsIn;
+        flow of CountsFrame from trafficDataSource.countsOut.counts to smartTrafficLight.sensor.countsIn.counts;
+
     part smartTrafficLight : SmartTrafficLightSystem {
 
         // C00: batas lingkungan - count disediakan eksternal (bukan perangkat deteksi fisik)
 
-        interface c01 : SamplesInterface
-            connect supplier ::> sensor.samplesOut to consumer ::> densityAnalysis.samplesIn;       // CountsFrame
+        connection c01 connect sensor.samplesOut to densityAnalysis.samplesIn;
+        flow of CountsFrame from sensor.samplesOut.counts to densityAnalysis.samplesIn.counts;       // CountsFrame
 
-        interface c02 : DensityInterface
-            connect supplier ::> densityAnalysis.densityOut to consumer ::> controller.densityIn;   // DensityFrame
+        connection c02 connect densityAnalysis.densityOut to controller.densityIn;
+        flow of DensityFrame from densityAnalysis.densityOut.density to controller.densityIn.density;   // DensityFrame
 
-        interface c03 : StatusInterface
-            connect supplier ::> sensor.statusOut to consumer ::> controller.statusIn;              // dataFault, streak
+        connection c03 connect sensor.statusOut to controller.statusIn;
+        flow of FaultStatus from sensor.statusOut.status to controller.statusIn.status;              // dataFault, streak
 
-        interface c04 : CommandInterface
-            connect supplier ::> controller.commandOut to consumer ::> signals.commandIn;           // PhaseCommand
+        connection c04 connect controller.commandOut to signals.commandIn;
+        flow of PhaseCommand from controller.commandOut.command to signals.commandIn.command;           // PhaseCommand
 
-        interface c05 : BoundaryInterface
-            connect supplier ::> signals.boundaryOut to consumer ::> controller.boundaryIn;         // BoundaryEvent
+        connection c05 connect signals.boundaryOut to controller.boundaryIn;
+        flow of BoundaryEvent from signals.boundaryOut.boundary to controller.boundaryIn.boundary;         // BoundaryEvent
 
         // C06: LampVector di-fan-out ke empat lampu; tiap lampu mengambil entry approach-nya
-        interface c06N : LampsInterface
-            connect supplier ::> signals.lampsOut to consumer ::> lightNorth.lampsIn;
-        interface c06S : LampsInterface
-            connect supplier ::> signals.lampsOut to consumer ::> lightSouth.lampsIn;
-        interface c06E : LampsInterface
-            connect supplier ::> signals.lampsOut to consumer ::> lightEast.lampsIn;
-        interface c06W : LampsInterface
-            connect supplier ::> signals.lampsOut to consumer ::> lightWest.lampsIn;
+        connection c06N connect signals.lampsOut to lightNorth.lampsIn;
+        flow of LampVector from signals.lampsOut.lamps to lightNorth.lampsIn.lamps;
+        connection c06S connect signals.lampsOut to lightSouth.lampsIn;
+        flow of LampVector from signals.lampsOut.lamps to lightSouth.lampsIn.lamps;
+        connection c06E connect signals.lampsOut to lightEast.lampsIn;
+        flow of LampVector from signals.lampsOut.lamps to lightEast.lampsIn.lamps;
+        connection c06W connect signals.lampsOut to lightWest.lampsIn;
+        flow of LampVector from signals.lampsOut.lamps to lightWest.lampsIn.lamps;
     }
 }

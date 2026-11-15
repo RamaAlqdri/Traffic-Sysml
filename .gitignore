@@ -33,3 +33,6 @@
 /report/*.bbl-SAVE-ERROR
 /report/missfont.log
 /report/mfput.log
+
+/node_modules/
+/.build/

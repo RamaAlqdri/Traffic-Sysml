@@ -1,7 +1,7 @@
 \section{Perancangan Model SysML}
-Setiap gambar adalah hasil render source Mermaid atau PlantUML. Bentuk renderer dipetakan secara eksplisit ke elemen SysML; gambar bukan sumber semantik yang berdiri sendiri. Model menggunakan ID konsisten dan stereotype/annotation yang dijelaskan dalam traceability; pemaknaan elemen dan relasi mengikuti subset SysML 1.6 \parencite[bagian 15.3.1.2, 16.3.2.7, 16.3.2.9]{omg2019}. Gambar~\ref{fig:requirements} sampai Gambar~\ref{fig:ibd} menyajikan tujuh view.
+Seluruh diagram dihasilkan langsung dari hasil parsing berkas SysML v2.0 melalui language server dan renderer SysML yang versinya dikunci. Berkas \texttt{.sysml} menjadi sumber model; SVG dan PDF merupakan artefak turunannya. Definisi elemen dan relasi mengacu ke spesifikasi SysML v2 \parencite{omg2026}. Gambar~\ref{fig:requirements} sampai Gambar~\ref{fig:ibd} menyajikan tujuh view. Pemeriksaan parser dan kontrak statis tidak menyatakan seluruh perilaku telah dieksekusi dalam engine SysML.
 \subsection{Requirement view}
-Requirement view menampilkan empat requirement inti dengan dependency satisfy dan satu verify. Seluruh 24 requirement tetap terdaftar dan terhubung pada katalog serta matrix; ini partial view, bukan penghilangan requirement.
+Requirement view menampilkan empat requirement inti dari model native. Relasi satisfy dan verify diperiksa pada source alokasi dan verification; tidak seluruh relasi ditampilkan pada overview ini. Seluruh 24 requirement tetap terdaftar dan terhubung pada katalog serta matrix; ini partial view, bukan penghilangan requirement.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.60\textheight,keepaspectratio]{requirements.pdf}
 \caption{Requirement view dari model baseline}\label{fig:requirements}
@@ -10,7 +10,7 @@ Requirement view menampilkan empat requirement inti dengan dependency satisfy da
 \clearpage
 \begin{landscape}
 \subsection{Use case view}
-UC-02 mencakup MaintainSafeSignals, sedangkan HandleDataFailure memperluas pelayanan pada kondisi dataFault. TrafficDataSource tetap di luar boundary; komponen internal tidak dijadikan actor.
+UC-02 mengikutsertakan MaintainSafeSignals. HandleDataFailure memiliki dependency ke ServeApproach; kondisi dataFault dinyatakan pada dokumentasi model, bukan relasi UML extend. TrafficDataSource dan RoadUsers merupakan aktor eksternal. Overview native menampilkan aktor dan use case; hubungan include/dependency tidak ditampilkan lengkap pada view ini dan tetap ditelusuri pada source.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.66\textwidth,keepaspectratio]{use-case.pdf}
 \caption{Use case view dari model baseline}\label{fig:use-case}
@@ -47,22 +47,22 @@ STM-01 dimiliki SignalController. Normal/Fallback merupakan variabel controller,
 \end{figure}
 \clearpage
 \begin{landscape}
-\subsection{Block Definition Diagram}
-BDD mendefinisikan tipe BLK-01 sampai BLK-06 dan composition part dengan multiplicity. InterfaceBlock/value types didefinisikan dalam dictionary model; port receiver memakai conjugation.
+\subsection{Definisi struktur}
+View definisi struktur menampilkan graf enam part definition. Garis menunjukkan kepemilikan part yang diagregasi menurut tipe target, diturunkan dari model; bentuk garis mengikuti native Graph View, bukan notasi diamond UML. Atribut dan port rinci ditelusuri pada source dan view interkoneksi. Sebutan BDD dipertahankan sebagai nama berkas keluaran; elemen model memakai konsep SysML v2, bukan stereotype block UML.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.66\textwidth,keepaspectratio]{bdd.pdf}
-\caption{Block Definition Diagram dari model baseline}\label{fig:bdd}
+\caption{Part definitions pada model SysML v2}\label{fig:bdd}
 \sumber{Pemodelan proyek berdasarkan asumsi desain ASM-001--010 (2026)}
 \end{figure}
 \clearpage
 \end{landscape}
 \clearpage
 \begin{landscape}
-\subsection{Internal Block Diagram}
-IBD memakai part dari BDD dalam context BLK-01. P01--P12 mengacu ke port bertipe pada dictionary. C01--C06 adalah assembly connector dengan item flow; panah menunjukkan flow, bukan dependency satisfy.
+\subsection{Interkoneksi internal}
+View interkoneksi menampilkan part usage dan port yang diwarisi dari definisi tipe BLK-01. C00 menghubungkan sumber eksternal ke input sensor; C01--C05 menghubungkan komponen internal, dan C06 dipecah menjadi empat koneksi lampu. Arah aliran item ditentukan pada source SysML v2. Adapter mengekspansi fitur tipe untuk kebutuhan tampilan.
 \begin{figure}[htbp]\centering
 \includegraphics[width=\linewidth,height=.66\textwidth,keepaspectratio]{ibd.pdf}
-\caption{Internal Block Diagram dari model baseline}\label{fig:ibd}
+\caption{Part, port, dan koneksi pada model SysML v2}\label{fig:ibd}
 \sumber{Pemodelan proyek berdasarkan asumsi desain ASM-001--010 (2026)}
 \end{figure}
 \clearpage

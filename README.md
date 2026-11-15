@@ -1,60 +1,39 @@
-# Smart Traffic Light — MBSE dan SysML
+# Smart Traffic Light — MBSE dengan SysML v2
 
-Proyek akademik pemodelan satu simpang empat pendekat dengan subset SysML 1.6. Evidence jurnal, catatan kuliah, asumsi desain, model dan verification disimpan sebagai source text yang dapat ditelusuri.
-
-Model sistem wajib mengikuti SysML. Mermaid dan PlantUML hanya textual rendering tools untuk merepresentasikan elemen serta relasi SysML secara konsisten. Versi/subset SysML dan pemetaan notasi harus terdokumentasi; keberhasilan render tetap memerlukan pemeriksaan semantik model dan konsistensi antar-view.
-
-## Artefak baseline
-
-- [Laporan PDF](report/main.pdf) dan [source LaTeX modular](report/main.tex).
-- [Presentasi PDF](presentation/main.pdf) dan [source Beamer, 14 slide](presentation/main.tex).
-- [Formulasi masalah](research/problem-formulation.md), [evidence matrix](research/evidence-matrix.md), dan [register asumsi](research/design-assumptions.md).
-- [24 requirements](model/requirements/requirements.md), [traceability dan pemetaan SysML](model/traceability/traceability-matrix.md), serta [21 verification scenarios](model/verification/verification-scenarios.md).
-- [Receipt analisis referensi](model/verification/verification-results.md), [inspection subset SysML](model/verification/manual-inspection.md), dan [QC rilis](logs/qc.md).
-
-Semua angka baseline merupakan asumsi konseptual. Checker mengenumerasi urutan putaran dan contoh kontrak input/tie/output; ia tidak mengeksekusi phase engine lengkap atau mengukur throughput. Status `not-run` pada skenario yang belum dieksekusi dipertahankan. Artefak ini bukan controller lapangan yang telah diuji.
-
-## Penggunaan ulang panduan
-
-1. Copy isi folder ini ke root repository proyek Anda.
-2. Pertahankan folder `references/` yang sudah berisi 3 jurnal.
-3. Sediakan materi kuliah MBSE/SysML asli di `lecture/mbse-material.pdf` (atau catat lokasi alternatif). Modeling tidak boleh dimulai sebelum materi tersedia dan diperiksa.
-4. Berikan isi `MASTER_PROMPT.md` sebagai initial task kepada Codex, lalu jalankan audit Tahap 0 terlebih dahulu.
-5. Pastikan Codex membaca `AGENT.md`.
-6. Pastikan Codex benar-benar menggunakan skill sesuai tahap:
-   - `academic-research-suite` (padanan `academic research`)
-   - `ponytail:ponytail`
-7. Pantau progres, keputusan, blocker, dan build melalui `logs/`.
-
-## Expected final output
-
-- `report/main.tex` + compiled PDF
-- `presentation/main.tex` + compiled PDF
-- SysML Requirement Diagram yang dirender dengan Mermaid
-- SysML behavioral/structural diagrams yang dirender dengan PlantUML
-- traceability matrix
-- literature review
-- verification scenarios
-- build and progress logs
-
-## Important
-
-Starter ini tidak menyentuh folder `references/`.
+Model konseptual satu simpang empat pendekat. Sesuai keputusan pengguna 7 November 2026, **berkas `model/**/*.sysml` menjadi sumber utama model, parameter, requirement, dan diagram**. Mermaid/PlantUML lama berada di `archive/sysml1/` dan tidak dipakai build.
 
 ## Build
 
-Jalankan dari root repository:
+Prasyarat: Node.js 20+, npm, Python 3, librsvg (`rsvg-convert`), TeX Live dengan latexmk/XeLaTeX/pdfLaTeX/Biber/BibTeX, serta Calibri lokal sesuai [template UB](report/TEMPLATE-UB.md). Materi kuliah pengguna tetap wajib tersedia sebelum modeling; sumber tersedia pada `lecture/`.
 
 ```sh
+make setup
 make build
 ```
 
-Prasyarat: materi kuliah dan source proyek lengkap; Mermaid CLI (`mmdc`, beserta browser yang dibutuhkannya), PlantUML (`plantuml`), Java, Graphviz (`dot`), librsvg (`rsvg-convert`), serta TeX Live dengan `latexmk`, XeLaTeX, pdfLaTeX, Biber/BibTeX dan paket LaTeX/Beamer; laporan juga memerlukan Calibri lokal. Versi teruji dan konfigurasi dependency dicatat saat toolchain tersedia; starter belum menyediakan environment terkunci atau menjamin hasil identik lintas mesin.
+`make setup` menjalankan `npm ci`, memasang dependensi yang dikunci dan browser Chrome for Testing melalui Puppeteer. Setelah setup, jalur parser/renderer bekerja lokal. Gunakan `CHROME_BIN=/path/to/chrome` bila memakai browser alternatif. Dependency lock bukan jaminan PDF identik bit-for-bit lintas OS/font/TeX.
 
-Makefile mengutamakan `lecture/mbse-material.pdf`, lalu mencari PDF/PPTX/Markdown di `lecture/` selain `README.md`. Untuk memilih sumber tertentu, gunakan `make build LECTURE="lecture/nama-materi.pdf"` dan catat identitasnya. Pemeriksaan file hanya memeriksa keberadaan/ukuran; agent tetap wajib memeriksa bahwa isinya merupakan materi kuliah yang relevan. Jika memakai catatan yang diperluas dari slide, bedakan isi kuliah dari penjelasan tambahan; jangan mengatribusikan perluasan sebagai kutipan slide asli tanpa pemeriksaan.
+`make build` menjalankan:
+1. Parser ANTLR dan validator SysML v2, lalu pemeriksaan kontrak model.
+2. Tujuh ekspor SVG langsung dari AST model melalui renderer SysML; konversi SVG ke PDF.
+3. Sinkronisasi katalog requirement dan kartu laporan dari dokumentasi requirement `.sysml`.
+4. Checker referensi memakai parameter model, regression tests, lalu kompilasi laporan/presentasi.
 
-Build merender satu Mermaid ke PDF serta enam PlantUML ke SVG/PDF, lalu mengompilasi `report/main.tex` dan `presentation/main.tex`. Output PDF berada di `report/main.pdf` dan `presentation/main.pdf`. Build berhenti bila prasyarat/tahap gagal dan append output ke `logs/build.md`; tidak menginstal tool secara otomatis. Pola CLI mengikuti [Mermaid CLI](https://github.com/mermaid-js/mermaid-cli) dan [PlantUML CLI](https://plantuml.com/command-line). Perubahan versi/opsi tetap perlu diuji saat tool tersedia.
+Output: [laporan](report/main.pdf), [presentasi](presentation/main.pdf), dan tujuh SVG/PDF pada `assets/diagrams/`. Log build append-only di `logs/build.md`; status rilis/QC terkini ada di `logs/qc.md`.
 
-Build juga menjalankan `python3 model/verification/check_model.py` sebelum rendering. Perintah tersebut dapat dijalankan sendiri untuk analisis dan cross-link checks; assertion harus aktif dan `python -O` ditolak. Laporan memakai [template UB](report/TEMPLATE-UB.md), font Calibri asli, XeLaTeX dan Biber. Beamer mandiri tetap memakai pdfLaTeX/BibTeX. Identitas sampul berada di [metadata.tex](report/metadata.tex). Pembahasan langsung berupa poin bernomor tanpa label BAB, ringkasan, daftar isi/tabel/gambar atau bagian dasar teori. Jangan menafsirkan satu command sebagai environment terkunci lintas mesin; versi sistem yang dipakai tercatat pada log.
+Untuk validasi tanpa rendering/LaTeX: `make check-model`. Detail arsitektur tool dan batasnya: [model/BUILD.md](model/BUILD.md).
 
-Milestone: `source-complete` → `build-verified` → `release-complete`. `build-unverified` menandai build source terkini yang belum terverifikasi, termasuk ketika source sudah lengkap. Hanya `release-complete` boleh disebut proyek selesai; keberhasilan command tetap memerlukan pemeriksaan log, citation, traceability, dan visual PDF.
+## Source utama
+
+- Parameter/domain: `model/structure/types.sysml`.
+- Struktur/interkoneksi: `bdd.sysml`, `ibd.sysml` (nama berkas dipertahankan untuk kompatibilitas; konsep v2 adalah part definition/usage dan port).
+- Perilaku: `model/behavior/*.sysml`.
+- Kebutuhan: `model/requirements/requirements.sysml`; katalog Markdown dan kartu laporan adalah keluaran otomatis.
+- Satisfaction/allocation: `model/traceability/allocation.sysml`; 21 verification case: `model/verification/verification.sysml`.
+- Penjelasan evidence/ASM, dictionary dan skenario rinci tetap pada source Markdown yang dirujuk model.
+
+Format laporan tetap sampul UB/Calibri, poin pembahasan tanpa BAB, tanpa ringkasan/daftar isi/tabel/gambar/dasar teori. Identitas kelompok ada di `report/metadata.tex`. Source referensi dan materi kuliah tidak diubah oleh build.
+
+## Batas verifikasi
+
+Seluruh angka tetap asumsi desain. Build memeriksa sintaks, sebagian semantik, hubungan requirement dan kontrak baseline; checker referensi menghitung bound 208 s untuk asumsi nominal. Ini bukan interpreter SysML penuh, simulator arus kendaraan, pengukuran throughput atau pengujian hardware. Skenario yang belum dieksekusi tetap `not-run`. Milestone: `source-complete` → `build-verified` → `release-complete`; rendering saja tidak memenuhi QC.

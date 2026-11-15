@@ -13,7 +13,7 @@ Status: dasar awal Tahap 1; belum merupakan baseline requirement yang lengkap. S
 | ASM-007 | Data invalid/hilang/stale memicu default timing/fail-safe dan pemulihan yang eksplisit | pengguna; EVID-TRF-007 tidak membuktikan failure handling siap pakai | definisikan kelas kegagalan, kondisi fallback, transisi aman dan syarat pulih; jaminan nominal tidak otomatis berlaku saat fault | accepted wajib; strategi pending |
 | ASM-008 | Transisi keselamatan serta matriks konflik disusun eksplisit sebelum model | pengguna; EVID-TRF-002/003 memberi contoh fase/amber tanpa parameter lokasi proyek | pilih gerakan yang didukung, yellow/all-red dan interlock; analisis conflicting green | pending konfigurasi |
 | ASM-009 | Tidak mengimplementasikan CNN atau emergency preemption pada baseline | pengguna; teknologi artikel TRF2 bukan kewajiban tugas (EVID-TRF-007, EVID-LEC-005) | interface detector menerima hitungan; inspeksi scope dan boundary | accepted |
-| ASM-010 | Usulan acuan model: subset SysML 1.6, versi tetap | catatan memakai keluarga konsep BDD/IBD/requirement tetapi tidak menyebut versi; halaman resmi OMG 1.6 diperiksa | catat subset, pemetaan renderer dan relasi secara eksplisit; bukan klaim dosen menetapkan 1.6 atau sertifikasi engine | accepted sebagai pilihan proyek, bukan fakta kuliah |
+| ASM-010 | Usulan acuan model: subset SysML 2.0, versi tetap | instruksi pengguna 7 November 2026 memilih SysML v2.0; materi kuliah tidak menetapkan versi | catat subset, pemetaan renderer dan relasi secara eksplisit; bukan klaim dosen menetapkan 1.6 atau sertifikasi engine | accepted sebagai pilihan proyek, bukan fakta kuliah |
 
 ## Parameter sumber yang tidak otomatis diadopsi
 
@@ -39,6 +39,10 @@ Bagian awal merekam status Tahap 1; tabel ini menggantikan pending untuk baselin
 | ASM-007 | dataFault dilatch segera; grant aktif diselesaikan, lalu clearance dan fallback green10 ring; pulih setelah 3 frame lengkap baik pada tick berbeda dan round baru | membatasi osilasi mode; no timer reset/no round reset saat fault; walkthrough fault/recovery |
 | ASM-008 | yellow3 s, all-red1 s tiap pergantian; startup all-red1; command invalid→SafetyHold all-red sampai restart | semua pasangan gerak dipisah; uji konflik/clearance, nyatakan SafetyHold mengecualikan min-green/wait bound nominal |
 | ASM-009 | tanpa CNN/emergency/dashboard | scope tetap, inspeksi boundary |
-| ASM-010 | SysML 1.6 subset requirement, use case, activity, interaction, state machine, block, part, port, connector/item flow, satisfy/verify/allocate | konsisten dengan keluarga konsep kuliah; versi pilihan proyek, bukan versi yang dinyatakan dosen; QC pemetaan dan semantik |
+| ASM-010 | SysML 2.0 subset requirement, use case, activity, interaction, state machine, block, part, port, connector/item flow, satisfy/verify/allocate | konsisten dengan keluarga konsep kuliah; versi pilihan proyek, bukan versi yang dinyatakan dosen; QC pemetaan dan semantik |
 
 Tidak ada ASM-002–008 yang masih pending untuk baseline konseptual ini. Area pengamatan/kapasitas fisik, delay hardware, geometri clearance dan sensor nyata tetap di luar scope; bukan parameter yang diam-diam diasumsikan telah dikalibrasi. Perubahan nilai memerlukan revisi seluruh artefak dan bukti bound.
+
+## Revisi ASM-010 — 7 November 2026
+
+Pengguna menetapkan SysML v2.0 penuh dan menerima model `.sysml` rekan sebagai basis. Pilihan versi 1.6 sebelumnya digantikan; ini keputusan desain pengguna, bukan nomor versi dari materi kuliah. Tipe struktur memakai part def/part, antarmuka memakai port def/port dan connection/flow. Nilai numerik ASM-001–009 tetap.

@@ -129,3 +129,34 @@ Date: 2026-11-03 09:50:01 WIB. Status: **release-complete untuk artefak akademik
 | `report/main.tex` | `0ed9e2e2c711959be8b44a362aae7c9685818e65fd3841a108488ce0683f348e` |
 | `report/gaya/ubtesis.sty` | `79a57918002aa045aacf7ea406bc7f6e8d7874f478936b0850c894449e2e196a` |
 | `report/sections/04-requirements.tex` | `9a910db2b3e6fc6fbd93d68f0ef8ab6b8e7522318b702c4d41c9e8c20e3b7cd4` |
+
+## 2026-11-07 16:37:29 WIB — QC rilis migrasi native SysML v2
+
+- Supersedes: snapshot v1/renderer lama pada receipt sebelumnya. Scope baru mengikuti keputusan eksplisit pengguna; laporan23halaman dan presentasi14slide, seluruh tujuh SVG/PDF berasal dari native SysML parser/renderer. Format UB/Calibri dan bagian3 kartu requirement tetap.
+- Build: make build akhir exit0; make check-model setelah penguatan escaping dokumen model exit0. Guard memastikan teks doc tidak dapat menjadi command LaTeX. Generated catalogue/cards dibandingkan dan tetap sama. npm ci dry-run memverifikasi lock tanpa mengklaim fresh-machine/cold-install sudah diuji.
+- Model:10source SysML tervalidasi dengan0parser error;16naming-convention hints tetap dicatat (bukan missing-doc/error). Parameter dan source/validator hashes cocok receipt.24requirement memiliki satisfaction/verify;21verification case adalah definisi/rencana, bukan21pengujian runtime lulus.
+- Regression:5test passed, termasuk mutasi timer999s, verify link hilang, inheritance/fan-out IBD, agregasi struktur dan syntax rusak. CLI Python pada salinan terisolasi dengan timer999s exit1 dari native contract gate sebelum PASS. Reference analysis tetap576pasangan/2304waits dan maksimum208s; batas ideal nominal tidak diperluas.
+- Preservation: seluruh file references/lecture yang tracked dan delapan source/checker arsip v1 identik byte dengan HEAD sebelum migrasi. Katalog/kartu requirement dihasilkan dari model; perubahan normatif versi REQ-D-002/ASM-010 menjadi2.0 diotorisasi pengguna. Identitas kelompok/sampul tetap benar; Calibri embedded dikonfirmasi pdffonts.
+- Documents: metadata dan teks aktif memakai SysML2.0, enam cited keys termasuk omg2026 dan bukan omg2019. Daftar referensi PDF tidak memuat orphan/missing citation. Ketujuh PDF diagram tercatat dalam main.fls; source v1 dikeluarkan dari jalur build.
+- Visual:23halaman/14slide final ditinjau pada10contact sheet; halaman diagram diperiksa lebih besar selama iterasi. Crop berdasarkan bbox isi menghilangkan canvas kosong; seluruh garis/panah memakai tema cetak terang. Tidak ada konten dokumen hilang/terpotong/overlap material. CaseView/include/dependency yang tidak lengkap pada gambar, label panjang yang disingkat, graf struktur agregasi dan kepadatan overview dijelaskan dalam narasi/model/BUILD.md; standalone vector dapat diperbesar.
+- Logs: final .log/.blg laporan/presentasi tanpa error, Overfull, undefined reference/citation atau warning LaTeX/paket. 49Underfull hbox akibat aturan justification template diterima setelah visual QA, bukan diklaim nol warning tipografi. Draft timeout/parser errors tetap tercatat pada log historis; final build berhasil dan gagal ekspor tetap nonzero.
+- Limits: bukan sertifikasi OMG atau interpreter SysML lengkap; tidak mengklaim phase engine/fault recovery/hardware/throughput baru dieksekusi. Inspection v1 sebelumnya historis. Keterbatasan integritas sumber MBSE tetap seperti receipt lama.
+- Status: source-complete → build-verified → release-complete pada scope artefak konseptual/migrasi ini. Perubahan source berikutnya memerlukan checks/QC terdampak diulang.
+
+### Snapshot source/toolchain dan keluaran
+
+| File | SHA-256 |
+|---|---|
+| `report/main.pdf` | `e326b09a9b70c2aed62a3b1933d7e43b67ab1634bcf77b6d45b3e80949208291` |
+| `presentation/main.pdf` | `50925c9234e8b4a8847ff9b610e56d20925e922864d96b44346bcd046feddf9a` |
+| `Makefile` | `0547e7bebfaf9a2add90c1426df6d98e0fd90cfa7e3ba3fd857fed91f66b033b` |
+| `package-lock.json` | `46f00683c044aeaad0fa57de2d2e589e7a26a334775f4267eec502d09649cd40` |
+| `model/verification/sysml-validation.json` | `94755d6122af2b4ece8cc37d4161135e15c962d5ca01e73c098ff0923af2db1c` |
+| `tools/contract.mjs` | `57e7608914dfe6d7388d982d00604563631700862f1b9887d022356482a13289` |
+| `tools/lsp.mjs` | `857a28fa6f1773b9bdb437b2d245fdb2f84972d1678a1f33e9c9990e5e4593a1` |
+| `tools/projection.mjs` | `66deaf8b711eb76746876dde4ad96c4e68a4a600a6c60b607bbf683771a450a2` |
+| `tools/render.mjs` | `084e886e983380e5afa5b993464e995cd42bcd8f5867b48215b65622986cfd3c` |
+| `tools/sync-requirements.py` | `56a629f864475842e63f13909bc973fa30d13e9bda2439a9c8b533871f9dea55` |
+| `tools/sysml.mjs` | `3945d4ad817555a5a5f8976d6a8439f77798f38ecd402488e1f67c43c1fc53ee` |
+| `tools/sysml.test.mjs` | `91c356c1346e452d4573447204bf98194c64a684377da4fdf8894af949da249b` |
+| `tools/views.json` | `a0acad577ecc4eb53bedf671a296f8641c083c66cd3b77fcbd739bc9a1102e31` |

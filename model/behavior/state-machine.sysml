@@ -8,13 +8,18 @@ package StlStateMachine {
     private import StlTypes::*;
 
     item def GrantEvent {
+        doc /* Grant pendekat dan durasi dalam detik; hanya diterima pada Ready. */
         attribute approach : Approach;
         attribute greenSeconds : Natural;
     }
-    item def InvalidCommandEvent;
-    item def RestartEvent;
+    item def InvalidCommandEvent { doc /* ACT-09 menolak domain/phase command tidak sah dan meminta semua merah. */ }
+    item def InfeasiblePlanEvent { doc /* ACT-03 tidak menemukan jadwal deadline yang layak; meminta SafetyHold. */ }
+    item def RestartEvent { doc /* Restart eksplisit dari SafetyHold; reset round dan clock model. */ }
 
     state def SignalLifecycle {
+        doc /* STM-01; durasi grant disalin saat diterima lalu dipertahankan hingga expiry. */
+        attribute lockedGreen : DurationValue = StlTypes::minimumGreen;
+        attribute activeApproach : Approach;
         entry; then running;
 
         state running {
@@ -50,12 +55,22 @@ package StlStateMachine {
                 first ready
                 accept grant : GrantEvent
                 if grant.greenSeconds >= 10 and grant.greenSeconds <= 30
-                do action lockGrantAndEmitAccepted
+                do action lockGrantAndEmitAccepted {
+                    doc /* GrantAccepted dipancarkan pada BoundaryIF C05 sesudah grant dikunci. */
+                    assign lockedGreen := grant.greenSeconds * 1 [s];
+                    assign activeApproach := grant.approach;
+                }
                 then green;
+
+            transition rejectedGrant
+                first ready
+                accept rejected : GrantEvent
+                if rejected.greenSeconds < 10 or rejected.greenSeconds > 30
+                then safetyHold;
 
             transition greenExpiry
                 first green
-                accept after 30 [s]
+                accept after lockedGreen
                 do action recordLastGreenEnd
                 then yellow;
 
@@ -79,6 +94,11 @@ package StlStateMachine {
         transition toSafetyHold
             first running
             accept invalid : InvalidCommandEvent
+            then safetyHold;
+
+        transition infeasiblePlan
+            first running
+            accept infeasible : InfeasiblePlanEvent
             then safetyHold;
 
         transition restart

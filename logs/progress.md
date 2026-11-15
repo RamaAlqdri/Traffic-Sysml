@@ -136,3 +136,14 @@ Gunakan template berikut untuk entri berikutnya:
 - Skills used: pdf:pdf untuk render/QA; pedoman academic-research-suite academic-paper formatter/citation_compliance diterapkan inline untuk menjaga isi dan tautan sitasi, tanpa audit penerbit baru; ponytail:ponytail untuk perubahan terbatas pada layout. Tidak ada eksperimen atau validasi model baru.
 - Status: source-complete, build-verified, release-complete untuk revisi keterbacaan ini, dengan batas model/sumber sebelumnya tetap berlaku.
 - Next step: PDF revisi siap dibaca pengguna.
+
+## 2026-11-07 16:37:29 WIB — Migrasi native SysML v2 selesai
+
+- Stage: perbaikan model, pipeline, dokumentasi dan QC.
+- Action: gunakan source terbaru f5a2bbb; perbaiki grant/expiry/failure transitions, activity event routing, boundary input dan sequence recovery; terapkan parser/renderer native dengan dependency lock, parameter model tunggal dan requirement generation. Arsipkan source v1 utuh.
+- Files: model/**/*.sysml, checker/receipt, tools/, package.json/lock, Makefile, panduan/ASM/traceability, bibliography normatif v2, source/PDF laporan dan presentasi, seluruh SVG/PDF diagram dan log. references/lecture tidak berubah.
+- Validation: make build final exit0; make check-model setelah pengamanan escaping LaTeX exit0 dan generated views tetap byte-identik; npm ci dry-run exit0 (bukan klaim cold install). Lima tests passed: timer999 ditolak, verify link hilang ditolak, inheritance/fan-out IBD, agregasi lima target definisi/empat lampu, dan parser menolak syntax rusak. CLI checker pada salinan dengan timer999 juga exit1 sebelum PASS. Analisis referensi576pasangan/2304waits tetap208s.
+- Visual QA: seluruh23halaman laporan dan14slide dirender/contact sheet ditinjau; halaman diagram diperiksa lebih besar selama iterasi. Tidak ada clipping/overlap material pada halaman dokumen. View native bersifat overview dan beberapa label dipendekkan; SVG/PDF standalone tersedia untuk zoom, detail pada source.
+- Skills: ponytail untuk perubahan minimum yang menyelesaikan pipeline; academic-research-suite untuk disiplin evidence/ASM serta preservasi provenance; pdf:pdf untuk render/QA/output; pedoman presentations diterapkan dengan format Beamer eksplisit pengguna tetap dipakai. Tidak ada subagent/reviewer independen atau eksperimen traffic baru.
+- Status: source-complete, build-verified, release-complete untuk artefak akademik konseptual dan migrasi toolchain ini; runtime/physical scenarios yang belum dieksekusi tetap not-run.
+- Next: artefak siap ditinjau kelompok; panduan model/BUILD.md menjelaskan penggunaan dan batas tool.

@@ -5,15 +5,30 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 import math
 import re
+import json
+import hashlib
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 APPROACHES = ('N', 'S', 'E', 'W')
-MIN_GREEN, MAX_GREEN, YELLOW, ALL_RED, MAX_WAIT = 10, 30, 3, 1, 210
+def load_contract():
+    receipt_path = ROOT / '.build/sysml-contract.json'
+    receipt = json.loads(receipt_path.read_text()) if receipt_path.exists() else None
+    hashes = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in (ROOT / 'model').rglob('*.sysml')}
+    validator_hashes = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in ('tools/contract.mjs', 'tools/lsp.mjs', 'tools/sysml.mjs', 'package-lock.json')}
+    if receipt is None or receipt['sourceHashes'] != hashes or receipt.get('validatorHashes') != validator_hashes:
+        subprocess.run(['node', 'tools/sysml.mjs', '--check'], cwd=ROOT, check=True)
+        receipt = json.loads(receipt_path.read_text())
+    return receipt
+
+CONTRACT = load_contract()
+PARAMETERS = CONTRACT['parameters']
+MIN_GREEN, MAX_GREEN, YELLOW, ALL_RED, MAX_WAIT = (PARAMETERS[k] for k in ('minimumGreen', 'maximumGreen', 'yellowDuration', 'allRedDuration', 'maximumWaitingTime'))
 
 
 def category(count):
     assert type(count) is int and 0 <= count <= 2147483647
-    return 0 if count <= 5 else 1 if count <= 15 else 2
+    return 0 if count <= PARAMETERS['lowUpperBound'] else 1 if count <= PARAMETERS['mediumUpperBound'] else 2
 
 
 def rank(eligible, categories, waits, pointer):
@@ -33,7 +48,7 @@ def valid_frame(records, now, previous):
             return False
         if type(t) not in (int, float) or not math.isfinite(t):
             return False
-        if row['valid'] is not True or not 0 <= now - t <= 3 or t < previous.get(a, 0):
+        if row['valid'] is not True or not 0 <= now - t <= PARAMETERS['staleThreshold'] or t < previous.get(a, 0):
             return False
         ids.append(a)
     return len(set(ids)) == 4
@@ -102,8 +117,11 @@ def main():
             assert not any(ord(c) < 32 for c in line), 'Control character in graphics dimensions'
             assert re.search(r'height=[.0-9]+\\text(?:width|height)', line), line
 
-    actions = re.findall(r'action def \w+;\s*// (ACT-\d+)', (ROOT / 'model/behavior/activity.sysml').read_text(encoding='utf-8'))
-    assert len(actions) == len(set(actions)) == 10, 'Activity nodes need distinct model IDs'
+    # The native parser/contract gate validates actions, grant transitions and links.
+    assert len(CONTRACT['requirements']) == 24
+    assert len(CONTRACT['verificationCases']) == 21
+    for duration in (PARAMETERS['greenLow'], PARAMETERS['greenMedium'], PARAMETERS['greenHigh'], PARAMETERS['fallbackGreen']):
+        assert MIN_GREEN <= duration <= MAX_GREEN
 
     req = (ROOT / 'model/requirements/requirements.md').read_text(encoding='utf-8')
     trace = (ROOT / 'model/traceability/traceability-matrix.md').read_text(encoding='utf-8')
@@ -129,7 +147,7 @@ def main():
     receipt = f'''# Verification receipt
 
 Run: {stamp}. Command: `python3 model/verification/check_model.py`.
-Scope: executable reference-contract checks and static cross-links; not execution of diagrams, hardware, or vehicle-flow simulation. Python assertions must be enabled (do not use `-O`).
+Scope: parameters loaded from validated SysML v2 parser receipt, frozen-grant static contract checks, reference analysis and cross-links; not execution of diagrams, hardware, or vehicle-flow simulation. Python assertions must be enabled (do not use `-O`).
 
 | TestCase | Verdict | Actual evidence / limit |
 |---|---|---|
@@ -142,7 +160,7 @@ Scope: executable reference-contract checks and static cross-links; not executio
 | VER-16 | passed (limited analysis) | age3 accepted, age4 rejected; startup/mode transitions remain walkthrough-only |
 | Cross-links | passed | 24 unique requirements, source IDs and 21 verification definitions linked to trace matrix |
 
-VER-02/04/05/06/07/08/11/12/17/18/19 remain **not-run** as dynamic/complete inspections in this receipt. Their expected timelines/contracts are specified, but not asserted as measured or executed. VER-15/20/21 have separate source inspection receipts in manual-inspection.md; they are not executable tests here. For partially covered scenarios above, unexercised behavior remains not-run. No throughput improvement is measured.
+VER-02/04/05/06/07/08/11/12/17/18/19 remain **not-run** as dynamic/complete inspections in this receipt. Their expected timelines/contracts are specified, but not asserted as measured or executed. The pre-migration inspections in manual-inspection.md are historical. Native v2 syntax/contract/link checks are recorded in sysml-validation.json; VER-15/20/21 are not claimed as complete v2 executions here. For partially covered scenarios above, unexercised behavior remains not-run. No throughput improvement is measured.
 
 The worst-case wait proof assumes every approach served exactly once per round, green≤30 s, clearance=4 s, ideal clock and no SafetyHold/restart. Changing these assumptions invalidates the bound. No parameter/location/hardware calibration was performed.
 '''

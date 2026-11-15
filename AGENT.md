@@ -85,39 +85,16 @@ Jangan memakai label umum `lecture`, `journal-1`, atau `design-assumption` sebag
 
 ## Modeling stack
 
-**Model wajib mengikuti SysML. Mermaid dan PlantUML hanya textual rendering tools untuk merepresentasikan elemen dan relasi SysML secara konsisten.** Semantik model tidak ditentukan oleh sintaks renderer.
+Keputusan pengguna 7 November 2026: **SysML v2.0 sepenuhnya; `.sysml` adalah sumber utama model dan diagram**. Versi 1.6 dan kewajiban Mermaid/PlantUML pada panduan awal digantikan oleh keputusan ini. Materi kuliah tidak menetapkan versi tertentu.
 
-Sebelum modeling, catat versi SysML dan subset/notasi yang dipakai berdasarkan materi kuliah. Jangan mencampur versi. Kepatuhan yang dinyatakan harus dibatasi pada pemeriksaan yang benar-benar dilakukan; rendering bukan bukti kepatuhan formal.
-
-### Mermaid
-Wajib digunakan untuk:
-- Requirement Diagram
-
-Extension:
-- `.mmd`
-
-### PlantUML
-Wajib digunakan untuk:
-- Use Case Diagram
-- Activity Diagram
-- Sequence Diagram
-- State Machine Diagram
-- Block Definition Diagram (BDD)
-- Internal Block Diagram (IBD)
-
-Extension:
-- `.puml`
-
-Mermaid/PlantUML dipakai untuk rendering diagram-as-code. Jika notasi SysML tidak didukung langsung, gunakan stereotype/label/anotasi eksplisit dan dokumentasikan pemetaannya. Keterbatasan tool tidak membolehkan perubahan atau pelemahan semantik SysML. Jika representasi belum memadai, catat issue dan perbaiki sebelum QC model dinyatakan lulus.
-
-Dalam bagian **Pemetaan SysML** di `model/traceability/traceability-matrix.md`, catat ID elemen, jenis SysML, owner/context, file/view, alias/notasi renderer, relasi beserta jenis/arah/endpoint, dan keterbatasan representasi. Gunakan ID yang sama untuk elemen yang sama lintas view; pemetaan tidak membuat model terpisah untuk setiap tool.
-
-Aturan semantik minimum:
-- Requirement, behavior, structure, dan verification harus memiliki hubungan bermakna yang eksplisit.
-- BDD mendefinisikan block/type; IBD merepresentasikan part usage, port, connector, dan flow dalam context block. Part harus ditautkan ke type BDD yang sesuai.
-- Actor/use case, activity/action, interaction/message, state/transition, block/part, port, connector, serta verification/test case harus dibedakan sesuai konsep SysML yang dipakai.
-- Relasi `satisfy`, `verify`, `deriveReqt`, `refine`, dan `allocate` digunakan bila relevan dengan jenis, arah, dan endpoint yang dijelaskan; panah generik tanpa pemetaan tidak cukup.
-- Katalog requirement, definisi elemen/relasi, traceability, dan source diagram bersama-sama merepresentasikan model SysML yang konsisten. Gambar hasil render merupakan artefak turunan.
+- Requirement, action/occurrence/state, part definition/usage, port definition/usage, connection/flow, satisfy, allocation dan verification case didefinisikan pada `model/**/*.sysml`.
+- ID REQ/UC/ACT/BLK/VER tetap stabil. BLK adalah ID historis untuk tipe struktur; konsep v2-nya part definition, bukan stereotype UML block.
+- Native ANTLR parsing melalui sysml-v2-lsp dan renderer SysML ekstensi yang versinya dikunci dalam package-lock.json. Diagram SVG/PDF dihasilkan dari AST `.sysml`; tidak membuat sumber `.puml`/`.mmd` baru.
+- `tools/views.json` memilih view/partial view, bukan mendefinisikan elemen model. Part/port yang diwarisi diresolusikan pada adapter projection untuk renderer.
+- Katalog requirements.md dan kartu laporan adalah keluaran `tools/sync-requirements.py` dari dokumentasi requirement SysML tervalidasi. Perubahan kebutuhan dilakukan pada `.sysml`, bukan pada keluaran.
+- Build menolak parser error, ketidaksesuaian parameter ASM, timer green selain grant beku, atau requirement tanpa satisfy/verify. Regression test harus menolak mutasi timer 999 s.
+- Parsing, inspection dan rendering tidak membuktikan eksekusi SysML penuh, sertifikasi OMG, atau keselamatan hardware. Catat advisory tool dan batas renderer secara eksplisit.
+- Traceability dictionary memetakan konsep v2, owner, source dan endpoint. `archive/sysml1/` hanya histori dan dikecualikan dari build aktif.
 
 ## LaTeX stack
 Laporan:
@@ -351,8 +328,7 @@ Format laporan mengikuti revisi pengguna 5 November 2026: judul pembahasan langs
 
 Entry point dari root: `make build`. Build harus memeriksa prasyarat, merender tujuh diagram, lalu mengompilasi laporan dan presentasi; gagal dengan exit code nonzero jika ada tahap gagal, dan append output/command/versi ke `logs/build.md`. Gunakan konfigurasi lokal yang tercatat, dependency lockfile bila relevan, serta satu engine LaTeX dan satu backend bibliography. Sesuai revisi pengguna 5 November 2026, laporan wajib mengikuti template UB yang dicatat di report/TEMPLATE-UB.md dengan Calibri asli, XeLaTeX dan Biber. Presentasi mandiri tetap pdfLaTeX/BibTeX; masing-masing artefak memakai satu backend konsisten. Jangan memakai versi `latest` sebagai spesifikasi reproducibility. Catat font dan toolchain; satu command saja tidak menjamin hasil identik lintas mesin.
 Sebelum selesai:
-- render Mermaid
-- render PlantUML
+- parse/validate model SysML v2 dan render seluruh tujuh view native
 - compile report
 - compile presentation
 - check bibliography
@@ -382,13 +358,13 @@ Sebelum refactor besar:
 Proyek selesai hanya jika tersedia:
 - literature review berbasis 3 referensi,
 - requirement catalog,
-- Mermaid Requirement Diagram,
-- PlantUML Use Case,
-- PlantUML Activity,
-- PlantUML Sequence,
-- PlantUML State Machine,
-- PlantUML BDD,
-- PlantUML IBD,
+- native SysML v2 requirement view,
+- native use case view,
+- native action flow view,
+- native sequence view,
+- native state transition view,
+- native part definition view,
+- native interconnection view,
 - traceability matrix,
 - verification scenarios,
 - laporan LaTeX,

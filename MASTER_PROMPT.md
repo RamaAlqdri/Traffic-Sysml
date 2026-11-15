@@ -1,3 +1,5 @@
+> Revisi pengguna 7 November 2026 (mengungguli instruksi stack lama di bawah): gunakan SysML v2.0 penuh. `.sysml` adalah sumber utama; native parser/renderer menghasilkan diagram, tanpa jalur Mermaid/PlantUML. Katalog requirement dan kartu laporan diturunkan dari model. Ikuti AGENT.md dan README.md terkini untuk build (`make setup`, `make build`). Source v1 berada di archive/sysml1/.
+
 # MASTER PROMPT — Smart Traffic Light MBSE Project
 
 Anda adalah coding/research agent yang bekerja di repository lokal untuk menyelesaikan proyek akademik **Model-Based Systems Engineering (MBSE) — Smart Traffic Light berbasis kepadatan kendaraan**.
@@ -7,9 +9,7 @@ Hasil akhir proyek harus berupa:
 
 1. **Laporan akademik dalam LaTeX** yang dapat dikompilasi ke PDF.
 2. **Presentasi dalam LaTeX Beamer** yang dapat dikompilasi ke PDF.
-3. Model sistem **wajib mengikuti SysML**. Mermaid dan PlantUML hanya digunakan sebagai **textual rendering tools** untuk merepresentasikan elemen dan relasi SysML secara konsisten:
-   - **Mermaid** merender representasi SysML Requirement Diagram.
-   - **PlantUML** merender representasi SysML Use Case, Activity, Sequence, State Machine, BDD, dan IBD.
+3. Model sistem wajib memakai SysML v2.0 native. Semua view dirender langsung dari AST `.sysml`; tidak ada sumber Mermaid/PlantUML pada build aktif.
 4. Semua klaim akademik penting harus ditopang oleh referensi di folder `references/`.
 5. Progres pekerjaan harus dicatat di folder `logs/`.
 
@@ -58,12 +58,12 @@ Kerjakan proyek dari awal secara bertahap dan dapat diaudit.
 
 ### Kontrak pemodelan SysML
 
-- SysML menjadi dasar semantik model. Sintaks Mermaid/PlantUML tidak boleh menentukan atau menggantikan makna elemen, relasi, ownership, maupun interface sistem.
+- SysML menjadi dasar semantik model. Sintaks parser/renderer SysML native tidak boleh menentukan atau menggantikan makna elemen, relasi, ownership, maupun interface sistem.
 - Identifikasi dan catat versi SysML serta subset/notasi yang dipakai berdasarkan materi kuliah sebelum modeling. Jangan mencampur versi atau mengklaim kepatuhan formal/certification yang belum diperiksa.
 - Gunakan identitas elemen yang stabil lintas view: requirement, actor/use case, activity/action, interaction/message, state/transition, block, part property, port, connector, dan verification/test case sesuai kebutuhan.
 - BDD harus mendefinisikan block/type dan relasinya; IBD harus merepresentasikan penggunaan part, port, connector, dan flow di dalam context block. Kaitkan part ke type yang didefinisikan pada BDD; jangan menganggap kotak/garis generik otomatis memenuhi makna SysML.
 - Nyatakan jenis, arah, dan endpoint relasi SysML yang digunakan, termasuk `satisfy`, `verify`, `deriveReqt`, `refine`, dan `allocate` bila relevan; jangan menggantinya dengan panah tanpa makna yang dijelaskan.
-- Catat pemetaan elemen/relasi SysML ke representasi Mermaid/PlantUML dalam bagian **Pemetaan SysML** di `model/traceability/traceability-matrix.md`: ID elemen, jenis SysML, owner/context, file/view, notasi/alias renderer, relasi beserta endpoint, serta keterbatasan representasi. Ini mendokumentasikan model yang sama, bukan membuat definisi elemen yang berbeda per tool.
+- Catat pemetaan elemen/relasi SysML ke representasi parser/renderer SysML native dalam bagian **Pemetaan SysML** di `model/traceability/traceability-matrix.md`: ID elemen, jenis SysML, owner/context, file/view, notasi/alias renderer, relasi beserta endpoint, serta keterbatasan representasi. Ini mendokumentasikan model yang sama, bukan membuat definisi elemen yang berbeda per tool.
 - Jika renderer tidak mendukung notasi langsung, gunakan stereotype/label/anotasi yang eksplisit dengan pemetaan terdokumentasi. Keterbatasan renderer tidak membolehkan pelemahan semantik SysML; representasi yang belum memadai harus dicatat sebagai issue dan diperbaiki sebelum QC model dinyatakan lulus.
 - Keberhasilan parsing/rendering hanya memverifikasi sintaks tool. QC terpisah wajib memeriksa semantik SysML, konsistensi antar-view, dan traceability.
 
@@ -75,8 +75,7 @@ Kerjakan proyek dari awal secara bertahap dan dapat diaudit.
 - Jika belum ada, catat blocker materi kuliah; jangan menganggap Tahap 0 lulus penuh atau memulai modeling.
 - Verifikasi tool lokal:
   - LaTeX compiler (`latexmk`, `pdflatex`, atau `xelatex`)
-  - Mermaid CLI jika tersedia
-  - PlantUML / Java jika tersedia
+  - Node.js/npm dan native SysML v2 LSP/renderer yang dikunci dependency lock
 - Jangan menghapus file pengguna.
 - Jangan memindahkan isi `references/` tanpa kebutuhan.
 - Catat inventaris, lokasi materi, metadata awal 3 PDF, versi/ketersediaan tool, dan hasil gate. Metadata PDF tidak berarti isi jurnal sudah dianalisis.
@@ -164,12 +163,12 @@ Buat:
 - `model/requirements/requirements.md`
 - `model/requirements/requirements.mmd`
 
-Requirement Diagram harus dibuat dengan **Mermaid**.
+Requirement Diagram harus dibuat dengan **SysML native**.
 Field `source` harus menunjuk ID terdaftar, misalnya `source: [EVID-TRF-001, ASM-001]`; jangan berhenti pada nama file jurnal. Setiap `ASM-*` memuat keputusan/nilai, satuan bila relevan, rationale, sumber yang sudah diperiksa, dampak, dan cara verifikasi.
 Seluruh parameter baseline wajib tercakup oleh requirement yang atomic dan dapat diverifikasi. Asumsi harus memiliki nilai/aturan yang cukup jelas untuk pengujian sebelum gate requirements dinyatakan lulus.
 
 ### Tahap 4 — Behavioral model
-Gunakan **PlantUML**.
+Gunakan **SysML native**.
 
 Buat:
 - `model/behavior/use-case.puml`
@@ -183,7 +182,7 @@ Ketentuan:
 - jangan membuat diagram dekoratif yang tidak menjawab requirement.
 
 ### Tahap 5 — Structural model
-Gunakan **PlantUML**.
+Gunakan **SysML native**.
 
 Buat:
 - `model/structure/bdd.puml`
@@ -230,7 +229,7 @@ Jika belum ada simulasi nyata, labeli sebagai **verification scenario / expected
 Expected behavior yang hanya ditulis tidak boleh diberi status `passed`. Jika memakai walkthrough/analisis model, catat metode, langkah, dan bukti pemeriksaannya; jangan menyebutnya pengujian perangkat nyata.
 
 ### Tahap 8 — Rendering diagram
-Render Mermaid dan PlantUML ke format yang cocok untuk LaTeX:
+Render seluruh tujuh view SysML native ke format yang cocok untuk LaTeX:
 - prioritaskan SVG/PDF bila workflow mendukung,
 - PNG hanya jika diperlukan.
 
@@ -390,7 +389,7 @@ Jangan menghapus log lama. Append perubahan.
 - Gunakan nama file konsisten dan lowercase-kebab-case.
 - Jangan menyimpan generated artifact yang tidak diperlukan.
 - Jangan mengubah `references/` kecuali untuk metadata/bibliography extraction yang diperlukan.
-- Jangan membuat ulang gambar secara manual jika bisa digenerate dari `.mmd` / `.puml`.
+- Jangan membuat ulang gambar secara manual jika bisa digenerate dari `.sysml`.
 
 ## Quality gates
 Sebelum menyatakan proyek selesai, pastikan:
@@ -399,8 +398,8 @@ Sebelum menyatakan proyek selesai, pastikan:
 - [ ] 3 jurnal pada `references/` dianalisis
 - [ ] materi kuliah tersedia, diperiksa, dan dirujuk sebelum modeling
 - [ ] requirement memiliki sumber atau label asumsi desain
-- [ ] Mermaid Requirement Diagram valid
-- [ ] seluruh PlantUML valid
+- [ ] SysML native Requirement Diagram valid
+- [ ] seluruh SysML native valid
 - [ ] versi/subset SysML serta pemetaan elemen/relasi renderer terdokumentasi
 - [ ] semantik SysML dan konsistensi antar-view diperiksa; render sukses saja tidak memenuhi gate ini
 - [ ] terminology konsisten

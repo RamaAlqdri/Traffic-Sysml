@@ -118,3 +118,14 @@ Template:
 - Attempted fix: kartu tabel dengan lima atribut per baris, enam kelompok, panduan kode dan jarak antarkartu. Draft awal macro diletakkan sesudah endinput sehingga tidak terbaca; pindahkan definisi sebelum endinput dan kompilasi ulang.
 - Status: resolved. Seluruh 24 kartu tampil lengkap tanpa split; semua atribut dan ID cocok snapshot. make build final exit0; semua halaman final ditinjau melalui render.
 - Disposition: log percobaan gagal tetap tersimpan. 51 Underfull hbox pada laporan mengikuti batas tipografi template dan telah dinilai visual; tidak ada Overfull, undefined reference/citation atau error final. Warning tag PDF Mermaid tetap sebatas struktur PDF impor.
+
+## ISSUE-009 — Migrasi SysML v2: konsistensi, parser dan rendering
+
+- Date: 2026-11-07 16:37:29 WIB
+- Severity: model/build.
+- Cause: greenExpiry lama selalu30s, checker tidak membaca perilaku `.sysml`, build tetap merender v1; input boundary serta sebagian succession/recovery belum terhubung lengkap. Beberapa definition tidak memiliki doc internal.
+- Fix: lockedGreen disalin saat grant diterima dan dipakai expiry; invalid grant dan infeasible plan memiliki jalur SafetyHold. Tambah C00, ref part sequence, urutan m01..m21 dan tiga frame recovery; pisahkan event sample/tick dari phase timer. Parameter komponen mereferensikan StlTypes. Native parser, kontrak, source/validator hashes, generation requirement dan regression tests kini menjadi gate build.
+- Authoring: cabang activity yang sempat salah sintaks diperbaiki berdasarkan diagnostic parser. Test malformed pertama ternyata deklarasi anonim yang sah; diganti ekspresi aritmetika yang benar-benar rusak dan ditolak parser. Tidak melemahkan parser gate.
+- Rendering: warna tema VS Code, padding/crop canvas, inherited part/port, exhibit state dan fake ordinal-seconds memerlukan adapter eksplisit. Satu draft mengalami timeout ekspor; timeout tetap fail-closed, diagnostic/screenshot ditambahkan, seed layout dikunci dan build akhir berhasil. Tidak menyatakan penyebab internal timeout upstream telah dibuktikan.
+- Status: resolved untuk scope migrasi dan artefak; batas renderer/API experimental yang dinyatakan tetap berlaku. CaseView adalah overview aktor/use case, tidak menampilkan semua include/dependency; struktur memakai graf agregasi, bukan diamond UML. Detail tetap pada source/narasi.
+- Disposition: parser0error, advisory16 berupa naming-convention hints; missing-doc sudah tidak ada. Final LaTeX tanpa error/Overfull/unresolved citations. 49 Underfull hbox tetap dinilai visual sesuai template. Tidak ada klaim eksekusi controller/hardware lengkap.

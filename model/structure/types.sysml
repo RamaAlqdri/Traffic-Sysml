@@ -8,26 +8,27 @@ package StlTypes {
     private import SI::*;
 
     // ---------------------------------------------------------------- enumerasi
-    enum def Approach { enum North; enum South; enum East; enum West; }
-    enum def SignalColor { enum Red; enum Yellow; enum Green; }
-    enum def ControlMode { enum Normal; enum Fallback; }
-    enum def DensityCategory { enum LOW; enum MEDIUM; enum HIGH; }
-    enum def CommandKind { enum Grant; enum Hold; }
-    enum def BoundaryKind { enum SafeBoundary; enum GrantAccepted; }
+    enum def Approach { doc /* Empat pendekat baseline, hanya gerak lurus. */ enum North; enum South; enum East; enum West; }
+    enum def SignalColor { doc /* Indikasi lampu logis untuk setiap pendekat. */ enum Red; enum Yellow; enum Green; }
+    enum def ControlMode { doc /* Mode scheduler; bukan region sinyal konkuren. */ enum Normal; enum Fallback; }
+    enum def DensityCategory { doc /* Kategori proksi hitungan kendaraan ASM-003. */ enum LOW; enum MEDIUM; enum HIGH; }
+    enum def CommandKind { doc /* Grant normal atau permintaan semua merah. */ enum Grant; enum Hold; }
+    enum def BoundaryKind { doc /* Notifikasi boundary aman atau grant yang sudah diterima. */ enum SafeBoundary; enum GrantAccepted; }
 
     // ---------------------------------------------------------------- record
     attribute def ApproachCount {
         doc /* Satu record count per pendekat (ASM-002). */
         attribute approach : Approach;
         attribute vehicleCount : Natural;
+        assert constraint countDomain { vehicleCount <= 2147483647 }
         attribute observedAt : DurationValue;
         attribute valid : Boolean;
     }
-    attribute def ApproachDensity {
+    attribute def ApproachDensity { doc /* Kategori hasil klasifikasi untuk satu pendekat. */
         attribute approach : Approach;
         attribute category : DensityCategory;
     }
-    attribute def ApproachLamp {
+    attribute def ApproachLamp { doc /* Warna lampu untuk satu pendekat. */
         attribute approach : Approach;
         attribute color : SignalColor;
     }
@@ -41,7 +42,7 @@ package StlTypes {
         doc /* Kategori LOW/MEDIUM/HIGH per pendekat; hanya dari frame valid. */
         attribute levels : ApproachDensity[4];
     }
-    item def FaultStatus {
+    item def FaultStatus { doc /* Latch dataFault dan jumlah frame baru baik berturut-turut. */
         attribute dataFault : Boolean;
         attribute recoveryStreak : Natural;   // 0..3
     }
@@ -52,7 +53,7 @@ package StlTypes {
         attribute greenSeconds : Natural[0..1];
         attribute mode : ControlMode[0..1];
     }
-    item def BoundaryEvent {
+    item def BoundaryEvent { doc /* Notifikasi lifecycle dari signals ke controller. */
         attribute kind : BoundaryKind;
         attribute timestamp : DurationValue;
         attribute completedApproach : Approach[0..1];
@@ -64,12 +65,12 @@ package StlTypes {
     }
 
     // ---------------------------------------------------------------- interface block
-    port def SamplesIF  { out item counts : CountsFrame; }
-    port def DensityIF  { out item density : DensityFrame; }
-    port def StatusIF   { out item status : FaultStatus; }
-    port def CommandIF  { out item command : PhaseCommand; }
-    port def BoundaryIF { out item boundary : BoundaryEvent; }
-    port def LampsIF    { out item lamps : LampVector; }
+    port def SamplesIF  { doc /* Aliran CountsFrame. */ out item counts : CountsFrame; }
+    port def DensityIF  { doc /* Aliran DensityFrame. */ out item density : DensityFrame; }
+    port def StatusIF   { doc /* Aliran FaultStatus. */ out item status : FaultStatus; }
+    port def CommandIF  { doc /* Aliran PhaseCommand. */ out item command : PhaseCommand; }
+    port def BoundaryIF { doc /* Aliran BoundaryEvent. */ out item boundary : BoundaryEvent; }
+    port def LampsIF    { doc /* Aliran LampVector. */ out item lamps : LampVector; }
 
     // ---------------------------------------------------------------- parameter baseline (ASM-003..008)
     attribute minimumGreen        : DurationValue = 10 [s];   // ASM-005

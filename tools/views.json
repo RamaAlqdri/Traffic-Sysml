@@ -1,0 +1,51 @@
+[
+  {
+    "name": "requirements",
+    "file": "model/requirements/requirements.sysml",
+    "view": "elk",
+    "names": [
+      "reqPriority",
+      "reqMaximumWaiting",
+      "reqFallbackTiming",
+      "reqExclusivity"
+    ]
+  },
+  {
+    "name": "use-case",
+    "file": "model/behavior/use-case.sysml",
+    "view": "usecase"
+  },
+  {
+    "name": "activity",
+    "file": "model/behavior/activity.sysml",
+    "view": "activity"
+  },
+  {
+    "name": "sequence",
+    "file": "model/behavior/sequence.sysml",
+    "view": "sequence"
+  },
+  {
+    "name": "state-machine",
+    "file": "model/behavior/state-machine.sysml",
+    "view": "state"
+  },
+  {
+    "name": "bdd",
+    "file": "model/structure/bdd.sysml",
+    "view": "graph",
+    "names": [
+      "VehicleDetection",
+      "DensityAnalysis",
+      "TrafficController",
+      "SignalController",
+      "TrafficLights",
+      "SmartTrafficLightSystem"
+    ]
+  },
+  {
+    "name": "ibd",
+    "file": "model/structure/ibd.sysml",
+    "view": "ibd"
+  }
+]

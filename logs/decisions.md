@@ -137,3 +137,15 @@ Template:
 - Rationale: label dan batas visual memudahkan pembaca membedakan kewajiban dari rationale/evidence, metode pemeriksaan dan relasi model. Panduan EVID/ASM/UC/ACT/BLK/VER menjelaskan cara membaca kode.
 - Consequences: ukuran teks Calibri 12 pt dipertahankan, baris dan jarak antar-kartu diperlonggar; kartu utuh pada satu halaman. Bagian dimulai dan diakhiri pada batas halaman agar model view berikutnya tidak terpisah dari narasinya. Laporan menjadi 23 halaman; bagian 3 pada halaman PDF 5–11 (nomor isi 4–10). Seluruh 24 ID dan lima atribut substantif disalin tanpa perubahan dari snapshot sebelum revisi.
 - Evidence: instruksi pengguna, perbandingan field-per-field 24 kartu, make build exit0, render/QA final.
+
+## ADR-011 — Sumber tunggal dan build native SysML v2
+
+- Date: 2026-11-07 16:37:29 WIB
+- Status: accepted; keputusan pengguna menggantikan pilihan SysML 1.6 dan stack Mermaid/PlantUML sebelumnya.
+- Decision: `.sysml` menjadi sumber utama model/parameter/requirement; native parser dan renderer menghasilkan SVG/PDF tanpa konversi ke sumber diagram kedua.
+- Context: pengguna memilih SysML v2 penuh, mengikuti model terbaru rekan, lalu mengotorisasi implementasi/perbaikan. Branch lokal sudah memuat f5a2bbb saat implementasi dimulai.
+- Options: mempertahankan dua representasi yang disunting terpisah; atau pipeline native yang dikunci versinya dan diturunkan dari source model.
+- Chosen: sysml-v2-lsp 0.42.0, renderer ekstensi commit a4f3e48630842c173117aa1736bf46115929bc13 melalui browser headless, SVG→PDF librsvg. Parameter tunggal StlTypes; katalog/kartu LaTeX diturunkan dari doc requirement. npm lock dan make setup/build/check-model tersedia.
+- Rationale: menghilangkan drift antara model dan gambar; timer green memakai grant beku; pemeriksaan menolak mutasi 999 s dan link verify yang hilang. Parser bukan interpreter perilaku penuh/sertifikasi OMG.
+- Consequences: delapan source/checker v1 dipindahkan utuh ke archive/sysml1; tujuh SVG/PDF native, laporan23halaman dan Beamer14slide dibangun. View parsial/label yang disingkat serta graf agregasi struktur dijelaskan pada model/BUILD.md dan narasi. Format UB/Calibri, kartu requirement dan struktur tanpa BAB/daftar awal tetap dipertahankan.
+- Evidence: make build final exit0, make check-model exit0, lima regression tests passed, dan CLI mutation test pada salinan terisolasi gagal sebagaimana diharapkan. File referensi/kuliah serta seluruh source arsip identik byte dengan HEAD sebelum migrasi.

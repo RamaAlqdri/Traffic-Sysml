@@ -4,21 +4,17 @@ package StlInteraction {
 
     private import StlTypes::*;
     private import StlStructure::*;
-
-    item def GrantAccepted {
-        doc /* Payload grantAccepted(i) pada channel C05. */
-        attribute acceptedApproach : Approach;
-    }
+    private import StlContext::*;
 
     occurrence def InteractionINT01 {
         doc /* Urutan pesan dinyatakan oleh succession antar-message. */
 
-        part source : TrafficDataSource;
-        part sensor : VehicleDetection;
-        part densityAnalysis : DensityAnalysis;
-        part controller : TrafficController;
-        part signals : SignalController;
-        part lightNorth : TrafficLights;
+        ref part source : TrafficDataSource = trafficDataSource;
+        ref part sensor : VehicleDetection = smartTrafficLight.sensor;
+        ref part densityAnalysis : DensityAnalysis = smartTrafficLight.densityAnalysis;
+        ref part controller : TrafficController = smartTrafficLight.controller;
+        ref part signals : SignalController = smartTrafficLight.signals;
+        ref part lightNorth : TrafficLights = smartTrafficLight.lightNorth;
 
         // --- grant normal
         message m01 of CountsFrame from source to sensor;               // tiap 1 s
@@ -28,7 +24,7 @@ package StlInteraction {
         message m05 of BoundaryEvent from signals to controller;        // safeBoundary (startup/clearance selesai)
         message m06 of PhaseCommand from controller to signals;         // Grant(approach, greenSeconds, mode)
         message m07 of LampVector from signals to lightNorth;           // satu green, lainnya red
-        message m08 of GrantAccepted from signals to controller;        // ACT-08: tandai served
+        message m08 of BoundaryEvent from signals to controller;        // ACT-08: tandai served
 
         // --- fault saat green: grant aktif dibekukan
         message m09 of CountsFrame from source to sensor;               // invalid/stale
@@ -41,11 +37,21 @@ package StlInteraction {
 
         // --- pemulihan: tiga frame baru valid pada tick berbeda
         message m16 of CountsFrame from source to sensor;
-        message m17 of FaultStatus from sensor to controller;           // streak naik; fault clear pada frame ke-3
+        message m17 of FaultStatus from sensor to controller;           // frame baik pertama; belum clear
 
+        message m18 of CountsFrame from source to sensor;
+        message m19 of FaultStatus from sensor to controller;
+        message m20 of CountsFrame from source to sensor;
+        message m21 of FaultStatus from sensor to controller; // frame baik ketiga; clear; Normal hanya di round baru
+
+        first m17 then m18;
+        first m18 then m19;
+        first m19 then m20;
+        first m20 then m21;
         first m01 then m02;
         first m02 then m03;
-        first m03 then m06;
+        first m03 then m04;
+        first m04 then m05;
         first m05 then m06;
         first m06 then m07;
         first m07 then m08;

@@ -23,3 +23,7 @@ Materi tersedia dalam Markdown yang disediakan di workspace. Penulis, institusi,
 Gate ketersediaan/relevansi materi kuliah: **terpenuhi untuk catatan Markdown yang disediakan**, dengan keterbatasan provenance di atas. Tidak mengganti kuliah dengan sumber lain. ISSUE-001 dapat ditutup untuk ketersediaan/relevansi, tanpa menyatakan pembandingan dengan slide asli selesai.
 
 Materi memakai keluarga konsep BDD/IBD dan stereotype requirement, tetapi tidak menyebut nomor versi. Baseline yang diusulkan adalah **SysML 1.6**, sebagai keputusan desain ASM-010 yang konsisten dengan jenis view materi dan memiliki rujukan OMG tetap. Nomor 1.6 bukan fakta yang dinyatakan dosen pada catatan. Model tetap harus mengikuti semantik subset terpilih; Mermaid/PlantUML hanya renderer. Jangan mencampurnya dengan textual syntax SysML v2 atau mengklaim validasi oleh engine SysML formal.
+
+## Status setelah migrasi 7 November 2026
+
+Catatan di atas merekam baseline sebelum migrasi. Keputusan pengguna terbaru memakai SysML v2.0; inspection/receipt lama bukan sertifikasi model v2. Model aktif, hasil parser, pemeriksaan kontrak dan batas cakupan dicatat pada model/BUILD.md dan logs/qc.md terkini.

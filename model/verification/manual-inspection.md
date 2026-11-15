@@ -20,3 +20,7 @@ Date: 2026-11-03 09:31:21 WIB. Metode: pemeriksaan source dan dictionary oleh ag
 Rujukan arah dependency: OMG SysML1.6 §15.3.1.2 dan §16.3.2.7/9, dibaca pada spesifikasi resmi. Tidak diperiksa seluruh constraint normatif/OCL, XMI interchange, atau kesesuaian implementasi fisik. Verdict ini hanya inspection subset yang dideklarasikan. Skenario runtime/timeline yang tidak dieksekusi tetap not-run; receipt ini tidak mengubahnya menjadi hasil sensor/controller nyata.
 
 Final identity check: sepuluh Action node memiliki ID unik ACT-01..10. Startup memakai ACT-10, apply/validate grant memakai ACT-09; tidak menduplikasi ID ACT-05 (timer) atau ACT-06 (clearance). Trace REQ-S-004 mengikuti ACT-09. Pemeriksaan uniqueness juga dijalankan oleh checker.
+
+## Status setelah migrasi 7 November 2026
+
+Catatan di atas merekam baseline sebelum migrasi. Keputusan pengguna terbaru memakai SysML v2.0; inspection/receipt lama bukan sertifikasi model v2. Model aktif, hasil parser, pemeriksaan kontrak dan batas cakupan dicatat pada model/BUILD.md dan logs/qc.md terkini.

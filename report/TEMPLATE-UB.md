@@ -26,3 +26,7 @@ Panduan `PANDUAN.md`, style `gaya/ubtesis.sty`, sampul `awal/sampul.tex` dan `la
 Dari root: `make build`. Laporan: `latexmk -xelatex -cd -interaction=nonstopmode -halt-on-error -file-line-error report/main.tex`. Dari folder `report/`, `latexmk main.tex` memakai `latexmkrc` lokal (XeLaTeX+Biber). Tidak perlu shell-escape.
 
 Jangan memuat geometry, font, titlesec, natbib, atau bibliographystyle tandingan pada main.tex. Format utama tetap berada di style yang diimpor. Peringatan underfull akibat perataan tanpa pemenggalan dinilai melalui render, bukan dihilangkan dengan mengubah aturan template secara diam-diam.
+
+## Migrasi model 7 November 2026
+
+Sumber model dan diagram aktif adalah SysML v2 native; detail pada model/BUILD.md. Perubahan ini mempertahankan format UB/Calibri dan poin pembahasan tanpa BAB maupun daftar awal. Kartu requirements diturunkan dari dokumentasi requirement `.sysml`; jangan diedit sebagai source kebutuhan tersendiri. Diagram vektor memakai renderer SysML native; font internal gambar mengikuti renderer, bukan font body laporan.

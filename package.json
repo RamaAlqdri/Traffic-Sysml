@@ -1,0 +1,15 @@
+{
+  "name": "traffic-sysml-build",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "model": "node tools/sysml.mjs",
+    "test": "node --test tools/sysml.test.mjs"
+  },
+  "dependencies": {
+    "sysml-v2-support": "https://codeload.github.com/daltskin/VSCode_SysML_Extension/tar.gz/a4f3e48630842c173117aa1736bf46115929bc13",
+    "sysml-v2-lsp": "0.42.0",
+    "esbuild": "0.25.12",
+    "puppeteer": "24.31.0"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "parameters": {
+    "minimumGreen": 10,
+    "maximumGreen": 30,
+    "maximumWaitingTime": 210,
+    "observationInterval": 1,
+    "staleThreshold": 3,
+    "yellowDuration": 3,
+    "allRedDuration": 1,
+    "fallbackGreen": 10,
+    "greenLow": 10,
+    "greenMedium": 20,
+    "greenHigh": 30,
+    "lowUpperBound": 5,
+    "mediumUpperBound": 15,
+    "recoveryFrames": 3
+  },
+  "requirements": [
+    {
+      "id": "REQ-F-001",
+      "name": "reqClassification",
+      "documentation": "Name: Klasifikasi\nType: Functional\nStatement: DensityAnalysis harus memetakan count valid ke LOW (0..5), MEDIUM (6..15), atau HIGH (≥16).\nSource: EVID-TRF-006, ASM-003\nRationale: Proksi count tanpa kapasitas lokasi.\nVerification Method: Test; VER-01\nTrace: UC-01 → ACT-02 → BLK-03 → VER-01"
+    },
+    {
+      "id": "REQ-F-002",
+      "name": "reqEligibility",
+      "documentation": "Name: Eligibility\nType: Functional\nStatement: TrafficController harus mengeluarkan pendekat dari eligible setelah grant green hingga round berikutnya.\nSource: ASM-004\nRationale: Satu pelayanan per pendekat per round.\nVerification Method: Analysis; VER-02\nTrace: UC-02 → ACT-08 → BLK-04 → VER-02"
+    },
+    {
+      "id": "REQ-F-003",
+      "name": "reqPriority",
+      "documentation": "Name: Prioritas\nType: Functional\nStatement: TrafficController harus memilih eligible menurut kategori menurun, waktu tunggu menurun, lalu jarak ring dari pointer bila deadline nominal masih layak.\nSource: EVID-TRF-001, ASM-004\nRationale: Adaptif dengan tie deterministik; bukan formula jurnal.\nVerification Method: Test; VER-03\nTrace: UC-02 → ACT-03 → BLK-04 → VER-03"
+    },
+    {
+      "id": "REQ-F-004",
+      "name": "reqGrantGreen",
+      "documentation": "Name: Grant green\nType: Functional\nStatement: TrafficController harus mengunci grant 10/20/30 s untuk LOW/MEDIUM/HIGH hingga green berakhir pada mode Normal.\nSource: EVID-TRF-001, ASM-005, ASM-006\nRationale: Kategori lebih tinggi mendapat grant lebih lama tanpa perubahan di tengah fase.\nVerification Method: Test; VER-04\nTrace: UC-02 → ACT-04 → BLK-04 → VER-04"
+    },
+    {
+      "id": "REQ-F-005",
+      "name": "reqWaitTimer",
+      "documentation": "Name: Timer tunggu\nType: Functional\nStatement: TrafficController harus mengukur wait sejak green terakhir berakhir, nol selama green dan sejak startup untuk pendekat belum dilayani.\nSource: ASM-004\nRationale: Definisi service wait tidak sama dengan delay individu.\nVerification Method: Test; VER-05\nTrace: UC-02 → ACT-03 → BLK-04 → VER-05"
+    },
+    {
+      "id": "REQ-P-001",
+      "name": "reqObservation",
+      "documentation": "Name: Observasi\nType: Performance\nStatement: VehicleDetection harus menerima frame nominal lengkap pada cadence 1 s di model.\nSource: ASM-002, ASM-006\nRationale: Jendela observasi dan sampling eksplisit.\nVerification Method: Test; VER-06\nTrace: UC-01 → ACT-01 → BLK-02 → VER-06"
+    },
+    {
+      "id": "REQ-P-002",
+      "name": "reqDecisionBoundary",
+      "documentation": "Name: Boundary keputusan\nType: Performance\nStatement: TrafficController harus menerbitkan grant berikutnya hanya pada tick 1 s di akhir all-red.\nSource: ASM-006\nRationale: Semua durasi pada grid diskrit yang sama.\nVerification Method: Analysis; VER-07\nTrace: UC-02 → ACT-03 → BLK-04 → VER-07"
+    },
+    {
+      "id": "REQ-P-003",
+      "name": "reqMinimumGreen",
+      "documentation": "Name: Minimum green\nType: Performance\nStatement: SignalController harus mempertahankan green yang diterima sekurang-kurangnya 10 s kecuali masuk SafetyHold.\nSource: ASM-005, ASM-008\nRationale: Batas nominal dan pengecualian keselamatan eksplisit.\nVerification Method: Test; VER-08\nTrace: UC-03 → ACT-05 → BLK-05 → VER-08"
+    },
+    {
+      "id": "REQ-P-004",
+      "name": "reqMaximumGreen",
+      "documentation": "Name: Maximum green\nType: Performance\nStatement: SignalController harus mengakhiri setiap grant green paling lambat 30 s setelah grant dimulai.\nSource: ASM-005\nRationale: Membatasi layanan tunggal.\nVerification Method: Analysis; VER-08\nTrace: UC-03 → ACT-05 → BLK-05 → VER-08"
+    },
+    {
+      "id": "REQ-P-005",
+      "name": "reqMaximumWaiting",
+      "documentation": "Name: Maximum waiting\nType: Performance\nStatement: TrafficController harus menjadwalkan setiap pendekat kembali green dalam 210 s sejak green sebelumnya berakhir pada operasi round baseline tanpa SafetyHold/restart.\nSource: ASM-004, ASM-005, ASM-008\nRationale: Bound analitis nominal 208 s.\nVerification Method: Analysis; VER-09\nTrace: UC-02 → ACT-03 → BLK-04 → VER-09"
+    },
+    {
+      "id": "REQ-S-001",
+      "name": "reqExclusivity",
+      "documentation": "Name: Eksklusivitas\nType: Safety\nStatement: SignalController harus menghasilkan paling banyak satu pendekat green pada setiap state model.\nSource: EVID-TRF-002, ASM-001, ASM-008\nRationale: Matriks konflik konservatif.\nVerification Method: Analysis; VER-10\nTrace: UC-03 → ACT-05 → BLK-05 → VER-10"
+    },
+    {
+      "id": "REQ-S-002",
+      "name": "reqYellow",
+      "documentation": "Name: Yellow\nType: Safety\nStatement: SignalController harus menjalankan yellow 3 s pada pendekat aktif sebelum clearance all-red setelah grant normal berakhir.\nSource: ASM-008\nRationale: Pemisahan transisi eksplisit; bukan waktu lokasi terkalibrasi.\nVerification Method: Test; VER-11\nTrace: UC-03 → ACT-06 → BLK-05 → VER-11"
+    },
+    {
+      "id": "REQ-S-003",
+      "name": "reqAllRed",
+      "documentation": "Name: All-red\nType: Safety\nStatement: SignalController harus mempertahankan semua pendekat merah selama 1 s pada startup dan setiap clearance sebelum green berikutnya.\nSource: ASM-008\nRationale: Batas fase aman.\nVerification Method: Test; VER-11\nTrace: UC-03 → ACT-06 → BLK-05 → VER-11"
+    },
+    {
+      "id": "REQ-S-004",
+      "name": "reqCommandRejection",
+      "documentation": "Name: Command rejection\nType: Safety\nStatement: SignalController harus masuk SafetyHold all-red bila menerima command di luar domain atau command green yang melompati clearance.\nSource: ASM-008\nRationale: Tidak mengeksekusi command yang melanggar invariant.\nVerification Method: Test; VER-12\nTrace: UC-03 → ACT-09 → BLK-05 → VER-12"
+    },
+    {
+      "id": "REQ-S-005",
+      "name": "reqDeadlinePrecedence",
+      "documentation": "Name: Deadline precedence\nType: Safety\nStatement: TrafficController harus mengganti urutan nominal dengan earliest-deadline-first jika proyeksi sisa round nominal melampaui deadline 210 s.\nSource: ASM-004, ASM-005\nRationale: Fairness mendahului density pada boundary.\nVerification Method: Test; VER-13\nTrace: UC-02 → ACT-03 → BLK-04 → VER-13"
+    },
+    {
+      "id": "REQ-S-006",
+      "name": "reqInfeasiblePlan",
+      "documentation": "Name: Infeasible plan\nType: Safety\nStatement: TrafficController harus meminta SafetyHold bila urutan earliest-deadline-first juga tidak memenuhi deadline.\nSource: ASM-004, ASM-008\nRationale: Jangan menjanjikan bound saat keadaan tidak konsisten.\nVerification Method: Test; VER-13\nTrace: UC-03 → ACT-03 → BLK-04 → VER-13"
+    },
+    {
+      "id": "REQ-I-001",
+      "name": "reqInputFrame",
+      "documentation": "Name: Input frame\nType: Interface\nStatement: VehicleDetection harus memvalidasi CountsFrame sesuai domain field, empat ID unik dan aturan timestamp pada kontrak operasi.\nSource: ASM-002, ASM-006\nRationale: Input tervalidasi sebelum analisis.\nVerification Method: Test; VER-14\nTrace: UC-01 → ACT-01 → BLK-02 → VER-14"
+    },
+    {
+      "id": "REQ-I-002",
+      "name": "reqOutputLamps",
+      "documentation": "Name: Output lampu\nType: Interface\nStatement: TrafficLights harus menerima LampVector empat indikasi yang masing-masing bernilai Red, Yellow atau Green dari SignalController.\nSource: EVID-TRF-002, ASM-008\nRationale: Kontrak output logis; actuator ideal.\nVerification Method: Inspection; VER-15\nTrace: UC-03 → ACT-05 → BLK-06 → VER-15"
+    },
+    {
+      "id": "REQ-R-001",
+      "name": "reqDataFaultDetection",
+      "documentation": "Name: Deteksi data fault\nType: Reliability/Failure Handling\nStatement: VehicleDetection harus melatch dataFault ketika frame invalid, valid=false, cache tidak lengkap atau umur cached sample lebih dari 3 s.\nSource: ASM-006, ASM-007\nRationale: Data rusak tidak diperlakukan sebagai count nol.\nVerification Method: Test; VER-16\nTrace: UC-04 → ACT-01 → BLK-02 → VER-16"
+    },
+    {
+      "id": "REQ-R-002",
+      "name": "reqFallbackEntry",
+      "documentation": "Name: Masuk fallback\nType: Reliability/Failure Handling\nStatement: TrafficController harus memakai Fallback pada boundary aman berikutnya setelah dataFault dilatch tanpa mengubah grant aktif.\nSource: ASM-007\nRationale: Tidak memotong green oleh fault data.\nVerification Method: Test; VER-17\nTrace: UC-04 → ACT-07 → BLK-04 → VER-17"
+    },
+    {
+      "id": "REQ-R-003",
+      "name": "reqFallbackTiming",
+      "documentation": "Name: Fallback timing\nType: Reliability/Failure Handling\nStatement: TrafficController harus melayani eligible dalam urutan ring dengan green 10 s pada Fallback.\nSource: ASM-007\nRationale: Timing default deterministik; round tidak direset.\nVerification Method: Test; VER-18\nTrace: UC-04 → ACT-07 → BLK-04 → VER-18"
+    },
+    {
+      "id": "REQ-R-004",
+      "name": "reqRecovery",
+      "documentation": "Name: Pemulihan\nType: Reliability/Failure Handling\nStatement: TrafficController harus kembali Normal hanya pada awal round setelah tiga frame lengkap fresh/valid dengan timestamp baru berturut-turut di tick berbeda.\nSource: ASM-007\nRationale: Mencegah flapping dan pemulihan dari retransmisi yang sama.\nVerification Method: Test; VER-19\nTrace: UC-04 → ACT-07 → BLK-04 → VER-19"
+    },
+    {
+      "id": "REQ-D-001",
+      "name": "reqScope",
+      "documentation": "Name: Scope\nType: Design Constraint\nStatement: Model harus membatasi operasi pada empat pendekat lurus tanpa pedestrian, dedicated turn, emergency atau ML.\nSource: ASM-001, ASM-009\nRationale: Menjaga scope pengguna.\nVerification Method: Inspection; VER-20\nTrace: UC-02 → ACT-03 → BLK-01 → VER-20"
+    },
+    {
+      "id": "REQ-D-002",
+      "name": "reqSysml",
+      "documentation": "Name: SysML\nType: Design Constraint\nStatement: Model harus mempertahankan identitas dan semantik subset SysML 2.0 dalam tujuh view dan pemetaan renderer yang terdokumentasi.\nSource: EVID-LEC-001, EVID-LEC-002, EVID-LEC-003, EVID-LEC-004, ASM-010\nRationale: Semantik tidak ditentukan tool rendering.\nVerification Method: Inspection; VER-21\nTrace: UC-02 → ACT-03 → BLK-01 → VER-21"
+    }
+  ],
+  "verificationCases": [
+    "VER-01",
+    "VER-02",
+    "VER-03",
+    "VER-04",
+    "VER-05",
+    "VER-06",
+    "VER-07",
+    "VER-08",
+    "VER-09",
+    "VER-10",
+    "VER-11",
+    "VER-12",
+    "VER-13",
+    "VER-14",
+    "VER-15",
+    "VER-16",
+    "VER-17",
+    "VER-18",
+    "VER-19",
+    "VER-20",
+    "VER-21"
+  ],
+  "scope": "Native parser + static contract checks; not a SysML execution engine or hardware test",
+  "toolchain": {
+    "parser": "sysml-v2-lsp@0.42.0",
+    "renderer": "sysml-v2-support@a4f3e48630842c173117aa1736bf46115929bc13"
+  },
+  "validatorHashes": {
+    "tools/contract.mjs": "57e7608914dfe6d7388d982d00604563631700862f1b9887d022356482a13289",
+    "tools/lsp.mjs": "857a28fa6f1773b9bdb437b2d245fdb2f84972d1678a1f33e9c9990e5e4593a1",
+    "tools/sysml.mjs": "3945d4ad817555a5a5f8976d6a8439f77798f38ecd402488e1f67c43c1fc53ee",
+    "package-lock.json": "46f00683c044aeaad0fa57de2d2e589e7a26a334775f4267eec502d09649cd40"
+  },
+  "sourceHashes": {
+    "model/behavior/activity.sysml": "639bf85f9d2ef5be8054cc7b378e9f3eceecb5e92b41da0acdcd95dff4269b7c",
+    "model/behavior/sequence.sysml": "78b2cf8f36b3ae8c7f21987b0368f0a2aca58dde83d538d808de1d77452dddff",
+    "model/behavior/state-machine.sysml": "db668c80ac58d91611f0b57379c479f1feec9ead60ed6815b04f659995122d2b",
+    "model/behavior/use-case.sysml": "70e1432a8376b626528ca31ef603e739a7d0ea131828e3b076a7684bec65a281",
+    "model/requirements/requirements.sysml": "14d86dba1df385f580e3a25b3d365f10aaf24ef834ca4fcf7daabe57a71bdfa4",
+    "model/structure/bdd.sysml": "1e2803465357e0f7d1ab4c411fff554c6b5348ee9311a3653afb178895bd0223",
+    "model/structure/ibd.sysml": "f75f187e0f98f925f90cdf6a5cab6d3209538afe9ed4d2a26912f14739e3b717",
+    "model/structure/types.sysml": "6741986ccf761f7711317cff6c495a91086b7569f7c5e38d41698495748ffd0a",
+    "model/traceability/allocation.sysml": "6ff73b3d1bc84d06f36b7e870b8c1913983969366e9c31cc200079b2cbecf763",
+    "model/verification/verification.sysml": "e9899ff1c91cd3b468e226acc0d683db4065a203cce0ce331a0cfb0e6a6be9bd"
+  },
+  "diagnosticCounts": {
+    "errors": 0,
+    "advisories": 16
+  }
+}

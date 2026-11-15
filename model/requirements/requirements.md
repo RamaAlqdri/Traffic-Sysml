@@ -1,8 +1,6 @@
 # Katalog requirement baseline
 
-Versi baseline: 3 November 2026. Kata normatif: **harus**. Seluruh angka waktu/ambang adalah asumsi konseptual ASM-*, bukan fakta jurnal. Kontrak domain, mode, scheduler dan batas jaminan berada di `research/problem-formulation.md`. Sumber dipetakan ke `research/evidence-matrix.md` atau `research/design-assumptions.md`.
-
-Statement merupakan sumber requirement lengkap; label diagram hanya ringkasan. Verification method adalah rencana, bukan status passed. Trace lengkap dan pemetaan SysML ada di `model/traceability/traceability-matrix.md`.
+Dihasilkan dari `model/requirements/requirements.sysml` melalui `make build`. Berkas `.sysml` adalah sumber utama; jangan mengedit keluaran ini secara terpisah. Seluruh nilai baseline tetap asumsi ASM-*. Verification method bukan verdict passed.
 
 ## REQ-F-001 — Klasifikasi
 - Type: Functional
@@ -190,7 +188,7 @@ Statement merupakan sumber requirement lengkap; label diagram hanya ringkasan. V
 
 ## REQ-D-002 — SysML
 - Type: Design Constraint
-- Statement: Model harus mempertahankan identitas dan semantik subset SysML 1.6 dalam tujuh view dan pemetaan renderer yang terdokumentasi.
+- Statement: Model harus mempertahankan identitas dan semantik subset SysML 2.0 dalam tujuh view dan pemetaan renderer yang terdokumentasi.
 - Source: EVID-LEC-001, EVID-LEC-002, EVID-LEC-003, EVID-LEC-004, ASM-010
 - Rationale: Semantik tidak ditentukan tool rendering.
 - Verification Method: Inspection; VER-21
